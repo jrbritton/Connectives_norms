@@ -1,0 +1,91 @@
+﻿SOS_ID,ITEM_ID,NUMBER,CLIP_SENT,CONN,CLIP_TARG,ORIG_TARG,CONDITION,TARGET_WORD
+SR1a_05,5,17,Guglielmo era a casa. Si era completamente dimenticato di dare da mangiare al gatto. ,X,Il gatto era affamato.,Il gatto era affamato alla fine della settimana.,PLAUS_NOCONN,affamato
+SR1a_33,33,129,C'era un incontro di boxe. Il pugno di un pugile raggiunse il viso del suo avversario.,X,Dopo l'avversario cadde. ,Dopo l'avversario cadde a terra.,PLAUS_NOCONN,cadde
+SR1a_45,45,177,Stefano ha fatto domanda per una scuola di legge. Aveva voti bassi e raccomandazioni mediocri.,X,La scuola ha rifiutato lui.,La scuola ha rifiutato la sua domanda.,PLAUS_NOCONN,rifiutato
+SR1a_69,69,273,Maria stava organizzando un cocktail party. Aveva pulito e lucidato la casa tutto il giorno. ,X,La casa era magnifica.,La casa era magnifica durante la festa.,PLAUS_NOCONN,magnifica
+SR1a_73,73,289,L'uomo stava cercando di attraversare a nuoto l'ampio fiume. L'acqua era profonda e agitata,X,L'uomo annegato prima.  ,L'uomo annegato prima di riuscire ad attraversare.,PLAUS_NOCONN,annegato
+SR1b_05,85,337,Cominciarono a circolare voci sulla corruzione del governatore. Il procuratore federale ha minacciato di indagare.,X,Il governatore si dimise.,Il governatore si dimise dall'incarico.,PLAUS_NOCONN,dimise
+SR1b_09,89,353,L'esaminatore di guida  stato molto severo. Era contento che Bernardo non avesse commesso errori.,X,Bernardo ha superato il test.,Bernardo ha superato il test quel giorno.,PLAUS_NOCONN,superato
+SR1b_17,97,385,Stefano si è iscritto alla facoltà di giurisprudenza. Aveva valutazioni basse e raccomandazioni scadenti.,X,L'auto si schiantata.,L'auto si schiantata contro un albero.,PLAUS_NOCONN,schiantata
+SR1b_45,125,497,Era il primo giorno di primavera. La giornata era molto bella e abbastanza calda,X,I bambini giocato in cortile.,I bambini hanno passato la ricreazione in cortile quel giorno.,PLAUS_NOCONN,cortile
+SR2a_52,52,205,"
+Il dipendente lavorava da tempo per l'azienda. è stato sorpreso a fare uso di droghe.",X,é stato licenziato dalla societˆ.,é stato licenziato dalla societˆ.,PLAUS_NOCONN,licenziato
+SR2a_56,56,221,Alice stava tornando a casa dal lavoro di notte. Uno sconosciuto la stava seguendo.,X,Si era sentita nervosa.,Si era sentita nervosa per tutto il tragitto.,PLAUS_NOCONN,nervosa
+SR2b_24,104,413,L'adolescente era andata a farsi tagliare i capelli. Voleva qualcosa di aggressivo e alternativo.,X,Aveva una cresta al salone.,Si fece fare una cresta mohawk al salone.,PLAUS_NOCONN,cresta
+SR2b_36,116,461,La donna non aveva mai ballato prima del suo matrimonio. Ha preso mesi di lezioni.,X,Ha ballato come una professionista.,Ha ballato come una professionista al ricevimento.,PLAUS_NOCONN,professionista
+SR2b_44,124,493,Alice si sta allenando per la stagione calcistica. Luned“ si davvero sovraccaricata con gli esercizi. ,X,Il giorno dopo era dolorante.,Il giorno dopo era dolorante dappertutto.,PLAUS_NOCONN,dolorante
+SR3b_03,83,329,Si è scoperto che l'atleta stava usando steroidi. Aveva una storia di abuso di droghe.,X,Il Comitato lo ha bandito.,Il Comitato Olimpico lo ha bandito per 10 anni.,PLAUS_NOCONN,bandito
+SR3b_59,139,553,Matteo aveva dimenticato che l'articolo doveva essere consegnato mercoledì“. Quel giorno stava appena iniziando.,X,Ha consegnato l'articolo in ritardo.,Ha consegnato l'articolo in ritardo all'insegnante.,PLAUS_NOCONN,ritardo
+SR3b_63,143,569,Giacomo e altri cinque amici stavano viaggiando insieme. Affittarono un gigantesco furgone per il viaggio.,X,Erano tutti molto comodi.,Erano tutti molto comodi durante il viaggio.,PLAUS_NOCONN,comodi
+SR3b_75,155,617,Cristiano stava andando a trovare la sua ragazza per San Valentino. Sapeva che amava i fiori.,X,Le aveva comprato delle rose.,Aveva comprato delle rose per lei.,PLAUS_NOCONN,rose
+SR4a_02,2,5,Claudio era tornato di corsa al ristorante. Aveva perso il portafoglio da qualche parte.,X,Si sentiva intensamente teso tutto.,Si sentito incredibilmente teso tutto il giorno.,PLAUS_NOCONN,teso
+SR4a_38,38,149,Alessandro voleva disperatamente andare ad Harvard. Aveva ricevuto una lettera di accettazione per posta.,X,Inizi˜ subito a festeggiare.,Inizi˜ subito a festeggiare con i suoi amici.,PLAUS_NOCONN,festeggiare
+SR4a_50,50,197,Il passeggero stava facendo i controlli di sicurezza all'aeroporto. Le guardie gli trovarono un'arma addosso.,X,Il passeggero fu subito arrestato.,Il passeggero fu subito arrestato come terrorista.,PLAUS_NOCONN,arrestato
+SR4b_14,94,373,L'uragano aveva colpito l'isola. Gli argini si sono rotti con l'innalzamento del livello del mare.,X,Le strade sono state allagate.,Le strade sono state allagate per giorni. ,PLAUS_NOCONN,allagate
+SR4b_22,102,405,Daniele andato in un pub con i suoi amici. Aveva voglia di un drink.,X,Ha ordinato un whisky,Ha ordinato un whisky e una bibita.,PLAUS_NOCONN,whisky
+SR4b_62,142,565,Daniele ha indossato un vestito nuovo per il colloquio. Lo ha abbinato con una cravatta.,X,Sembrava professionale durante il colloquio.,Sembrava molto professionale durante il colloquio.,PLAUS_NOCONN,professionale
+SR1a_34,34,134,"
+Luigi aveva trascorso un'intera settimana con i suoi amici. Avevano festeggiato tutte le sere.",X,Si sentiva davvero solo.,Si sentiva davvero solo quella settimana.,IMPLAUS_NOCONN,solo
+SR1a_78,78,310,"
+A Gianni è stato vietato di guardare film violenti. Invece ha guardato un quiz.",X,La televisione era proibita.,I suoi genitori gli hanno proibito la televisione.,IMPLAUS_NOCONN,proibito
+SR2a_13,13,50,Alice andata in campeggio durante le vacanze. Ha usato un ottimo repellente per le zanzare.,X,Ha iniziato a sentire prurito.,Ha iniziato a sentire prurito dappertutto.,IMPLAUS_NOCONN,prurito
+SR2a_21,21,82,"
+I due paesi erano in guerra da anni. I leader hanno rifiutato un cessate il fuoco.",X,Il conflitto fin“ poco dopo.,Il conflitto fin“ poco dopo.,IMPLAUS_NOCONN,fin“
+SR2a_33,33,130,C'era un incontro di boxe. Il pugno di un pugile manc˜ il viso del suo avversario.,X,Dopo l'avversario cadde a terra. ,Dopo l'avversario cadde a terra. ,IMPLAUS_NOCONN,cadde
+SR2a_45,45,178,Stefano ha fatto domanda per una scuola di legge. Aveva buoni voti e ottime raccomandazioni. ,X,La scuola ha rifiutato lui.,La scuola ha rifiutato la sua domanda.,IMPLAUS_NOCONN,rifiutato
+SR2b_05,85,338,Cominciarono a circolare voci sulla corruzione del governatore. Il procuratore federale dichiar˜ che risultava innocente. ,X,Il governatore si dimise.,Il governatore si dimise dall'incarico.,IMPLAUS_NOCONN,dimise
+SR2b_09,89,354,L'esaminatore di guida stato molto severo. Aveva notato che Bernardo aveva commesso diversi errori.,X,Bernardo ha superato il test.,Bernardo ha superato il test quel giorno.,IMPLAUS_NOCONN,superato
+SR2b_45,125,498,"
+Pioveva molto forte da una settimana. La pioggia aveva reso il terreno molto fangoso.",X,I bambini giocato in cortile.,I bambini hanno passato la ricreazione in cortile quel giorno.,IMPLAUS_NOCONN,cortile
+SR3a_80,80,318,Il soldato aveva ricevuto un colpo di striscio. Fu subito mandato da un medico esperto.,X,Il soldato era morto.,Il soldato era morto pochi minuti dopo.,IMPLAUS_NOCONN,morto
+SR3b_08,88,350,"
+Il ponte aveva solo un paio d'anni. La base era molto solida e stabile.",X,È stato ritenuto non sicuro,Gli ispettori statali lo hanno ritenuto poco sicuro per l'uso.,IMPLAUS_NOCONN,sicuro
+SR3b_36,116,462,La donna non aveva mai ballato prima del suo matrimonio. Non ha voluto prendere lezioni.,X,Ha ballato come una professionista.,Ha ballato come una professionista al ricevimento.,IMPLAUS_NOCONN,professionista
+SR4a_31,31,122,Il governatore era stato assassinato. Per la sera del crimine la moglie aveva un alibi molto solido.,X,La donna venne arrestata.,La donna venne arrestata immediatamente.,IMPLAUS_NOCONN,arrestata
+SR4a_51,51,202,Giulia era tornata dalla montagna con il raffreddore. Non volle prendere lo sciroppo per la tosse.,X,Si sent“ subito meglio.,Si sent“ subito meglio poco dopo.,IMPLAUS_NOCONN,meglio
+SR4a_67,67,266,Alice era stata attenta al suo maglione di lana. Lo aveva lavato a secco.,X,Il maglione si era ristretto.,Il maglione si era ristretto dopo la lavata. ,IMPLAUS_NOCONN,ristretto
+SR4b_07,87,346,A Claudia piace suonare la batteria nel suo appartamento. I vicini adorano sentirla suonare. ,X,Si sono lamentati del rumore.,Si sono lamentati con il padrone di casa.,IMPLAUS_NOCONN,lamentati
+SR4b_63,143,570,Giacomo e altri cinque amici stavano viaggiando insieme. Affittarono una piccola auto per il viaggio.,X,Erano tutti molto comodi.,Erano tutti molto comodi durante il viaggio.,IMPLAUS_NOCONN,comodi
+SR1a_40,40,160,Sara ha avuto un esame di storia oggi. Conosceva la risposta ad ogni singola domanda.,"Tuttavia, ",si sentiva nel panico.,si sentiva nel panico durante l'esame.,PLAUS_CONN,panico
+SR1b_04,84,336,L'astronomo pensava di aver trovato un nuovo pianeta. L'analisi del computer lo aveva confermato.,"Tuttavia, ",era abbattuto per questo.,era molto abbattuto per questo.,PLAUS_CONN,abbattuto
+SR1b_08,88,352,"
+Il ponte aveva solo un paio d'anni. La base era molto solida e stabile.","Tuttavia,",è stato ritenuto non sicuro,ispettori statali lo hanno ritenuto poco sicuro per l'uso.,PLAUS_CONN,sicuro
+SR1b_40,120,480,Giovanna era ottimista riguardo al suo caso. Il suo avvocato aveva prove che ne dimostravano l'innocenza. ,"Tuttavia,  ",stata condannata dalla giuria.,stata condannata dalla giuria.,PLAUS_CONN,condannata
+SR2a_07,7,28,"Il cane correva in una strada trafficata. Fortunatamente, l'auto ha sterzato e lo ha mancato.","Tuttavia,",il cane è rimasto ferito.,il cane si  ferito gravemente.,PLAUS_CONN,ferito
+SR2a_11,11,44,I funzionari della cittˆ sono stati portati in tribunale. Il giudice si pronunciato in loro favore.,"Tuttavia,",sono stati imprigionati immediatamente.,sono stati imprigionati immediatamente.,PLAUS_CONN,imprigionati
+SR2a_15,15,60,L'eremita viveva in una grotta. Si lavava in un fiume di montagna ogni giorno. ,"Tuttavia, ",i suoi capelli sembravano disordinati.,i suoi capelli sembravano sporchi e disordinati.,PLAUS_CONN,sporchi
+SR2a_59,59,236,Il condannato a morte ha impugnato il verdetto. Non erano emerse altre prove nel caso. ,"Tuttavia,",stato liberato dopo il procedimento.,stato liberato dopo il procedimento.,PLAUS_CONN,liberato
+SR2a_63,63,252,Corinna si sentiva assonnata se non beveva caff. Non ne aveva bevuto quel giorno. ,"Tuttavia, ",era molto agitata durante l'incontro.,era molto agitata durante l'incontro.,PLAUS_CONN,agitata
+SR2a_75,75,300,David ha sempre rispettato i suoi insegnanti. Andava sempre molto bene in classe.,"Tuttavia,",Il preside lo ha sospeso.,stato sospeso per volere del preside.,PLAUS_CONN,sospeso
+SR3a_26,26,104,La ginnasta era specializzata nella trave di equilibrio. Aveva eseguito il primo esercizio alla perfezione. ,"Tuttavia, ",era delusa di se stessa.,era rimasta delusa da sŽ stessa.,PLAUS_CONN,delusa
+SR3b_22,102,408,Daniele andato in un pub con i suoi amici. Aveva smesso di bere.,"Tuttavia, ",ha ordinato un whisky.,ha ordinato un whisky e una bibita.,PLAUS_CONN,whisky
+SR3b_26,106,424,Francesco aveva fatto un pranzo abbondante. Arriv˜ a casa pieno e un po' assonnato.,"Tuttavia, ",decise di mangiare un panino.,decise di mangiare un panino in cucina.,PLAUS_CONN,panino
+SR3b_62,142,568,Daniele ha indossato una maglietta spiegazzata per l'intervista. Ci ha versato sopra del caffè.,"Tuttavia, ",sembrava professionale durante il colloquio.,sembrava professionale durante il colloquio.,PLAUS_CONN,professionale
+SR4a_17,17,68,Giacomo ha avuto un problema con il cibo. Non riusciva a smettere di mangiare. ,"Tuttavia, ",presto divenne davvero magro,diventato davvero magro dopo un po'.,PLAUS_CONN,magro
+SR4a_29,29,116,L'idea dell'ingegnere del software era stata implementata nel nuovo prodotto. L'idea non ebbe successo. ,"Tuttavia, ",l'ingegnere ottenne una promozione.,l'ingegnere ottenne una promozione in azienda. ,PLAUS_CONN,promozione
+SR4b_41,121,484,Mario ha citato in giudizio il medico per negligenza. Alla fine ha perso in tribunale. ,"Tuttavia, ",diventato ricco grazie al caso.,diventato ricco grazie al caso.,PLAUS_CONN,ricco
+SR4b_61,141,564,Licia adora il suo attuale lavoro. Ha ricevuto un'offerta pi bassa da un'altra societˆ. ,"Tuttavia, ",ha accettato l'offerta,ha deciso di accettare la loro offerta.,PLAUS_CONN,accettare
+SR4b_73,153,612,Luke non è socievole o estroverso. Resta sempre a casa dopo il lavoro.,"Tuttavia, ",faceva festa ogni fine settimana,ha passato ogni fine settimana a festeggiare da qualche parte.,PLAUS_CONN,festeggiare
+SR1a_11,11,43,I funzionari della cittˆ sono stati portati in tribunale. Il giudice si pronunciato contro di loro. ,"Tuttavia, ",sono stati imprigionati immediatamente. ,sono stati imprigionati immediatamente. ,IMPLAUS_CONN,imprigionati
+SR1a_31,31,123,Il governatore era stato assassinato. La scena del crimine era coperta dalle impronte digitali della moglie. ,"Tuttavia,",la donna venne arrestata.,la donna venne arrestata immediatamente.,IMPLAUS_CONN,arrestata
+SR1a_35,35,139,Linda non riusciva a trovare la sua carta di credito. Era preoccupata che fosse stata rubata. ,"Tuttavia, ",aveva deciso di cancellarla.,aveva deciso di cancellarla immediatamente.,IMPLAUS_CONN,cancellarla
+SR1a_43,43,171,Il ragazzo aveva preso lo skilift fino in cima. Dopo aveva sciato fino in fondo. ,"Tuttavia, ",era fiero di sŽ stesso. ,era molto fiero di sŽ stesso. ,IMPLAUS_CONN,fiero
+SR1b_39,119,475,Carolina ascoltava la radio. La tempesta della scorsa notte aveva lasciato diversi metri di neve.,"Tuttavia, ",le scuole erano chiuse.,le scuole erano chiuse quel giorno.,IMPLAUS_CONN,chiuso
+SR1b_55,135,539,La senatrice si rec˜ da sola in viaggio all'estero. Era in una zona pericolosa. ,"Tuttavia,",è stata rapita da criminali.,stata poi rapita da due criminali.,IMPLAUS_CONN,rapita
+SR1b_71,151,603,Il tetto aveva avuto una falla in cucina. Il tuttofare passato e l'ha riparato. ,"Tuttavia, ",il gocciolamento cessato.,il gocciolamento cessato molto presto.,IMPLAUS_CONN,cessato
+SR2a_34,34,135,Luigi stato a casa da solo per un'intera settimana. Non ha ricevuto nessuna telefonata. ,"Tuttavia, ",si sentiva davvero solo.,si sentiva davvero solo quella settimana.,IMPLAUS_CONN,solo
+SR2b_18,98,391,"
+L'uomo è rimasto fuori tutta la notte. Il giorno dopo ha preso un terribile raffreddore.","Tuttavia, ",il giorno dopo ha la tosse.,la mattina dopo aveva tosse e naso che cola.,IMPLAUS_CONN,tosse
+SR2b_58,138,551,Melinda e suo marito sono andati a cena al ristorante di pesce. Adorano i molluschi.,"Tuttavia,",Melinda ha ordinato ostriche.,Melinda ha ordinato ostriche per cena.,IMPLAUS_CONN,ostriche
+SR2b_66,146,583,Donato ha fatto rimuovere un neo da un chirurgo. é stata una procedura facile. ,"Tuttavia, ",l'operazione stata un successo,l'operazione stata un successo quel giorno,IMPLAUS_CONN,successo
+SR3a_09,9,35,La star di Broadway ha avuto un assolo nel musical. Ha cantato il pezzo magnificamente. ,"Tuttavia, ",il pubblico ha applaudito,il pubblico ha applaudito molto energicamente.,IMPLAUS_CONN,applaudito
+SR3a_29,29,115,L'idea dell'ingegnere del software era stata implementata nel nuovo prodotto. L'idea si rivel˜ popolare. ,"Tuttavia, ",l'ingegnere ottenne una promozione,l'ingegnere ottenne una promozione in azienda.,IMPLAUS_CONN,promozione
+SR3a_65,65,259,Giovanni stava facendo domanda per un lavoro. Non era qualificato per nessuna posizione. ,"Tuttavia, ",era ormai disoccupato da.,era ormai disoccupato da pi di un anno.,IMPLAUS_CONN,disoccupato
+SR3b_21,101,403,Il sensitivo afferma di vedere il futuro. é stato utile a molte persone. ,"Tuttavia, ",i clienti sono rimasti soddisfatti.,i clienti sono rimasti soddisfatti delle sue predizioni.,IMPLAUS_CONN,soddisfatti
+SR3b_65,145,579,Jessica aveva chiesto una bicicletta per Natale. I suoi genitori gliene hanno regalata una. ,"Tuttavia, ",Jessica era molto felice.,Jessica era molto felice per il regalo.,IMPLAUS_CONN,felice
+SR3b_69,149,595,Giovanna pulisce raramente la sua casa. Ha due bambini piccoli a casa. ,"Tuttavia, ",la sua cucina era in disordine ,la sua cucina era in disordine tutto il tempo.,IMPLAUS_CONN,disordine
+SR4a_24,24,95,La sarta stava appuntando l'abito di Tobia. Era sbrigativa e negligente con gli spilli. ,"Tuttavia,",Tobia fu punto due volte,Tobia venne punto un paio di volte.,IMPLAUS_CONN,punto
+SR4a_60,60,239,Thomas ha dormito profondamente la scorsa notte. Ha bevuto una tazza di caffè stamattina.,"Tuttavia, ",si sentiva pieno di energia,si sentiva sveglio e pieno di energie al lavoro.,IMPLAUS_CONN,sveglio
+SR4b_04,84,335,L'astronomo pensava di aver trovato un nuovo pianeta. L'analisi del computer ha mostrato che si sbagliava. ,"Tuttavia, ",era molto abbattuto per questo.,era molto abbattuto per questo.,IMPLAUS_CONN,abbattuto
+SR4b_20,100,399,"
+La vecchia scendeva lentamente i gradini innevati. È caduto e si è rotto l'anca.","Tuttavia, ",dopo rimase in ospedale.,dopo rimase in ospedale per un po' di tempo.,IMPLAUS_CONN,ospedale

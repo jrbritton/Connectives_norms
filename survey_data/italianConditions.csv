@@ -1,0 +1,629 @@
+SOS_ID,ITEM_ID,NUMBER,SENTENCE,CONDITION,TARGET_WORD,SENT_COND
+SR1a_01,1,1,Olivia aveva comprato un pastore tedesco. Il cane era imprevedibile e violento. Le ha morso la mano.,PLAUS_NOCONN,morso,SC1
+SR1a_02,2,6,Claudio era tornato di corsa al ristorante. Grazie al cielo ha trovato il suo portafoglio sotto il tavolo. Si è sentito incredibilmente teso tutto il giorno.,IMPLAUS_NOCONN,teso,SC2
+SR1a_03,3,11,"Carlotta ha spinto il carrello della spesa sopra le buche. Le uova sono state sballottate nella borsa. Tuttavia, si sono rotte nel loro cartone.",IMPLAUS_CONN,rotte,SC3
+SR1a_04,4,16,"La giornata era stata alquanto nuvolosa. All'improvviso uscì il sole. Tuttavia, Sheila tirò fuori l'ombrello dalla borsa.",PLAUS_CONN,ombrello,SC4
+SR1a_05,5,17,Guglielmo era a casa. Si era completamente dimenticato di dare da mangiare al gatto. Il gatto era affamato alla fine della settimana.,PLAUS_NOCONN,affamato,SC1
+SR1a_06,6,22,La donna cieca era stata operata. Il dottore era molto deluso dai risultati. La sua vista migliorò il giorno successivo.,IMPLAUS_NOCONN,migliorò,SC2
+SR1a_07,7,27,"Il cane correva in una strada trafficata. L'auto stava accelerando e lo ha investito. Tuttavia, il cane si è ferito gravemente.",IMPLAUS_CONN,ferito,SC3
+SR1a_08,8,32,"Elisabetta ha avuto un esame di storia lunedì. Ha fatto il test e l'ha fallito. Tuttavia, è tornata a casa e ha festeggiato tutta la sera.",PLAUS_CONN,festeggiato,SC4
+SR1a_09,9,33,La star di Broadway ha avuto un assolo nel musical. Ha cantato il pezzo magnificamente. Il pubblico ha applaudito molto energicamente.,PLAUS_NOCONN,applaudito,SC1
+SR1a_10,10,38,Caterina ha avuto un esame martedì. Ha ricevuto il voto più alto. Era davvero frustrata per il risultato.,IMPLAUS_NOCONN,frustrata,SC2
+SR1a_11,11,43,"I funzionari della città sono stati portati in tribunale. Il giudice si è pronunciato contro di loro. Tuttavia, sono stati imprigionati immediatamente. ",IMPLAUS_CONN,imprigionati,SC3
+SR1a_12,12,48,"Silvia e Franco stavano giocando d'azzardo al casinò. Nessuno dei due vinse al blackjack. Tuttavia, erano entrambi felici quella notte.",PLAUS_CONN,felici,SC4
+SR1a_13,13,49,Alice è andata in campeggio durante le vacanze. È stata morsa dalle zanzare. Ha iniziato a sentire prurito dappertutto.,PLAUS_NOCONN,prurito,SC1
+SR1a_14,14,54,Uno scout è venuto a vedere Paolo giocare a baseball. Ha lanciato in modo pessimo. È stato firmato dalla squadra.,IMPLAUS_NOCONN,firmato,SC2
+SR1a_15,15,59,"L'eremita viveva in una grotta. Non faceva il bagno da mesi. Tuttavia, i suoi capelli sembravano sporchi e disordinati.",IMPLAUS_CONN,sporchi,SC3
+SR1a_16,16,64,"Ottavia ha bisogno di una media del 27 per laurearsi. Si è resa conto che la sua media è troppo bassa. Tuttavia, si diplomerà la prossima settimana con la sua classe.",PLAUS_CONN,settimana,SC4
+SR1a_17,17,65,Giacomo ha avuto un problema con il cibo. Praticamente aveva smesso di mangiare. È diventato davvero magro dopo un po'.,PLAUS_NOCONN,magro,SC1
+SR1a_18,18,70,Il ladro era goffo. L'allarme non era scattato. E' stato catturato dalla guardia.,IMPLAUS_NOCONN,catturato,SC2
+SR1a_19,19,75,"La compagnia telefonica aveva problemi finanziari quell'anno. Aveva perso molti clienti. Tuttavia, i suoi profitti sono diminuiti poco dopo.",IMPLAUS_CONN,diminuiti,SC3
+SR1a_20,20,80,"Gianni prendeva buoni voti e non dava mai problemi a scuola. Era sempre allegro e aveva molti amici. Tuttavia, i suoi genitori erano preoccupati per lui.",PLAUS_CONN,preoccupati,SC4
+SR1a_21,21,81,I due paesi erano in guerra da anni. I leader decisero di firmare la proposta di cessate il fuoco. Il conflitto finì poco dopo.,PLAUS_NOCONN,finì,SC1
+SR1a_22,22,86,Il ristorante aveva ricevuto recensioni ottime. Era sempre pieno. A maggio aveva chiuso in via definitiva.,IMPLAUS_NOCONN,chiuso,SC2
+SR1a_23,23,91,"La famosa violinista era sicura della sua performance. Ha interpretato il pezzo in modo eccezionale. Tuttavia, tutti avevano esultato per lei.",IMPLAUS_CONN,esultato,SC3
+SR1a_24,24,96,"La sarta stava appuntando l'abito di Tobia. Era molto attenta con gli spilli. Tuttavia, Tobia venne punto un paio di volte.",PLAUS_CONN,punto,SC4
+SR1a_25,25,97,Giuditta aveva un giardino nel cortile sul retro. Non ha mai trascorso molto tempo a lavorare lì. Era pieno di erbacce e spazzatura. ,PLAUS_NOCONN,erbacce,SC1
+SR1a_26,26,102,La ginnasta era specializzata nella trave di equilibrio. Aveva eseguito il primo esercizio alla perfezione. Era rimasta delusa da sé stessa.,IMPLAUS_NOCONN,delusa,SC2
+SR1a_27,27,107,"L'azienda aveva assunto un nuovo dipendente. Era pigro e lento. Tuttavia, le sue valutazioni sono state negative quel trimestre.",IMPLAUS_CONN,negative,SC3
+SR1a_28,28,112,Il bambino stava visitando il museo con i suoi genitori. Tenne una distanza rispettosa dalle opere d'arte. Dopo venne rimproverato dalla guardia del museo.,PLAUS_CONN,rimproverato,SC4
+SR1a_29,29,113,L'idea dell'ingegnere del software era stata implementata nel nuovo prodotto. L'idea si rivelò molto popolare. L'ingegnere ottenne una promozione in azienda.,PLAUS_NOCONN,promozione,SC1
+SR1a_30,30,118,Era il giorno della partita di calcio. Tommaso bevve solo acqua quella notte. Si svegliò con i postumi di una sbornia la mattina dopo.,IMPLAUS_NOCONN,postumi,SC2
+SR1a_31,31,123,"Il governatore era stato assassinato. La scena del crimine era coperta dalle impronte digitali della moglie. Tuttavia, la donna venne arrestata immediatamente.",IMPLAUS_CONN,arrestata,SC3
+SR1a_32,32,128,"Il taxi aveva portato il passeggero all'aeroporto. Il passeggero lasciò una mancia generosa. Tuttavia, il tassista era furioso con lui.",PLAUS_CONN,furioso,SC4
+SR1a_33,33,129,C'era un incontro di boxe nell'arena. Il pugno di un pugile raggiunse il viso del suo avversario. Dopo l'avversario cadde a terra.,PLAUS_NOCONN,cadde,SC1
+SR1a_34,34,134,Luigi aveva passato un'intera settimana con i suoi amici. Erano andati ogni sera a una festa. Si sentiva davvero solo quella settimana.,IMPLAUS_NOCONN,solo,SC2
+SR1a_35,35,139,"Linda non riusciva a trovare la sua carta di credito. Era preoccupata che fosse stata rubata. Tuttavia, aveva deciso di cancellarla immediatamente.",IMPLAUS_CONN,cancellarla,SC3
+SR1a_36,36,144,"Susanna era in partenza per una vacanza alle Bahamas più tardi quella settimana. Le previsioni del tempo erano perfette. Tuttavia, il viaggio fu annullato poco dopo. ",PLAUS_CONN,annullato,SC4
+SR1a_37,37,145,"Durante la tempesta, l'elettricità in città era stata interrotta. Le luci del ristorante si erano spente. I camerieri portavano le candele ai tavoli.",PLAUS_NOCONN,candele,SC1
+SR1a_38,38,150,Alessandro voleva disperatamente andare ad Harvard. Aveva saputo per posta di non essere stato accettato. Iniziò subito a festeggiare con i suoi amici. ,IMPLAUS_NOCONN,festeggiare,SC2
+SR1a_39,39,155,"La donna dovette salire venti rampe di scale. Era fuori forma e sovrappeso. Tuttavia, si sentì subito stanca dopo lo sforzo.",IMPLAUS_CONN,stanca,SC3
+SR1a_40,40,160,"Sara ha avuto un esame di storia oggi. Conosceva la risposta ad ogni singola domanda. Tuttavia, si sentiva nel panico durante l'esame. ",PLAUS_CONN,panico,SC4
+SR1a_41,41,161,Tamara stava prendendo lezioni di guida. Di recente aveva avuto un incidente. Era molto nervosa per strada.,PLAUS_NOCONN,nervosa,SC1
+SR1a_42,42,166,Il sindacato era impegnato in trattative contrattuali. Le trattative ebbero successo e i dipendenti erano soddisfatti. Il giorno dopo decisero di picchettare per i loro diritti.,IMPLAUS_NOCONN,picchettare,SC2
+SR1a_43,43,171,"Il ragazzo aveva preso lo skilift fino in cima. Dopo aveva sciato fino in fondo. Tuttavia, era molto fiero di sé stesso. ",IMPLAUS_CONN,orgoglioso,SC3
+SR1a_44,44,176,"Maurizio ha lavorato in un ospedale alla reception. Indossava sempre guanti di lattice. Tuttavia, è stato contagiato da un paziente.",PLAUS_CONN,contagiato,SC4
+SR1a_45,45,177,Stefano ha fatto domanda per una scuola di legge. Aveva voti bassi e raccomandazioni mediocri. La scuola ha rifiutato la sua domanda.,PLAUS_NOCONN,rifiutato,SC1
+SR1a_46,46,182,Caterina stava preparando una limonata quel pomeriggio. Aveva aggiunto più zucchero rispetto alla ricetta richiesta. La limonata aveva un sapore troppo aspro per tutti.,IMPLAUS_NOCONN,aspro,SC2
+SR1a_47,47,187,"Gli amici di Tamara l'hanno portata al cinema. Era un film dell'orrore. Tuttavia, Tamara rimase molto spaventata dal film.",IMPLAUS_CONN,spaventata,SC3
+SR1a_48,48,192,"Donata era l'inquilina ideale. Pagava l'affitto sempre puntualmente. Tuttavia, il padrone di casa l'aveva sfrattata dall'edificio. ",PLAUS_CONN,sfrattata,SC4
+SR1a_49,49,193,Il comico era nervoso quella notte. Fece una performance pessima. Il pubblico lo fischiava senza sosta.,PLAUS_NOCONN,fischiava,SC1
+SR1a_50,50,198,Il passeggero stava facendo i controlli di sicurezza all'aeroporto. Le guardie non trovarono nulla di sospetto. Il passeggero fu subito arrestato come terrorista.,IMPLAUS_NOCONN,arrestato,SC2
+SR1a_51,51,203,"Giulia era tornata dalla montagna con il raffreddore. Prese dello sciroppo per la tosse. Tuttavia, si sentì subito meglio poco dopo.",IMPLAUS_CONN,meglio,SC3
+SR1a_52,52,208,"Il dipendente aveva lavorato per l'azienda per molti anni. Aveva sempre fatto un buon lavoro. Tuttavia, è stato licenziato dalla società.",PLAUS_CONN,licenziato,SC4
+SR1a_53,53,209,Edoardo era un giovane cantante pop. Tutti scaricavano la sua nuova canzone. Era stata un successo alla radio.,PLAUS_NOCONN,successo,SC1
+SR1a_54,54,214,L'uomo era sulla cinquantina. La sua pelle era liscia e luminosa. Si vide molto vecchio guardandosi allo specchio.,IMPLAUS_NOCONN,vecchio,SC2
+SR1a_55,55,219,"Marta voleva tingersi i capelli. Il parrucchiere fece un lavoro terribile. Tuttavia, Marta era davvero scontenta del risultato.",IMPLAUS_CONN,scontenta,SC3
+SR1a_56,56,224,"Alice stava tornando a casa dal lavoro di notte. Il suo fidanzato era con lei. Tuttavia, si era sentita nervosa per tutto il tragitto.",PLAUS_CONN,nervosa,SC4
+SR1a_57,57,225,Andrea voleva stare in salute. Aveva iniziato a sollevare pesi in palestra. Diventò davvero muscoloso quell'inverno.,PLAUS_NOCONN,muscoloso,SC1
+SR1a_58,58,230,Alla squadra di casa mancava solo un punto in più per vincere. Il giocatore sbagliò il tiro libero all'ultimo secondo. La squadra di casa vinse quella partita.,IMPLAUS_NOCONN,vinse,SC2
+SR1a_59,59,235,"Il condannato a morte ha impugnato il verdetto. C'erano nuove prove del DNA che dimostravano la sua innocenza. Tuttavia, è stato liberato dopo il procedimento.",IMPLAUS_CONN,liberato,SC3
+SR1a_60,60,240,"Tommaso ha dormito per sole due ore la notte scorsa. Non ha avuto tempo per il caffè stamattina. Tuttavia, si sentiva sveglio e pieno di energie al lavoro.",PLAUS_CONN,sveglio,SC4
+SR1a_61,61,241,Maria ha dimenticato di mettere in valigia un cappotto invernale per il viaggio a Chicago. Le temperature sono scese intorno allo zero. Ha avuto freddo tutto il tempo.,PLAUS_NOCONN,freddo,SC1
+SR1a_62,62,246,Tutti nell'ufficio di Giovanna avevano finalmente superato l'influenza. Giovanna non era più raffreddata dopo il lavoro martedì. Il giorno dopo si sentiva malissimo ed è rimasta a casa.,IMPLAUS_NOCONN,malissimo,SC2
+SR1a_63,63,251,"Tutto quel caffè diede a Corinna la tachicardia. Ne aveva bevuto troppo quella mattina. Tuttavia, era molto agitata durante l'incontro.",IMPLAUS_CONN,agitata,SC3
+SR1a_64,64,256,Marco si era alzato presto. Voleva essere sicuro di non perdere il bus. Giunse in ritardo per l'incontro. ,PLAUS_CONN,ritardo,SC4
+SR1a_65,65,257,Giovanni stava facendo domanda per un lavoro. Non era qualificato per nessuna posizione. Era ormai disoccupato da più di un anno.,PLAUS_NOCONN,disoccupato,SC1
+SR1a_66,66,262,Pietro era di nuovo a dieta. Era ossessionato dal mangiare sano. Mangiava spesso patatine a pranzo e cena.,IMPLAUS_NOCONN,patatine,SC2
+SR1a_67,67,267,"Alice era stata negligente con il suo maglione di lana. Lo aveva lavato in acqua calda in lavatrice. Tuttavia, il maglione si era ristretto dopo la lavata.",IMPLAUS_CONN,ristretto,SC3
+SR1a_68,68,272,Amanda è andata dal parrucchiere. I parrucchieri hanno fatto un pessimo lavoro. Era bellissima lasciando il negozio. ,PLAUS_CONN,bellissima,SC4
+SR1a_69,69,273,Maria stava organizzando un cocktail party. Aveva pulito e lucidato la casa tutto il giorno. La casa era magnifica durante la festa.,PLAUS_NOCONN,magnifica,SC1
+SR1a_70,70,278,Giovanni ha inviato un articolo di ricerca a un giornale. I revisori hanno mandato recensioni molto negative. L'articolo è stato accettato per la pubblicazione.,IMPLAUS_NOCONN,accettato,SC2
+SR1a_71,71,283,"Giovanni ha avuto una vacanza molto poco emozionante. Era rimasto a casa con i suoi genitori per un'intera settimana. Tuttavia, da inizio ferie si era annoiato ogni giorno. ",IMPLAUS_CONN,annoiato,SC3
+SR1a_72,72,288,"Giovanni si era fermato a prendere un caffè al bar. L'ha ordinato nero e senza zucchero. Tuttavia, aveva un sapore molto dolce per lui.",PLAUS_CONN,dolce,SC4
+SR1a_73,73,289,L'uomo stava cercando di attraversare a nuoto l'ampio fiume. L'acqua era profonda e agitata. L'uomo è annegato prima di riuscire ad attraversare.,PLAUS_NOCONN,annegato,SC1
+SR1a_74,74,294,Susanna è andata alla spa. Si sentiva fresca e pulita. Ha fatto una doccia appena tornata a casa.,IMPLAUS_NOCONN,doccia,SC2
+SR1a_75,75,299,"A Davide piaceva mettersi in mostra per i suoi amici. Era rumoroso e scortese con l'insegnante. Tuttavia, è stato sospeso per volere del preside.",IMPLAUS_CONN,sospeso,SC3
+SR1a_76,76,304,"L'imputato si dichiarava innocente. La giuria decise che era colpevole. Tuttavia, l'imputato fu liberato il giorno successivo.",PLAUS_CONN,liberato,SC4
+SR1a_77,77,305,Il mago stava eseguendo trucchi. Fece sparire un coniglio. Tutti rimasero incantati dalla performance.,PLAUS_NOCONN,incantati,SC1
+SR1a_78,78,310,A Gianni è stato vietato di guardare film violenti. Ha guardato un quiz televisivo. I suoi genitori gli hanno proibito la televisione.,IMPLAUS_NOCONN,proibito,SC2
+SR1a_79,79,315,"Giliana aveva la pelle molto chiara. Aveva dimenticato la crema solare in spiaggia. Tuttavia, si è presa una scottatura lunedì scorso.",IMPLAUS_CONN,scottatura,SC3
+SR1a_80,80,320,"Il soldato aveva ricevuto un colpo di striscio. Fu subito mandato da un medico esperto. Tuttavia, il soldato era morto pochi minuti dopo.",PLAUS_CONN,morto,SC4
+SR1b_01,81,321,Angela ha chiamato suo padre sul cellulare. Il segnale era pessimo. La voce di suo padre era confusa e indistinta. ,PLAUS_NOCONN,confusa,SC1
+SR1b_02,82,326,La zona era controllata dalla mafia. Il proprietario del negozio aveva sempre pagato il pizzo. Il suo negozio è stato attaccato quella notte.,IMPLAUS_NOCONN,attaccato,SC2
+SR1b_03,83,331,"Fu scoperto che l'atleta assumeva steroidi. Aveva una storia di abuso di droghe. Tuttavia, il Comitato Olimpico lo ha bandito per 10 anni.",IMPLAUS_CONN,bandito,SC3
+SR1b_04,84,336,"L'astronomo pensava di aver trovato un nuovo pianeta. L'analisi del computer aveva confermato la sua ipotesi. Tuttavia, era molto abbattuto per questo.",PLAUS_CONN,abbattuto,SC4
+SR1b_05,85,337,Cominciarono a circolare voci sulla corruzione del governatore. Il procuratore federale minacciava di indagare su di lui. Il governatore si dimise dall'incarico.,PLAUS_NOCONN,dimise,SC1
+SR1b_06,86,342,Laura ha messo la torta in forno. Ha seguito la ricetta alla lettera. La torta si è bruciata in forno. ,IMPLAUS_NOCONN,bruciata,SC2
+SR1b_07,87,347,"A Claudia piace suonare la batteria nel suo appartamento. Il suono è molto fastidioso per i vicini. Tuttavia, si sono lamentati con il padrone di casa.",IMPLAUS_CONN,lamentati,SC3
+SR1b_08,88,352,Il ponte aveva soltanto un paio d'anni. La fondazione era ben salda. Gli ispettori statali lo hanno ritenuto poco sicuro per l'uso.,PLAUS_CONN,sicuro,SC4
+SR1b_09,89,353,L'esaminatore di guida è stato molto severo. Era contento che Bernardo non avesse commesso errori. Bernardo ha superato il test quel giorno.,PLAUS_NOCONN,superato,SC1
+SR1b_10,90,358,Gianna è una grande fan della musica classica. Ha comprato un biglietto economico per il concerto di venerdì. Ha un posto in platea vicino al palco.,IMPLAUS_NOCONN,platea,SC2
+SR1b_11,91,363,"L'auto della polizia era seduta lungo la strada. Il rilevatore ha detto che un'auto stava andando troppo forte. Tuttavia, il poliziotto ha fermato l'autista.",IMPLAUS_CONN,fermato,SC3
+SR1b_12,92,368,"Michela era nella sua adolescenza. Usava una crema idratante tutti i giorni. Tuttavia, la sua faccia era rugosa e secca.",PLAUS_CONN,rugosa,SC4
+SR1b_13,93,369,"Il bambino è stato messo a dormire nella sua culla. Ha continuato a piangere durante la notte. La mattina dopo, i suoi genitori erano esausti e irritabili.",PLAUS_NOCONN,esausti,SC1
+SR1b_14,94,374,La tempesta di pioggia aveva colpito l'isola. Gli argini sono stati in grado di contenere l'acqua. Le strade sono state allagate per giorni.,IMPLAUS_NOCONN,allagate,SC2
+SR1b_15,95,379,"Le previsioni del tempo hanno mostrato bel tempo per il fine settimana di vacanza. Molte persone hanno deciso partire per il mare. Tuttavia, le autostrade erano bloccate per chilometri.",IMPLAUS_CONN,bloccate,SC3
+SR1b_16,96,384,"I residenti della città costiera hanno ascoltato le notizie dell'uragano. La tempesta non sarebbe passata dalla loro città. Tuttavia, gli è stato consigliato di evacuare immediatamente.",PLAUS_CONN,evacuare,SC4
+SR1b_17,97,385,Clara stava andando troppo velocemente nella tempesta di ghiaccio. Ha perso il controllo del mezzo. L'auto si è schiantata contro un albero.,PLAUS_NOCONN,schiantata,SC1
+SR1b_18,98,390,L'uomo è rimasto fuori tutta la notte. Indossava un pigiama caldo. La mattina dopo aveva tosse e naso che cola.,IMPLAUS_NOCONN,tosse,SC2
+SR1b_19,99,395,"L'aereo era fermo sulla pista. Il volo ha continuato a subire ritardi. Tuttavia, i passeggeri iniziarono a brontolare rumorosamente.",IMPLAUS_CONN,brontolare,SC3
+SR1b_20,100,400,"L'anziana donna stava scendendo i gradini innevati. Giunse in fondo alla scala senza cadere. Tuttavia, dopo rimase in ospedale per un po' di tempo.",PLAUS_CONN,ospedale,SC4
+SR1b_21,101,401,Il sensitivo afferma di vedere il futuro. È stato utile a molte persone. I clienti sono rimasti soddisfatti delle sue predizioni.,PLAUS_NOCONN,soddisfatti,SC1
+SR1b_22,102,406,Daniele è andato in un pub con i suoi amici. Aveva smesso di bere. Ha ordinato un whisky e una bibita.,IMPLAUS_NOCONN,whisky,SC2
+SR1b_23,103,411,"L'autista aveva bevuto troppo quella notte. L'ufficiale di polizia ha somministrato un test dell'etilometro. Tuttavia, il livello di alcol nel sangue del conducente era superiore al limite legale.",IMPLAUS_CONN,superiore,SC3
+SR1b_24,104,416,"L'adolescente era andata a farsi tagliare i capelli. Non era il tipo da look appariscenti. Tuttavia, si fece fare una cresta mohawk al salone.",PLAUS_CONN,cresta,SC4
+SR1b_25,105,417,I ragazzi stavano litigando. Alla fine hanno iniziato a prendersi a pugni. Erano pieni di lividi il ??giorno successivo.,PLAUS_NOCONN,lividi,SC1
+SR1b_26,106,422,Francesco aveva fatto un pranzo abbondante. Arrivò a casa pieno e un po' assonnato. Decise di mangiare un panino in cucina.,IMPLAUS_NOCONN,panino,SC2
+SR1b_27,107,427,"Tutti i turisti adoravano l'organizzatore dei tour. Ha sempre avuto molti clienti. Tuttavia, i suoi profitti erano enormi ogni estate.",IMPLAUS_CONN,enormi,SC3
+SR1b_28,108,432,"Lo chef stava lavorando in cucina. Non stava nemmeno toccando i coltelli. Tuttavia, si è poi tagliato il dito.",PLAUS_CONN,tagliato,SC4
+SR1b_29,109,433,Il turista voleva tornare al suo albergo. Aveva dimenticato le indicazioni. Si era perso per la strada.,PLAUS_NOCONN,perso,SC1
+SR1b_30,110,438,Il Congresso aveva inviato il disegno di legge al Presidente per la sua approvazione. Venne ritenuta un'idea eccellente. Il Presidente respinse la misura.,IMPLAUS_NOCONN,respinse,SC2
+SR1b_31,111,443,"Giovanni ha fatto i provini per la compagnia di teatro comico. La sua esibizione ha fatto ridere a crepapelle gli altri studenti. Tuttavia, il regista gli ha chiesto di unirsi al gruppo.",IMPLAUS_CONN,unirsi,SC3
+SR1b_32,112,448,"Giovanni si era ubriacato alla festa. Dovette stendersi sul divano. Tuttavia, ha finito per accompagnare tutti a casa.",PLAUS_CONN,accompagnare,SC4
+SR1b_33,113,449,Il carismatico guerriero aveva rovesciato il re. Il vecchio re era molto impopolare tra i suoi sudditi. La gente esultava per le strade. ,PLAUS_NOCONN,esultava,SC1
+SR1b_34,114,454,L'edificio era stato evacuato per una minaccia di bomba. Ai dipendenti fu detto che si trattava di un falso allarme. Tutti erano spaventati dalla notizia.,IMPLAUS_NOCONN,spaventati,SC2
+SR1b_35,115,459,"Riccardo aveva osservato il digiuno per la festa. Doveva digiunare tutto il giorno. Tuttavia, era davvero affamato quando venne sera.",IMPLAUS_CONN,affamato,SC3
+SR1b_36,116,464,"La donna non aveva mai ballato prima del suo matrimonio. Non ha voluto prendere lezioni. Tuttavia, ha ballato come una professionista al ricevimento.",PLAUS_CONN,professionista,SC4
+SR1b_37,117,465,Miriam ha ordinato dei bicchieri da vino nuovi. Alcuni sono arrivati ??rotti. Li ha voluti restituire immediatamente.,PLAUS_NOCONN,restituire,SC1
+SR1b_38,118,470,Il bambino piangeva. La madre era troppo impegnata per pensare a lui. Il bambino si è calmato molto presto.,IMPLAUS_NOCONN,calmato,SC2
+SR1b_39,119,475,"Carolina ascoltava la radio. La tempesta della scorsa notte aveva lasciato diversi metri di neve. Tuttavia, le scuole erano chiuse quel giorno.",IMPLAUS_CONN,chiuso,SC3
+SR1b_40,120,480,"Giovanna era ottimista riguardo al suo caso. Il suo avvocato aveva prove che ne dimostravano l'innocenza. Tuttavia, è stata condannata dalla giuria.",PLAUS_CONN,condannata,SC4
+SR1b_41,121,481,Mario ha citato in giudizio il medico per negligenza. Alla fine ha vinto il risarcimento dei danni. È diventato ricco grazie al caso.,PLAUS_NOCONN,ricco,SC1
+SR1b_42,122,486,C'era stata un'irruzione in casa. Il ladro non ha lasciato tracce. La polizia lo ha identificato facilmente.,IMPLAUS_NOCONN,identificato,SC2
+SR1b_43,123,491,"L'adolescente stava facendo una presentazione. Era una persona molto impacciata. Tuttavia, durante la sessione delle domande era arrossito visibilmente.",IMPLAUS_CONN,arrossito,SC3
+SR1b_44,124,496,"Alice si stava allenando per la stagione calcistica. Lunedì si è fatta fare un massaggio per rilassarsi. Tuttavia, il giorno dopo era dolorante dappertutto.",PLAUS_CONN,dolorante,SC4
+SR1b_45,125,497,Era il primo giorno di primavera. Il giorno era bello e caldo. I bambini hanno passato la ricreazione in cortile quel giorno.,PLAUS_NOCONN,cortile,SC1
+SR1b_46,126,502,Giovanna aveva deciso di restituire le scarpe che aveva comprato l'anno prima. Erano consumate e lei aveva perso lo scontrino. Il negozio le ha rimborsato i soldi.,IMPLAUS_NOCONN,rimborsato,SC2
+SR1b_47,127,507,"L'edificio del condominio si trovava in un quartiere elegante dei quartieri alti. La polizia ha regolarmente pattugliato la zona. Tuttavia, i residenti si sentivano sicuri vivendo lì.",IMPLAUS_CONN,sicuri,SC3
+SR1b_48,128,512,"L'amministratore delegato aveva programmato un incontro con i direttori di filiale della California. Ha perso un volo con un giorno d'anticipo. Tuttavia, la riunione è stata annullata e riprogrammata.",PLAUS_CONN,annullata,SC4
+SR1b_49,129,513,"Per ottenere un lavoro come avvocato, Cristiano doveva superare l'esame di avvocato. Aveva appena fallito l'esame ad aprile. Cristiano era preoccupato per la sua carriera.",PLAUS_NOCONN,preoccupato,SC1
+SR1b_50,130,518,Gilda vive in una tranquilla campagna. La finestra della sua camera da letto si affaccia su una foresta. Di notte può sentire il traffico che passa.,IMPLAUS_NOCONN,traffico,SC2
+SR1b_51,131,523,"Il Senato stava discutendo il nuovo disegno di legge del Presidente. Alla maggior parte dei membri del Congresso non piaceva. Tuttavia, il disegno di legge è fallito venerdì.",IMPLAUS_CONN,fallito,SC3
+SR1b_52,132,528,"Le collane sono state realizzate nello stile celtico antico. Sono state prodotte in massa con la stessa tecnica. Tuttavia, ogni pezzo è unico e prezioso.",PLAUS_CONN,unico,SC4
+SR1b_53,133,529,Il dirigente restava sempre alzato fino a tardi a lavorare. Il suo medico lo aveva esortato a riposarsi di più. Decise di dormire di più ogni giorno.,PLAUS_NOCONN,dormire,SC1
+SR1b_54,134,534,Giovanni ha sempre faticato in matematica. Nella lezione di oggi il professore ha spiegato un nuovo concetto. Giovanni lo ha trovato semplice da capire.,IMPLAUS_NOCONN,semplice,SC2
+SR1b_55,135,539,"La senatrice si recò da sola in viaggio all'estero. Era in una zona pericolosa. Tuttavia, è stata poi rapita da due criminali.",IMPLAUS_CONN,rapita,SC3
+SR1b_56,136,544,"C'è stato un piccolo incendio nella cucina del ristorante. Il camion dei pompieri è arrivato subito. Tuttavia, la maggior parte degli avventori si sono ustionati mentre cercavano di scappare.",PLAUS_CONN,ustionati,SC4
+SR1b_57,137,545,Giovanna era andata al cinema per vedere il nuovo film. I biglietti erano esauriti trenta minuti prima. Si è sentita molto sfortunata ed è andata a casa.,PLAUS_NOCONN,sfortunata,SC1
+SR1b_58,138,550,Melinda e suo marito sono andati a cena al ristorante di pesce. Sono entrambi intolleranti ai molluschi. Melinda ha ordinato ostriche per cena.,IMPLAUS_NOCONN,ostriche,SC2
+SR1b_59,139,555,"Matteo aveva dimenticato che l'articolo doveva essere consegnato mercoledì. A quel punto l'aveva a malapena iniziato. Tuttavia, ha consegnato l'articolo in ritardo all'insegnante.",IMPLAUS_CONN,ritardo,SC3
+SR1b_60,140,560,"Kevin è un wrestler professionista. Mangia cinque pasti al giorno. Tuttavia, è davvero magro come una stecco.",PLAUS_CONN,magro,SC4
+SR1b_61,141,561,Licia odia il suo attuale lavoro. È stata assunta da un'altra società con uno stipendio molto più alto. Ha deciso di accettare la loro offerta.,PLAUS_NOCONN,accettare,SC1
+SR1b_62,142,566,Daniele ha indossato una camicia stropicciata per il colloquio. Ci aveva appena rovesciato del caffè sopra. Sembrava professionale durante il colloquio.,IMPLAUS_NOCONN,professionale,SC2
+SR1b_63,143,571,"Giacomo e altri cinque amici stavano viaggiando insieme. Affittarono un gigantesco furgone per il viaggio. Tuttavia, erano tutti molto comodi durante il viaggio.",IMPLAUS_CONN,comodi,SC3
+SR1b_64,144,576,"Anna ha grossi problemi economici. Ora deve fare attenzione al suo budget mensile. Tuttavia, ha comprato un regalo molto costoso per la sua amica.",PLAUS_CONN,costoso,SC4
+SR1b_65,145,577,Jessica aveva chiesto una bicicletta per Natale. I suoi genitori gliene hanno regalata una. Jessica era molto felice per il regalo.,PLAUS_NOCONN,felice,SC1
+SR1b_66,146,582,Donato ha dovuto farsi riattaccare un tendine da un chirurgo. Ci sono state alcune complicazioni fatali durante la procedura. L'operazione è stata un successo quel giorno.,IMPLAUS_NOCONN,successo,SC2
+SR1b_67,147,587,"Il sindaco era incredibilmente impopolare in città. Ha ricevuto molte lettere di denuncia. Tuttavia, era circondato dalle critiche tutto il tempo.",IMPLAUS_CONN,critiche,SC3
+SR1b_68,148,592,"Diana è caduta la prima volta che è andata a sciare. Ha giurato di non farlo mai più. Tuttavia, in questi giorni va sulle piste il più spesso possibile.",PLAUS_CONN,piste,SC4
+SR1b_69,149,593,Giovanna pulisce raramente la sua casa. Ha due bambini piccoli a casa. La sua cucina era in disordine tutto il tempo.,PLAUS_NOCONN,disordine,SC1
+SR1b_70,150,598,Il proprietario della casa si era appena trasferito. Tutti i vicini si mostravano amichevoli con lui. Ha chiamato i carabinieri perché venissero a controllare.,IMPLAUS_NOCONN,carabinieri,SC2
+SR1b_71,151,603,"Il tetto aveva avuto una falla in cucina. Il tuttofare è passato e l'ha riparato. Tuttavia, il gocciolamento è cessato molto presto.",IMPLAUS_CONN,cessato,SC3
+SR1b_72,152,608,"L'amico di Johnny lo ha invitato a un cocktail party. Johnny ha indossato un casco da football al raduno. Tuttavia, tutti pensavano che il suo look fosse appropriato per l'occasione.",PLAUS_CONN,appropriato,SC4
+SR1b_73,153,609,Luca è molto socievole. Gli piace uscire con molti amici. Ha passato ogni fine settimana a festeggiare da qualche parte.,PLAUS_NOCONN,festeggiare,SC1
+SR1b_74,154,614,Elena ha fatto una pulizia dentale dal dentista. Si sentiva molto meglio subito dopo. Il dottore le ha dato degli antidolorifici da prendere.,IMPLAUS_NOCONN,antidolorifici,SC2
+SR1b_75,155,619,"Cristiano stava andando a trovare la sua ragazza per San Valentino. Sapeva che amava i fiori. Tuttavia, aveva comprato delle rose per lei.",IMPLAUS_CONN,rose,SC3
+SR1b_76,156,624,"Luca non amava l'arte. La sua grande passione era lo sport. Tuttavia, ha trascorso la maggior parte del suo tempo in gallerie e musei d'arte.",PLAUS_CONN,gallerie,SC4
+SR1b_77,157,625,Carlo era sovrappeso. Il dottore ha raccomandato più esercizio. Ha iniziato a correre quasi tutti i giorni.,PLAUS_NOCONN,correre,SC1
+SR2a_01,1,2,Olivia aveva comprato un pastore tedesco. Il cane era docile e amichevole. Le ha morso la mano.,IMPLAUS_NOCONN,morso,SC2
+SR2a_02,2,7,"Claudio era tornato di corsa al ristorante. Aveva perso il portafoglio da qualche parte. Tuttavia, si è sentito incredibilmente teso tutto il giorno.",IMPLAUS_CONN,teso,SC3
+SR2a_03,3,12,"Carlotta ha spinto il carrello della spesa attraverso il parcheggio. Le uova erano state imballate in modo sicuro nella borsa. Tuttavia, si sono rotte nel loro cartone.",PLAUS_CONN,rotte,SC4
+SR2a_04,4,13,La giornata era stata alquanto nuvolosa. All'improvviso iniziò a piovere. Sheila tirò fuori l'ombrello dalla borsa.,PLAUS_NOCONN,ombrello,SC1
+SR2a_05,5,18,Guglielmo era a casa. Aveva dato da mangiare al gatto regolarmente. Il gatto era affamato alla fine della settimana.,IMPLAUS_NOCONN,affamato,SC2
+SR2a_06,6,23,"La donna cieca era stata operata. Il dottore era molto ottimista sui risultati. Tuttavia, la sua vista migliorò il giorno successivo.",IMPLAUS_CONN,migliorò,SC3
+SR2a_07,7,28,"Il cane correva in una strada trafficata. Fortunatamente, l'auto ha sterzato e lo ha mancato. Tuttavia, il cane si è ferito gravemente.",PLAUS_CONN,ferito,SC4
+SR2a_08,8,29,Elisabetta ha avuto un esame di storia lunedì. Ha fatto il test e l'ha superato. È tornata a casa e ha festeggiato tutta la sera.,PLAUS_NOCONN,festeggiato,SC1
+SR2a_09,9,34,La star di Broadway ha avuto un assolo nel musical. Ha cantato il pezzo molto male e stonando. Il pubblico ha applaudito molto energicamente.,IMPLAUS_NOCONN,applaudito,SC2
+SR2a_10,10,39,"Caterina ha avuto un esame martedì. Ha ricevuto un voto negativo. Tuttavia, era davvero frustrata per il risultato.",IMPLAUS_CONN,frustrata,SC3
+SR2a_11,11,44,"I funzionari della città sono stati portati in tribunale. Il giudice si è pronunciato in loro favore. Tuttavia, sono stati imprigionati immediatamente.",PLAUS_CONN,imprigionati,SC4
+SR2a_12,12,45,Silvia e Franco stavano giocando d'azzardo al casinò. Vinsero tutte le partite di blackjack. Erano entrambi felici quella notte.,PLAUS_NOCONN,felici,SC1
+SR2a_13,13,50,Alice è andata in campeggio durante le vacanze. Ha usato un ottimo repellente per le zanzare. Ha iniziato a sentire prurito dappertutto.,IMPLAUS_NOCONN,prurito,SC2
+SR2a_14,14,55,"Uno scout è venuto a vedere Paolo giocare a baseball. Ha lanciato molto bene. Tuttavia, è stato firmato dalla squadra.",IMPLAUS_CONN,firmato,SC3
+SR2a_15,15,60,"L'eremita viveva in una grotta. Si lavava in un fiume di montagna ogni giorno. Tuttavia, i suoi capelli sembravano sporchi e disordinati.",PLAUS_CONN,sporchi,SC4
+SR2a_16,16,61,Ottavia ha bisogno di una media del 27 per laurearsi. Si è resa conto che la sua media è abbastanza alta. Si diplomerà la prossima settimana con la sua classe.,PLAUS_NOCONN,settimana,SC1
+SR2a_17,17,66,Giacomo ha avuto un problema con il cibo. Non riusciva a smettere di mangiare. È diventato davvero magro dopo un po'.,IMPLAUS_NOCONN,magro,SC2
+SR2a_18,18,71,"Il ladro era goffo. Aveva fatto scattare l'allarme. Tuttavia, è stato catturato dalla guardia. ",IMPLAUS_CONN,catturato,SC3
+SR2a_19,19,76,"La compagnia telefonica aveva avuto successo quell'anno. Aveva guadagnato molti clienti. Tuttavia, i suoi profitti sono diminuiti poco dopo.",PLAUS_CONN,diminuiti,SC4
+SR2a_20,20,77,Gianni prendeva brutti voti e spesso si metteva nei guai a scuola. Sembrava depresso e non aveva amici. I suoi genitori erano preoccupati per lui.,PLAUS_NOCONN,preoccupati,SC1
+SR2a_21,21,82,I due paesi erano in guerra da anni. I leader respinsero la proposta di cessate il fuoco. Il conflitto finì poco dopo.,IMPLAUS_NOCONN,finì,SC2
+SR2a_22,22,87,"Il ristorante aveva ricevuto recensioni terribili. Era sempre vuoto. Tuttavia, a maggio aveva chiuso in via definitiva.",IMPLAUS_CONN,chiuso,SC3
+SR2a_23,23,92,"La famosa violinista era nervosa durante la performance. Fece molti errori mentre suonava. Tuttavia, tutti avevano esultato per lei.",PLAUS_CONN,esultato,SC4
+SR2a_24,24,93,La sarta stava appuntando l'abito di Tobia. Era sbrigativa e negligente con gli spilli. Tobia venne punto un paio di volte.,PLAUS_NOCONN,punto,SC1
+SR2a_25,25,98,Giuditta aveva un giardino nel cortile sul retro. Passava molto tempo a prendersene cura. Era pieno di erbacce e spazzatura.,IMPLAUS_NOCONN,erbacce,SC2
+SR2a_26,26,103,"La ginnasta era specializzata nella trave di equilibrio. Era inciampata durante la prima presa. Tuttavia, era rimasta delusa da sé stessa.",IMPLAUS_CONN,delusa,SC3
+SR2a_27,27,108,"L'azienda aveva assunto un nuovo dipendente. Era efficiente e responsabile. Tuttavia, le sue valutazioni sono state negative quel trimestre.",PLAUS_CONN,negative,SC4
+SR2a_28,28,109,Il bambino stava visitando il museo con i suoi genitori. Allungò una mano per toccare alcune delle opere d'arte. Dopo venne rimproverato dalla guardia del museo.,PLAUS_NOCONN,rimproverato,SC1
+SR2a_29,29,114,L'idea dell'ingegnere del software era stata implementata nel nuovo prodotto. L'idea non ebbe molto successo. L'ingegnere ottenne una promozione in azienda.,IMPLAUS_NOCONN,promozione,SC2
+SR2a_30,30,119,"Era il giorno della partita di calcio. Tommaso bevve un sacco di birra quella notte. Tuttavia, i svegliò con i postumi di una sbornia la mattina dopo. ",IMPLAUS_CONN,postumi,SC3
+SR2a_31,31,124,"Il governatore era stato assassinato. Per la sera del crimine la moglie aveva un alibi molto solido. Tuttavia, la donna venne arrestata immediatamente.",PLAUS_CONN,arrestata,SC4
+SR2a_32,32,125,Il taxi aveva portato il passeggero all'aeroporto. Il passeggero saltò fuori senza pagare. Il tassista era furioso con lui.,PLAUS_NOCONN,furioso,SC1
+SR2a_33,33,130,C'era un incontro di boxe nell'arena. Il pugno di un pugile mancò il viso del suo avversario. Dopo l'avversario cadde a terra. ,IMPLAUS_NOCONN,cadde,SC2
+SR2a_34,34,135,"Luigi è stato a casa da solo per un'intera settimana. Non ha ricevuto nessuna telefonata. Tuttavia, si sentiva davvero solo quella settimana.",IMPLAUS_CONN,solo,SC3
+SR2a_35,35,140,"Linda pensava di sapere dove fosse la sua carta di credito. Pensava fosse da qualche parte in camera da letto. Tuttavia, aveva deciso di cancellarla immediatamente.",PLAUS_CONN,cancellarla,SC4
+SR2a_36,36,141,Susanna era in partenza per una vacanza alle Bahamas più tardi quella settimana. Un grande uragano colpì le isole. Il viaggio fu annullato poco dopo.,PLAUS_NOCONN,annullato,SC1
+SR2a_37,37,146,"Dopo la tempesta, l'elettricità in città era stata riattivata. Le luci del ristorante si erano riaccese. I camerieri portavano le candele ai tavoli.",IMPLAUS_NOCONN,candele,SC2
+SR2a_38,38,151,"Alessandro voleva disperatamente andare ad Harvard. Aveva ricevuto una lettera di accettazione per posta. Tuttavia, iniziò subito a festeggiare con i suoi amici.",IMPLAUS_CONN,festeggiare,SC3
+SR2a_39,39,156,"La donna dovette salire venti rampe di scale. Era in perfetta forma e faceva spesso esercizio. Tuttavia, si sentì subito stanca dopo lo sforzo.",PLAUS_CONN,stanca,SC4
+SR2a_40,40,157,Sara ha avuto un esame di storia oggi. Era completamente impreparata alle domande. Si sentiva nel panico durante l'esame.,PLAUS_NOCONN,panico,SC1
+SR2a_41,41,162,Tamara guidava da vent'anni. Non aveva mai avuto incidenti. Era molto nervosa per strada.,IMPLAUS_NOCONN,nervosa,SC2
+SR2a_42,42,167,"Il sindacato era impegnato in trattative contrattuali. Le trattative fallirono e i dipendenti erano furiosi. Tuttavia, il giorno dopo decisero di picchettare per i loro diritti.",IMPLAUS_CONN,picchettare,SC3
+SR2a_43,43,172,"Il ragazzo aveva preso lo skilift fino in cima. Era troppo spaventato per scendere. Tuttavia, era molto fiero di sé stesso. ",PLAUS_CONN,orgoglioso,SC4
+SR2a_44,44,173,Maurizio ha lavorato in un ospedale. Si è rifiutato di indossare guanti di lattice. È stato contagiato da un paziente.,PLAUS_NOCONN,contagiato,SC1
+SR2a_45,45,178,Stefano ha fatto domanda per una scuola di legge. Aveva buoni voti e ottime raccomandazioni. La scuola ha rifiutato la sua domanda.,IMPLAUS_NOCONN,rifiutato,SC2
+SR2a_46,46,183,"Caterina stava preparando una limonata quel pomeriggio. Aveva aggiunto meno zucchero rispetto alla ricetta richiesta. Tuttavia, la limonata aveva un sapore troppo aspro per tutti.",IMPLAUS_CONN,aspro,SC3
+SR2a_47,47,188,"Gli amici di Tamara l'hanno portata al cinema. Era una commedia romantica. Tuttavia, Tamara rimase molto spaventata dal film.",PLAUS_CONN,spaventata,SC4
+SR2a_48,48,189,Donata era un'inquilina irresponsabile. Non era riuscita a pagare l'affitto. Il padrone di casa l'aveva sfrattata dall'edificio.,PLAUS_NOCONN,sfrattata,SC1
+SR2a_49,49,194,Il comico era brillante quella notte. Fece una performance eccezionale. Il pubblico lo fischiava senza sosta.,IMPLAUS_NOCONN,fischiava,SC2
+SR2a_50,50,199,"Il passeggero stava facendo i controlli di sicurezza all'aeroporto. Le guardie gli trovarono un'arma addosso. Tuttavia, il passeggero fu subito arrestato come terrorista.",IMPLAUS_CONN,arrestato,SC3
+SR2a_51,51,204,"Giulia era tornata dalla montagna con il raffreddore. Non volle prendere lo sciroppo per la tosse. Tuttavia, si sentì subito meglio poco dopo.",PLAUS_CONN,meglio,SC4
+SR2a_52,52,205,Il dipendente aveva lavorato per l'azienda per molti anni. È stato sorpreso a fare uso di droghe. È stato licenziato dalla società.,PLAUS_NOCONN,licenziato,SC1
+SR2a_53,53,210,Edoardo era un giovane cantante pop. La sua nuova canzone non aveva molti download. Era stata un successo alla radio.,IMPLAUS_NOCONN,successo,SC2
+SR2a_54,54,215,"L'uomo era sulla cinquantina. La sua pelle era rugosa e grigia. Tuttavia, si vide molto vecchio guardandosi allo specchio.",IMPLAUS_CONN,vecchio,SC3
+SR2a_55,55,220,"Marta voleva tingersi i capelli. Il parrucchiere fece un ottimo lavoro. Tuttavia, Marta era davvero scontenta del risultato.",PLAUS_CONN,scontenta,SC4
+SR2a_56,56,221,Alice stava tornando a casa dal lavoro di notte. Uno sconosciuto la stava seguendo. Si era sentita nervosa per tutto il tragitto.,PLAUS_NOCONN,nervosa,SC1
+SR2a_57,57,226,Andrea era diventato pigro. Aveva smesso di andare in palestra. Diventò davvero muscoloso quell'inverno.,IMPLAUS_NOCONN,muscoloso,SC2
+SR2a_58,58,231,"Alla squadra di casa mancava solo un punto in più per vincere. Il giocatore realizzò il tiro libero all'ultimo secondo. Tuttavia, la squadra di casa vinse quella partita.",IMPLAUS_CONN,vinse,SC3
+SR2a_59,59,236,"Il condannato a morte ha impugnato il verdetto. Non erano emerse altre prove nel caso. Tuttavia, è stato liberato dopo il procedimento.",PLAUS_CONN,liberato,SC4
+SR2a_60,60,237,Tommaso ha dormito profondamente la notte scorsa. Ha bevuto del caffè stamattina. Si sentiva sveglio e pieno di energie al lavoro.,PLAUS_NOCONN,sveglio,SC1
+SR2a_61,61,242,Maria aveva messo in valigia un cappotto invernale per il viaggio a Chicago. Le temperature erano meno rigide del previsto. Ha avuto freddo tutto il tempo.,IMPLAUS_NOCONN,freddo,SC2
+SR2a_62,62,247,"Molte persone nell'ufficio di Joanna avevano avuto l'influenza. Era un po' raffreddata dopo il lavoro martedì. Tuttavia, il giorno dopo si sentiva malissimo ed è rimasta a casa.",IMPLAUS_CONN,malissimo,SC3
+SR2a_63,63,252,"Corinna si sentiva assonnata se non beveva caffè la mattina. Non ne aveva bevuto quel giorno. Tuttavia, era molto agitata durante l'incontro.",PLAUS_CONN,agitata,SC4
+SR2a_64,64,253,Marco aveva perso il suo autobus. Era stato costretto ad andare al lavoro a piedi. Giunse in ritardo per l'incontro.,PLAUS_NOCONN,ritardo,SC1
+SR2a_65,65,258,Giovanni stava facendo domanda per un lavoro. Aveva diverse qualifiche importanti. Era ormai disoccupato da più di un anno.,IMPLAUS_NOCONN,disoccupato,SC2
+SR2a_66,66,263,"A Pietro piaceva il cibo spazzatura. Non amava mangiare sano. Tuttavia, mangiava spesso patatine a pranzo e cena.",IMPLAUS_CONN,patatine,SC3
+SR2a_67,67,268,"Alice era stata attenta al suo maglione di lana. Lo aveva lavato a secco. Tuttavia, il maglione si era ristretto dopo la lavata.",PLAUS_CONN,ristretto,SC4
+SR2a_68,68,269,Amanda è andata dal parrucchiere. I parrucchieri hanno fatto un ottimo lavoro. Era bellissima mentre lasciava il negozio.,PLAUS_NOCONN,bellissima,SC1
+SR2a_69,69,274,Maria stava organizzando un cocktail party. Era stata troppo occupata per pulire la casa prima della festa. La casa era magnifica durante la festa.,IMPLAUS_NOCONN,magnifica,SC2
+SR2a_70,70,279,"Giovanni ha inviato un articolo di ricerca a un giornale. I revisori hanno mandato recensioni molto positive. Tuttavia, l'articolo è stato accettato per la pubblicazione.",IMPLAUS_CONN,accettato,SC3
+SR2a_71,71,284,"Giovanni ha avuto delle vacanze davvero eccitanti. Ha visitato un sacco di posti fantastici coi suoi amici. Tuttavia, da inizio ferie si era annoiato ogni giorno.",PLAUS_CONN,annoiato,SC4
+SR2a_72,72,285,Giovanni si era fermato a prendere un caffè al bar. L'ha ordinato con zucchero e panna extra. Aveva un sapore molto dolce per lui.,PLAUS_NOCONN,dolce,SC1
+SR2a_73,73,290,L'uomo stava cercando di attraversare a nuoto l'ampio fiume. L'acqua era calma e poco profonda. L'uomo è annegato prima di riuscire ad attraversare.,IMPLAUS_NOCONN,annegato,SC2
+SR2a_74,74,295,"Susanna è andata a correre. Ha sudato parecchio. Tuttavia, ha fatto una doccia appena tornata a casa.",IMPLAUS_CONN,doccia,SC3
+SR2a_75,75,300,"Davide portava sempre rispetto ai suoi insegnanti. Si è sempre comportato benissimo in classe. Tuttavia, è stato sospeso per volere del preside.",PLAUS_CONN,sospeso,SC4
+SR2a_76,76,301,L'imputato si dichiarava innocente. La giuria ha deciso a suo favore. L'imputato fu liberato il giorno successivo.,PLAUS_NOCONN,liberato,SC1
+SR2a_77,77,306,Il mago stava eseguendo trucchi. Aveva sbagliato il numero del coniglio. Tutti rimasero incantati dalla performance.,IMPLAUS_NOCONN,incantati,SC2
+SR2a_78,78,311,"A Gianni è stato vietato di guardare film violenti. Ha guardato un film di sparatorie. Tuttavia, i suoi genitori gli hanno proibito la televisione.",IMPLAUS_CONN,proibito,SC3
+SR2a_79,79,316,"Giliana si abbronzava spesso. Aveva messo la crema solare in spiaggia. Tuttavia, si è presa una scottatura lunedì scorso.",PLAUS_CONN,scottatura,SC4
+SR2a_80,80,317,Il soldato era stato colpito al petto. Non c'era nessun medico nelle vicinanze. Il soldato era morto pochi minuti dopo.,PLAUS_NOCONN,morto,SC1
+SR2b_01,81,322,Angela ha chiamato suo padre sul cellulare. Il segnale era ottimo. La voce di suo padre era confusa e indistinta.,IMPLAUS_NOCONN,confusa,SC2
+SR2b_02,82,327,"La zona era controllata dalla mafia. Il proprietario del negozio si è rifiutato di pagarli. Tuttavia, il suo negozio è stato attaccato quella notte.",IMPLAUS_CONN,attaccato,SC3
+SR2b_03,83,332,"Fu scoperto che l'atleta non aveva mai assunto steroidi. I test mostrarono che era pulito. Tuttavia, il Comitato Olimpico lo ha bandito per 10 anni.",PLAUS_CONN,bandito,SC4
+SR2b_04,84,333,L'astronomo pensava di aver trovato un nuovo pianeta. L'analisi del computer ha mostrato che si sbagliava. Era molto abbattuto per questo.,PLAUS_NOCONN,abbattuto,SC1
+SR2b_05,85,338,Cominciarono a circolare voci sulla corruzione del governatore. Il procuratore federale dichiarò che risultava innocente dalle indagini. Il governatore si dimise dall'incarico.,IMPLAUS_NOCONN,dimise,SC2
+SR2b_06,86,343,"Laura ha messo la torta in forno. L'ha cotta per oltre mezz'ora. Tuttavia, la torta si è bruciata in forno.",IMPLAUS_CONN,bruciata,SC3
+SR2b_07,87,348,"A Claudia piace suonare la batteria nel suo appartamento. I vicini adorano sentirla suonare. Tuttavia, si sono lamentati con il padrone di casa.",PLAUS_CONN,lamentati,SC4
+SR2b_08,88,349,Il ponte aveva più di cento anni. La fondazione era stata recentemente danneggiata. Gli ispettori statali lo hanno ritenuto poco sicuro per l'uso.,PLAUS_NOCONN,sicuro,SC1
+SR2b_09,89,354,L'esaminatore di guida è stato molto severo. Aveva notato che Bernardo aveva commesso diversi errori. Bernardo ha superato il test quel giorno.,IMPLAUS_NOCONN,superato,SC2
+SR2b_10,90,359,"Gianna è una grande fan della musica classica. Ha comprato il biglietto più costoso per il concerto di venerdì. Tuttavia, ha un posto in platea vicino al palco.",IMPLAUS_CONN,platea,SC3
+SR2b_11,91,364,"L'auto della polizia era seduta lungo la strada. Il rilevatore ha detto che l'auto stava andando entro i limiti. Tuttavia, il poliziotto ha fermato l'autista.",PLAUS_CONN,fermato,SC4
+SR2b_12,92,365,Michela stava invecchiando. La sua crema antietà era inutile. La sua faccia era rugosa e secca.,PLAUS_NOCONN,rugosa,SC1
+SR2b_13,93,370,"Il bambino è stato messo a dormire nella sua culla. Aveva dormito tranquillamente tutta la notte. La mattina dopo, i suoi genitori erano esausti e irritabili.",IMPLAUS_NOCONN,esausti,SC2
+SR2b_14,94,375,"L'uragano aveva colpito l'isola. Gli argini si sono rotti con l'innalzamento del livello del mare. Tuttavia, le strade sono state allagate per giorni.",IMPLAUS_CONN,allagate,SC3
+SR2b_15,95,380,"Le previsioni del tempo hanno mostrato brutto tempo per il fine settimana di vacanza. Molte persone hanno deciso di restare a casa. Tuttavia, le autostrade erano bloccate per chilometri.",PLAUS_CONN,bloccate,SC4
+SR2b_16,96,381,I residenti della città costiera hanno ascoltato le notizie dell'uragano. La tempesta sarebbe giunta proprio sopra la loro città. Gli è stato consigliato di evacuare immediatamente.,PLAUS_NOCONN,evacuare,SC1
+SR2b_17,97,386,Clara stava andando piano nella tempesta di ghiaccio. Era concentrata sul mantenere il controllo del mezzo. L'auto si è schiantata contro un albero.,IMPLAUS_NOCONN,schiantata,SC2
+SR2b_18,98,391,"L'uomo è rimasto fuori tutta la notte. Ha preso un terribile raffreddore. Tuttavia, la mattina dopo aveva tosse e naso che cola.",IMPLAUS_CONN,tosse,SC3
+SR2b_19,99,396,"L'aereo iniziava a muoversi sulla pista. Il volo sarebbe stato il prossimo a partire. Tuttavia, i passeggeri iniziarono a brontolare rumorosamente.",PLAUS_CONN,brontolare,SC4
+SR2b_20,100,397,L'anziana donna stava scendendo i gradini innevati. Cadde e si ruppe l'anca. Dopo rimase in ospedale per un po' di tempo.,PLAUS_NOCONN,ospedale,SC1
+SR2b_21,101,402,Il sensitivo afferma di vedere il futuro. I giornali locali scrivono che si tratta di una truffa. I clienti sono rimasti soddisfatti delle sue predizioni.,IMPLAUS_NOCONN,soddisfatti,SC2
+SR2b_22,102,407,"Daniele è andato in un pub con i suoi amici. Aveva voglia di un drink. Tuttavia, ha ordinato un whisky e una bibita.",IMPLAUS_CONN,whisky,SC3
+SR2b_23,103,412,"L'autista non aveva bevuto quella notte. L'ufficiale di polizia ha somministrato un test dell'etilometro. Tuttavia, il livello di alcol nel sangue del conducente era superiore al limite legale.",PLAUS_CONN,superiore,SC4
+SR2b_24,104,413,L'adolescente era andata a farsi tagliare i capelli. Voleva qualcosa di aggressivo e alternativo. Si fece fare una cresta mohawk al salone.,PLAUS_NOCONN,cresta,SC1
+SR2b_25,105,418,I ragazzi stavano litigando. Alla fine sono riusciti a fare pace. Erano pieni di lividi il ??giorno successivo.,IMPLAUS_NOCONN,lividi,SC2
+SR2b_26,106,423,"Francesco aveva saltato colazione e pranzo. Arrivò a casa da scuola affamato. Tuttavia, decise di mangiare un panino in cucina.",IMPLAUS_CONN,panino,SC3
+SR2b_27,107,428,"Tutti i turisti evitavano l'organizzatore dei tour. Aveva sempre pochi clienti. Tuttavia, i suoi profitti erano enormi ogni estate.",PLAUS_CONN,enormi,SC4
+SR2b_28,108,429,Lo chef stava tagliando delle verdure. Stava facendo poca attenzione al coltello. Si è poi tagliato il dito.,PLAUS_NOCONN,tagliato,SC1
+SR2b_29,109,434,Il turista voleva tornare al suo albergo. Conosceva ormai la via a memoria. Si era perso per la strada.,IMPLAUS_NOCONN,perso,SC2
+SR2b_30,110,439,"Il Congresso aveva inviato il disegno di legge al Presidente per la sua approvazione. Venne ritenuta un'idea terribile. Tuttavia, il Presidente respinse la misura.",IMPLAUS_CONN,respinse,SC3
+SR2b_31,111,444,"Giovanni ha fatto i provini per la compagnia di teatro comico. Le sue battute erano fiacche e poco divertenti. Tuttavia, il regista gli ha chiesto di unirsi al gruppo.",PLAUS_CONN,unirsi,SC4
+SR2b_32,112,445,Giovanni non ha bevuto alla festa. Era l'unico sobrio tra i suoi amici. Ha finito per accompagnare tutti a casa.,PLAUS_NOCONN,accompagnare,SC1
+SR2b_33,113,450,I perfidi mercenari avevano rovesciato il re. Il vecchio re era molto popolare tra i suoi sudditi. La gente esultava per le strade.,IMPLAUS_NOCONN,esultava,SC2
+SR2b_34,114,455,"L'edificio era stato evacuato per una minaccia di bomba. Ai dipendenti fu detto che si trattava di una situazione grave. Tuttavia, tutti erano spaventati dalla notizia.",IMPLAUS_CONN,spaventati,SC3
+SR2b_35,115,460,"Riccardo era in vacanza per la festa nazionale. Aveva mangiato tutto il giorno. Tuttavia, era davvero affamato quando venne sera.",PLAUS_CONN,affamato,SC4
+SR2b_36,116,461,La donna non aveva mai ballato prima del suo matrimonio. Ha preso mesi di lezioni. Ha ballato come una professionista al ricevimento.,PLAUS_NOCONN,professionista,SC1
+SR2b_37,117,466,Miriam ha ordinato dei bicchieri da vino nuovi. Era contenta dell'acquisto del nuovo set. Li ha voluti restituire immediatamente.,IMPLAUS_NOCONN,restituire,SC2
+SR2b_38,118,471,"Il bambino piangeva. Sua madre venne e lo cullò dolcemente. Tuttavia, il bambino si è calmato molto presto. ",IMPLAUS_CONN,calmato,SC3
+SR2b_39,119,476,"Carolina ascoltava la radio. Dopo la tempesta della notte scorsa, era rimasta poca neve. Tuttavia, le scuole erano chiuse quel giorno.",PLAUS_CONN,chiuso,SC4
+SR2b_40,120,477,Giovanna era pessimista riguardo al suo caso. Il suo avvocato aveva pochissime prove che l'aiutassero. È stata condannata dalla giuria.,PLAUS_NOCONN,condannata,SC1
+SR2b_41,121,482,Mario ha citato in giudizio il medico per negligenza. Alla fine ha perso in tribunale. È diventato ricco grazie al caso.,IMPLAUS_NOCONN,ricco,SC2
+SR2b_42,122,487,"C'era stata un'irruzione in casa. Il ladro aveva lasciato molte impronte. Tuttavia, la polizia lo ha identificato facilmente.",IMPLAUS_CONN,identificato,SC3
+SR2b_43,123,492,"L'adolescente stava facendo una presentazione. Era una persona molto sicura di sé. Tuttavia, durante la sessione delle domande era arrossito visibilmente.",PLAUS_CONN,arrossito,SC4
+SR2b_44,124,493,Alice si sta allenando per la stagione calcistica. Lunedì si è davvero sovraccaricata con gli esercizi. Il giorno dopo era dolorante dappertutto.,PLAUS_NOCONN,dolorante,SC1
+SR2b_45,125,498,Pioveva da una settimana. La pioggia aveva reso il terreno molto fangoso. I bambini hanno passato la ricreazione in cortile quel giorno.,IMPLAUS_NOCONN,cortile,SC2
+SR2b_46,126,503,"Giovanna aveva deciso di restituire le scarpe che aveva appena comprato. Erano ancora nuove di zecca e lei aveva lo scontrino. Tuttavia, il negozio le ha rimborsato i soldi.",IMPLAUS_CONN,rimborsato,SC3
+SR2b_47,127,508,"L'edificio del condominio si trovava in un quartiere molto malfamato. La polizia di rado pattugliava la zona. Tuttavia, i residenti si sentivano sicuri vivendo lì.",PLAUS_CONN,sicuri,SC4
+SR2b_48,128,509,L'amministratore delegato aveva programmato un incontro con i direttori di filiale della California. Ha perso l'ultimo volo della giornata. La riunione è stata annullata e riprogrammata.,PLAUS_NOCONN,annullata,SC1
+SR2b_49,129,514,"Per ottenere un lavoro come avvocato, Cristiano doveva superare l'esame di avvocato. Aveva appena superato l'esame ad aprile. Cristiano era preoccupato per la sua carriera.",IMPLAUS_NOCONN,preoccupato,SC2
+SR2b_50,130,519,"Gilda vive nel cuore della città. La finestra della sua camera da letto si affaccia sulla strada. Tuttavia, di notte può sentire il traffico che passa.",IMPLAUS_CONN,traffico,SC3
+SR2b_51,131,524,"Il Senato stava discutendo il nuovo disegno di legge del Presidente. La maggior parte dei membri del Congresso lo approvavano. Tuttavia, il disegno di legge è fallito venerdì.",PLAUS_CONN,fallito,SC4
+SR2b_52,132,525,Le collane sono state realizzate da artisti provenienti da molti paesi diversi. Tutti hanno impresso il loro stile inconfondibile. Ogni pezzo è unico e prezioso.,PLAUS_NOCONN,unico,SC1
+SR2b_53,133,530,Il dirigente restava alla scrivania a lavorare. Il suo medico lo aveva esortato a fare più esercizio. Decise di dormire di più ogni giorno.,IMPLAUS_NOCONN,dormire,SC2
+SR2b_54,134,535,"Giovanni ha un talento naturale per la matematica. Nella lezione di oggi il professore ha spiegato un nuovo concetto. Tuttavia, Giovanni lo ha trovato semplice da capire.",IMPLAUS_CONN,semplice,SC3
+SR2b_55,135,540,"La senatrice si recò in viaggio con la sua guardia del corpo. Era in una zona sicura. Tuttavia, è stata poi rapita da due criminali.",PLAUS_CONN,rapita,SC4
+SR2b_56,136,541,C'è stato un pericoloso incendio nella cucina del ristorante. Il camion dei pompieri si è presentato troppo tardi. La maggior parte degli avventori si sono ustionati mentre cercavano di scappare.,PLAUS_NOCONN,ustionati,SC1
+SR2b_57,137,546,Giovanna era andata al cinema per vedere il nuovo film. Ha comprato l'ultimo biglietto disponibile. Si è sentita molto sfortunata ed è andata a casa.,IMPLAUS_NOCONN,sfortunata,SC2
+SR2b_58,138,551,"Melinda e suo marito sono andati a cena al ristorante di pesce. Adorano i molluschi. Tuttavia, Melinda ha ordinato ostriche per cena.",IMPLAUS_CONN,ostriche,SC3
+SR2b_59,139,556,"Matteo doveva consegnare l'articolo mercoledì. Aveva iniziato a scriverlo presto. Tuttavia, ha consegnato l'articolo in ritardo all'insegnante.",PLAUS_CONN,ritardo,SC4
+SR2b_60,140,557,Kevin è un modello professionista. È a dieta tutti i giorni. È davvero magro come una stecco.,PLAUS_NOCONN,magro,SC1
+SR2b_61,141,562,Licia adora il suo attuale lavoro. Ha ricevuto un'offerta più bassa da un'altra società. Ha deciso di accettare la loro offerta.,IMPLAUS_NOCONN,accettare,SC2
+SR2b_62,142,567,"Daniele ha indossato un vestito nuovo per il colloquio. Lo ha abbinato con una bella cravatta. Tuttavia, sembrava molto professionale durante il colloquio.",IMPLAUS_CONN,professionale,SC3
+SR2b_63,143,572,"Giacomo e altri cinque amici stavano viaggiando insieme. Affittarono una piccola auto per il viaggio. Tuttavia, erano tutti molto comodi durante il viaggio.",PLAUS_CONN,comodi,SC4
+SR2b_64,144,573,Anna ha appena avuto un grosso aumento di stipendio. Ora può permettersi quasi tutto ciò che vuole. Ha comprato un regalo molto costoso per la sua amica.,PLAUS_NOCONN,costoso,SC1
+SR2b_65,145,578,Jessica aveva chiesto una bicicletta per Natale. I suoi genitori invece le hanno regalato una bambola. Jessica era molto felice per il regalo.,IMPLAUS_NOCONN,felice,SC2
+SR2b_66,146,583,"Donato ha fatto rimuovere un neo da un chirurgo. È stata una procedura facile. Tuttavia, l'operazione è stata un successo quel giorno",IMPLAUS_CONN,successo,SC3
+SR2b_67,147,588,"Il sindaco era incredibilmente popolare in città. Ha ricevuto molte lettere di ringraziamento. Tuttavia, era circondato dalle critiche tutto il tempo.",PLAUS_CONN,critiche,SC4
+SR2b_68,148,589,Diana si è divertita tanto la prima volta che è andata a sciare. Si è innamorata di questo sport. In questi giorni va sulle piste il più spesso possibile.,PLAUS_NOCONN,piste,SC1
+SR2b_69,149,594,Giovanna pulisce la sua casa ogni giorno. Ha anche addetti alle pulizie che vengono regolarmente. La sua cucina era in disordine tutto il tempo.,IMPLAUS_NOCONN,disordine,SC2
+SR2b_70,150,599,"Il proprietario della casa si era appena trasferito. Ha visto delle persone sospette fuori dal suo garage. Tuttavia, ha chiamato i carabinieri perché venissero a controllare.",IMPLAUS_CONN,carabinieri,SC3
+SR2b_71,151,604,"Il tetto aveva avuto una falla in cucina. La pioggia si è fatta intensa durante la settimana. Tuttavia, il gocciolamento è cessato molto presto.",PLAUS_CONN,cessato,SC4
+SR2b_72,152,605,L'amico di Johnny lo ha invitato a una festa del Superbowl. Johnny ha indossato un casco da football. Tutti pensavano che il suo look fosse appropriato per l'occasione.,PLAUS_NOCONN,appropriato,SC1
+SR2b_73,153,610,Luca è poco socievole. Resta sempre a casa dopo il lavoro. Ha passato ogni fine settimana a festeggiare da qualche parte.,IMPLAUS_NOCONN,festeggiare,SC2
+SR2b_74,154,615,"Elena ha estratto i denti del giudizio dal dentista. La sua bocca era molto dolorante dopo. Tuttavia, il dottore le ha dato degli antidolorifici da prendere.",IMPLAUS_CONN,antidolorifici,SC3
+SR2b_75,155,620,"Cristiano stava andando a trovare la sua ragazza per San Valentino. Sapeva che era allergica ai fiori. Tuttavia, aveva comprato delle rose per lei.",PLAUS_CONN,rose,SC4
+SR2b_76,156,621,Luca era un pittore. Gli piaceva imparare dal lavoro di altre persone. Ha trascorso la maggior parte del suo tempo in gallerie e musei d'arte.,PLAUS_NOCONN,gallerie,SC1
+SR2b_77,157,626,Carlo aveva problemi al cuore. Il dottore ha raccomandato di limitare gli esercizi fisici intensi. Ha iniziato a correre quasi tutti i giorni.,IMPLAUS_NOCONN,correre,SC2
+SR3a_01,1,3,"Olivia aveva comprato un pastore tedesco. Il cane era imprevedibile e violento. Tuttavia, le ha morso la mano.",IMPLAUS_CONN,morso,SC3
+SR3a_02,2,8,"Claudio era tornato di corsa al ristorante. Grazie al cielo ha trovato il suo portafoglio sotto il tavolo. Tuttavia, si è sentito incredibilmente teso tutto il giorno.",PLAUS_CONN,teso,SC4
+SR3a_03,3,9,Carlotta ha spinto il carrello della spesa sopra le buche. Le uova sono state sballottate nella borsa. Si sono rotte nel loro cartone.,PLAUS_NOCONN,rotte,SC1
+SR3a_04,4,14,La giornata era stata alquanto nuvolosa. All'improvviso uscì il sole. Sheila tirò fuori l'ombrello dalla borsa.,IMPLAUS_NOCONN,ombrello,SC2
+SR3a_05,5,19,"Guglielmo era a casa. Si era completamente dimenticato di dare da mangiare al gatto. Tuttavia, il gatto era affamato alla fine della settimana.",IMPLAUS_CONN,affamato,SC3
+SR3a_06,6,24,"La donna cieca era stata operata. Il dottore era molto deluso dai risultati. Tuttavia, la sua vista migliorò il giorno successivo.",PLAUS_CONN,migliorò,SC4
+SR3a_07,7,25,Il cane correva in una strada trafficata. L'auto stava accelerando e lo ha investito. Il cane si è ferito gravemente.,PLAUS_NOCONN,ferito,SC1
+SR3a_08,8,30,Elisabetta ha avuto un esame di storia lunedì. Ha fatto il test e l'ha fallito. È tornata a casa e ha festeggiato tutta la sera.,IMPLAUS_NOCONN,festeggiato,SC2
+SR3a_09,9,35,"La star di Broadway ha avuto un assolo nel musical. Ha cantato il pezzo magnificamente. Tuttavia, il pubblico ha applaudito molto energicamente.",IMPLAUS_CONN,applaudito,SC3
+SR3a_10,10,40,"Caterina ha avuto un esame martedì. Ha ricevuto il voto più alto. Tuttavia, era davvero frustrata per il risultato.",PLAUS_CONN,frustrata,SC4
+SR3a_11,11,41,I funzionari della città sono stati portati in tribunale. Il giudice si è pronunciato contro di loro. Sono stati imprigionati immediatamente.,PLAUS_NOCONN,imprigionati,SC1
+SR3a_12,12,46,Silvia e Franco stavano giocando d'azzardo al casinò. Nessuno dei due vinse al blackjack. Erano entrambi felici quella notte.,IMPLAUS_NOCONN,felici,SC2
+SR3a_13,13,51,"Alice è andata in campeggio durante le vacanze. È stata morsa dalle zanzare. Tuttavia, ha iniziato a sentire prurito dappertutto.",IMPLAUS_CONN,prurito,SC3
+SR3a_14,14,56,"Uno scout è venuto a vedere Paolo giocare a baseball. Ha lanciato in modo pessimo. Tuttavia, è stato firmato dalla squadra.",PLAUS_CONN,firmato,SC4
+SR3a_15,15,57,L'eremita viveva in una grotta. Non faceva il bagno da mesi. I suoi capelli sembravano sporchi e disordinati.,PLAUS_NOCONN,sporchi,SC1
+SR3a_16,16,62,Ottavia ha bisogno di una media del 27 per laurearsi. Si è resa conto che la sua media è troppo bassa. Si diplomerà la prossima settimana con la sua classe.,IMPLAUS_NOCONN,settimana,SC2
+SR3a_17,17,67,"Giacomo ha avuto un problema con il cibo. Praticamente aveva smesso di mangiare. Tuttavia, è diventato davvero magro dopo un po'.",IMPLAUS_CONN,magro,SC3
+SR3a_18,18,72,"Il ladro era goffo. L'allarme non era scattato. Tuttavia, è stato catturato dalla guardia.",PLAUS_CONN,catturato,SC4
+SR3a_19,19,73,La compagnia telefonica aveva problemi finanziari quell'anno. Aveva perso molti clienti. I suoi profitti sono diminuiti poco dopo.,PLAUS_NOCONN,diminuiti,SC1
+SR3a_20,20,78,Gianni prendeva buoni voti e non dava mai problemi a scuola. Era sempre allegro e aveva molti amici. I suoi genitori erano preoccupati per lui.,IMPLAUS_NOCONN,preoccupati,SC2
+SR3a_21,21,83,"I due paesi erano in guerra da anni. I leader decisero di firmare la proposta di cessate il fuoco. Tuttavia, il conflitto finì poco dopo. ",IMPLAUS_CONN,finì,SC3
+SR3a_22,22,88,"Il ristorante aveva ricevuto recensioni ottime. Era sempre pieno. Tuttavia, a maggio aveva chiuso in via definitiva.",PLAUS_CONN,chiuso,SC4
+SR3a_23,23,89,La famosa violinista era sicura della sua performance. Ha interpretato il pezzo in modo eccezionale. Tutti avevano esultato per lei.,PLAUS_NOCONN,esultato,SC1
+SR3a_24,24,94,La sarta stava appuntando l'abito di Tobia. Era molto attenta con gli spilli. Tobia venne punto un paio di volte.,IMPLAUS_NOCONN,punto,SC2
+SR3a_25,25,99,"Giuditta aveva un giardino nel cortile sul retro. Non ha mai trascorso molto tempo a lavorare lì. Tuttavia, era pieno di erbacce e spazzatura.",IMPLAUS_CONN,erbacce,SC3
+SR3a_26,26,104,"La ginnasta era specializzata nella trave di equilibrio. Aveva eseguito il primo esercizio alla perfezione. Tuttavia, era rimasta delusa da sé stessa.",PLAUS_CONN,delusa,SC4
+SR3a_27,27,105,L'azienda aveva assunto un nuovo dipendente. Era pigro e lento. Le sue valutazioni sono state negative quel trimestre.,PLAUS_NOCONN,negative,SC1
+SR3a_28,28,110,Il bambino stava visitando il museo con i suoi genitori. Tenne una distanza rispettosa dalle opere d'arte. Dopo venne rimproverato dalla guardia del museo.,IMPLAUS_NOCONN,rimproverato,SC2
+SR3a_29,29,115,"L'idea dell'ingegnere del software era stata implementata nel nuovo prodotto. L'idea si rivelò molto popolare. Tuttavia, l'ingegnere ottenne una promozione in azienda.",IMPLAUS_CONN,promozione,SC3
+SR3a_30,30,120,"Era il giorno della partita di calcio. Tommaso bevve solo acqua quella notte. Tuttavia, si svegliò con i postumi di una sbornia la mattina dopo.",PLAUS_CONN,postumi,SC4
+SR3a_31,31,121,Il governatore era stato assassinato. La scena del crimine era coperta dalle impronte digitali della moglie. La donna venne arrestata immediatamente.,PLAUS_NOCONN,arrestata,SC1
+SR3a_32,32,126,Il taxi aveva portato il passeggero all'aeroporto. Il passeggero lasciò una mancia generosa. Il tassista era furioso con lui.,IMPLAUS_NOCONN,furioso,SC2
+SR3a_33,33,131,"C'era un incontro di boxe nell'arena. Il pugno di un pugile raggiunse il viso del suo avversario. Tuttavia, dopo l'avversario cadde a terra.",IMPLAUS_CONN,cadde,SC3
+SR3a_34,34,136,"Luigi aveva passato un'intera settimana con i suoi amici. Erano andati ogni sera a una festa. Tuttavia, si sentiva davvero solo quella settimana.",PLAUS_CONN,solo,SC4
+SR3a_35,35,137,Linda non riusciva a trovare la sua carta di credito. Era preoccupata che fosse stata rubata. Aveva deciso di cancellarla immediatamente.,PLAUS_NOCONN,cancellarla,SC1
+SR3a_36,36,142,Susanna era in partenza per una vacanza alle Bahamas più tardi quella settimana. Le previsioni del tempo erano perfette. Il viaggio fu annullato poco dopo.,IMPLAUS_NOCONN,annullato,SC2
+SR3a_37,37,147,"Durante la tempesta, l'elettricità in città era stata interrotta. Le luci del ristorante si erano spente. Tuttavia, i camerieri portavano le candele ai tavoli.",IMPLAUS_CONN,candele,SC3
+SR3a_38,38,152,"Alessandro voleva disperatamente andare ad Harvard. Aveva saputo per posta di non essere stato accettato. Tuttavia, iniziò subito a festeggiare con i suoi amici.",PLAUS_CONN,festeggiare,SC4
+SR3a_39,39,153,La donna dovette salire venti rampe di scale. Era fuori forma e sovrappeso. Si sentì subito stanca dopo lo sforzo.,PLAUS_NOCONN,stanca,SC1
+SR3a_40,40,158,Sara ha avuto un esame di storia oggi. Conosceva la risposta ad ogni singola domanda. Si sentiva nel panico durante l'esame.,IMPLAUS_NOCONN,panico,SC2
+SR3a_41,41,163,"Tamara stava prendendo lezioni di guida. Di recente aveva avuto un incidente. Tuttavia, era molto nervosa per strada.",IMPLAUS_CONN,nervosa,SC3
+SR3a_42,42,168,"Il sindacato era impegnato in trattative contrattuali. Le trattative ebbero successo e i dipendenti erano soddisfatti. Tuttavia, il giorno dopo decisero di picchettare per i loro diritti",PLAUS_CONN,picchettare,SC4
+SR3a_43,43,169,Il ragazzo aveva preso lo skilift fino in cima. Dopo aveva sciato fino in fondo. Era molto fiero di sé stesso. ,PLAUS_NOCONN,orgoglioso,SC1
+SR3a_44,44,174,Maurizio ha lavorato in un ospedale alla reception. Indossava sempre guanti di lattice. È stato contagiato da un paziente.,IMPLAUS_NOCONN,contagiato,SC2
+SR3a_45,45,179,"Stefano ha fatto domanda per una scuola di legge. Aveva voti bassi e raccomandazioni mediocri. Tuttavia, la scuola ha rifiutato la sua domanda.",IMPLAUS_CONN,rifiutato,SC3
+SR3a_46,46,184,"Caterina stava preparando una limonata quel pomeriggio. Aveva aggiunto più zucchero rispetto alla ricetta richiesta. Tuttavia, la limonata aveva un sapore troppo aspro per tutti.",PLAUS_CONN,aspro,SC4
+SR3a_47,47,185,Gli amici di Tamara l'hanno portata al cinema. Era un film dell'orrore. Tamara rimase molto spaventata dal film.,PLAUS_NOCONN,spaventata,SC1
+SR3a_48,48,190,Donata era l'inquilina ideale. Pagava l'affitto sempre puntualmente. Il padrone di casa l'aveva sfrattata dall'edificio. ,IMPLAUS_NOCONN,sfrattata,SC2
+SR3a_49,49,195,"Il comico era nervoso quella notte. Fece una performance pessima. Tuttavia, il pubblico lo fischiava senza sosta. ",IMPLAUS_CONN,fischiava,SC3
+SR3a_50,50,200,"Il passeggero stava facendo i controlli di sicurezza all'aeroporto. Le guardie non trovarono nulla di sospetto. Tuttavia, il passeggero fu subito arrestato come terrorista.",PLAUS_CONN,arrestato,SC4
+SR3a_51,51,201,Giulia era tornata dalla montagna con il raffreddore. Prese dello sciroppo per la tosse. Si sentì subito meglio poco dopo. ,PLAUS_NOCONN,meglio,SC1
+SR3a_52,52,206,Il dipendente aveva lavorato per l'azienda per molti anni. Aveva sempre fatto un buon lavoro. È stato licenziato dalla società.,IMPLAUS_NOCONN,licenziato,SC2
+SR3a_53,53,211,"Edoardo era un giovane cantante pop. Tutti scaricavano la sua nuova canzone. Tuttavia, era stata un successo alla radio.",IMPLAUS_CONN,successo,SC3
+SR3a_54,54,216,"L'uomo era sulla cinquantina. La sua pelle era liscia e luminosa. Tuttavia, si vide molto vecchio guardandosi allo specchio.",PLAUS_CONN,vecchio,SC4
+SR3a_55,55,217,Marta voleva tingersi i capelli. Il parrucchiere fece un lavoro terribile. Marta era davvero scontenta del risultato.,PLAUS_NOCONN,scontenta,SC1
+SR3a_56,56,222,Alice stava tornando a casa dal lavoro di notte. Il suo fidanzato era con lei. Si era sentita nervosa per tutto il tragitto.,IMPLAUS_NOCONN,nervosa,SC2
+SR3a_57,57,227,"Andrea voleva stare in salute. Aveva iniziato a sollevare pesi in palestra. Tuttavia, diventò davvero muscoloso quell'inverno.",IMPLAUS_CONN,muscoloso,SC3
+SR3a_58,58,232,"Alla squadra di casa mancava solo un punto in più per vincere. Il giocatore sbagliò il tiro libero all'ultimo secondo. Tuttavia, la squadra di casa vinse quella partita.",PLAUS_CONN,vinse,SC4
+SR3a_59,59,233,Il condannato a morte ha impugnato il verdetto. C'erano nuove prove del DNA che dimostravano la sua innocenza. È stato liberato dopo il procedimento.,PLAUS_NOCONN,liberato,SC1
+SR3a_60,60,238,Tommaso ha dormito per sole due ore la notte scorsa. Non ha avuto tempo per il caffè stamattina. Si sentiva sveglio e pieno di energie al lavoro.,IMPLAUS_NOCONN,sveglio,SC2
+SR3a_61,61,243,"Maria ha dimenticato di mettere in valigia un cappotto invernale per il viaggio a Chicago. Le temperature sono scese intorno allo zero. Tuttavia, ha avuto freddo tutto il tempo.",IMPLAUS_CONN,freddo,SC3
+SR3a_62,62,248,"Tutti nell'ufficio di Giovanna avevano finalmente superato l'influenza. Giovanna non era più raffreddata dopo il lavoro martedì. Tuttavia, il giorno dopo si sentiva malissimo ed è rimasta a casa.",PLAUS_CONN,malissimo,SC4
+SR3a_63,63,249,Tutto quel caffè diede a Corinna la tachicardia. Ne aveva bevuto troppo quella mattina. Era molto agitata durante l'incontro.,PLAUS_NOCONN,agitata,SC1
+SR3a_64,64,254,Marco si era alzato presto. Voleva essere sicuro di non perdere il bus. Giunse in ritardo per l'incontro.,IMPLAUS_NOCONN,ritardo,SC2
+SR3a_65,65,259,"Giovanni stava facendo domanda per un lavoro. Non era qualificato per nessuna posizione. Tuttavia, era ormai disoccupato da più di un anno.",IMPLAUS_CONN,disoccupato,SC3
+SR3a_66,66,264,Pietro era di nuovo a dieta. Era ossessionato dal mangiare sano. Mangiava spesso patatine a pranzo e cena.,PLAUS_CONN,patatine,SC4
+SR3a_67,67,265,Alice era stata negligente con il suo maglione di lana. Lo aveva lavato in acqua calda in lavatrice. Il maglione si era ristretto dopo la lavata.,PLAUS_NOCONN,ristretto,SC1
+SR3a_68,68,270,Amanda è andata dal parrucchiere. I parrucchieri hanno fatto un pessimo lavoro. Era bellissima lasciando il negozio.,IMPLAUS_NOCONN,bellissima,SC2
+SR3a_69,69,275,"Maria stava organizzando un cocktail party. Aveva pulito e lucidato la casa tutto il giorno. Tuttavia, la casa era magnifica durante la festa.",IMPLAUS_CONN,magnifica,SC3
+SR3a_70,70,280,"Giovanni ha inviato un articolo di ricerca a un giornale. I revisori hanno mandato recensioni molto negative. Tuttavia, l'articolo è stato accettato per la pubblicazione. ",PLAUS_CONN,accettato,SC4
+SR3a_71,71,281,Giovanni ha avuto una vacanza molto poco emozionante. Era rimasto a casa con i suoi genitori per un'intera settimana. Da inizio ferie si era annoiato ogni giorno.,PLAUS_NOCONN,annoiato,SC1
+SR3a_72,72,286,Giovanni si era fermato a prendere un caffè al bar. L'ha ordinato nero e senza zucchero. Aveva un sapore molto dolce per lui.,IMPLAUS_NOCONN,dolce,SC2
+SR3a_73,73,291,"L'uomo stava cercando di attraversare a nuoto l'ampio fiume. L'acqua era profonda e agitata. Tuttavia, l'uomo è annegato prima di riuscire ad attraversare.",IMPLAUS_CONN,annegato,SC3
+SR3a_74,74,296,"Susanna è andata alla spa. Si sentiva fresca e pulita. Tuttavia, ha fatto una doccia appena tornata a casa.",PLAUS_CONN,doccia,SC4
+SR3a_75,75,297,A Davide piaceva mettersi in mostra per i suoi amici. Era rumoroso e scortese con l'insegnante. È stato sospeso per volere del preside.,PLAUS_NOCONN,sospeso,SC1
+SR3a_76,76,302,L'imputato si dichiarava innocente. La giuria decise che era colpevole. L'imputato fu liberato il giorno successivo.,IMPLAUS_NOCONN,liberato,SC2
+SR3a_77,77,307,"Il mago stava eseguendo trucchi. Fece sparire un coniglio. Tuttavia, tutti rimasero incantati dalla performance.",IMPLAUS_CONN,incantati,SC3
+SR3a_78,78,312,"A Gianni è stato vietato di guardare film violenti. Ha guardato un film di sparatorie. Tuttavia, i suoi genitori gli hanno proibito la televisione.",PLAUS_CONN,proibito,SC4
+SR3a_79,79,313,Giliana aveva la pelle molto chiara. Aveva dimenticato la crema solare in spiaggia. Si è presa una scottatura lunedì scorso.,PLAUS_NOCONN,scottatura,SC1
+SR3a_80,80,318,Il soldato aveva ricevuto un colpo di striscio. Fu subito mandato da un medico esperto. Il soldato era morto pochi minuti dopo.,IMPLAUS_NOCONN,morto,SC2
+SR3b_01,81,323,"Angela ha chiamato suo padre sul cellulare. Il segnale era pessimo. Tuttavia, la voce di suo padre era confusa e indistinta.",IMPLAUS_CONN,confusa,SC3
+SR3b_02,82,328,"La zona era controllata dalla mafia. Il proprietario del negozio aveva sempre pagato il pizzo. Tuttavia, il suo negozio è stato attaccato quella notte.",PLAUS_CONN,attaccato,SC4
+SR3b_03,83,329,Fu scoperto che l'atleta assumeva steroidi. Aveva una storia di abuso di droghe. Il Comitato Olimpico lo ha bandito per 10 anni.,PLAUS_NOCONN,bandito,SC1
+SR3b_04,84,334,L'astronomo pensava di aver trovato un nuovo pianeta. L'analisi del computer aveva confermato la sua ipotesi. Era molto abbattuto per questo.,IMPLAUS_NOCONN,abbattuto,SC2
+SR3b_05,85,339,"Cominciarono a circolare voci sulla corruzione del governatore. Il procuratore federale minacciava di indagare su di lui. Tuttavia, il governatore si dimise dall'incarico.",IMPLAUS_CONN,dimise,SC3
+SR3b_06,86,344,"Laura ha messo la torta in forno. Ha seguito la ricetta alla lettera. Tuttavia, la torta si è bruciata in forno.",PLAUS_CONN,bruciata,SC4
+SR3b_07,87,345,A Claudia piace suonare la batteria nel suo appartamento. Il suono è molto fastidioso per i vicini. Si sono lamentati con il padrone di casa.,PLAUS_NOCONN,lamentati,SC1
+SR3b_08,88,350,Il ponte aveva soltanto un paio d'anni. La fondazione era ben salda. Gli ispettori statali lo hanno ritenuto poco sicuro per l'uso.,IMPLAUS_NOCONN,sicuro,SC2
+SR3b_09,89,355,"L'esaminatore di guida è stato molto severo. Era contento che Bernardo non avesse commesso errori. Tuttavia, Bernardo ha superato il test quel giorno. ",IMPLAUS_CONN,superato,SC3
+SR3b_10,90,360,"Gianna è una grande fan della musica classica. Ha comprato un biglietto economico per il concerto di venerdì. Tuttavia, ha un posto in platea vicino al palco.",PLAUS_CONN,platea,SC4
+SR3b_11,91,361,L'auto della polizia era seduta lungo la strada. Il rilevatore ha detto che un'auto stava andando troppo forte. Il poliziotto ha fermato l'autista.,PLAUS_NOCONN,fermato,SC1
+SR3b_12,92,366,Michela era nella sua adolescenza. Usava una crema idratante tutti i giorni. La sua faccia era rugosa e secca.,IMPLAUS_NOCONN,rugosa,SC2
+SR3b_13,93,371,"Il bambino è stato messo a dormire nella sua culla. Ha continuato a piangere durante la notte. Tuttavia, la mattina dopo, i suoi genitori erano esausti e irritabili. ",IMPLAUS_CONN,esausti,SC3
+SR3b_14,94,376,"La tempesta di pioggia aveva colpito l'isola. Gli argini sono stati in grado di contenere l'acqua. Tuttavia, le strade sono state allagate per giorni.",PLAUS_CONN,allagate,SC4
+SR3b_15,95,377,Le previsioni del tempo hanno mostrato bel tempo per il fine settimana di vacanza. Molte persone hanno deciso partire per il mare. Le autostrade erano bloccate per chilometri.,PLAUS_NOCONN,bloccate,SC1
+SR3b_16,96,382,I residenti della città costiera hanno ascoltato le notizie dell'uragano. La tempesta non sarebbe passata dalla loro città. Gli è stato consigliato di evacuare immediatamente.,IMPLAUS_NOCONN,evacuare,SC2
+SR3b_17,97,387,"Clara stava andando troppo velocemente nella tempesta di ghiaccio. Ha perso il controllo del mezzo. Tuttavia, l'auto si è schiantata contro un albero.",IMPLAUS_CONN,schiantata,SC3
+SR3b_18,98,392,"L'uomo è rimasto fuori tutta la notte. Indossava un pigiama caldo. Tuttavia, la mattina dopo aveva tosse e naso che cola.",PLAUS_CONN,tosse,SC4
+SR3b_19,99,393,L'aereo era fermo sulla pista. Il volo ha continuato a subire ritardi. I passeggeri iniziarono a brontolare rumorosamente.,PLAUS_NOCONN,brontolare,SC1
+SR3b_20,100,398,L'anziana donna stava scendendo i gradini innevati. Giunse in fondo alla scala senza cadere. Dopo rimase in ospedale per un po' di tempo.,IMPLAUS_NOCONN,ospedale,SC2
+SR3b_21,101,403,"Il sensitivo afferma di vedere il futuro. È stato utile a molte persone. Tuttavia, i clienti sono rimasti soddisfatti delle sue predizioni.",IMPLAUS_CONN,soddisfatti,SC3
+SR3b_22,102,408,"Daniele è andato in un pub con i suoi amici. Aveva smesso di bere. Tuttavia, ha ordinato un whisky e una bibita.",PLAUS_CONN,whisky,SC4
+SR3b_23,103,409,L'autista aveva bevuto troppo quella notte. L'ufficiale di polizia ha somministrato un test dell'etilometro. Il livello di alcol nel sangue del conducente era superiore al limite legale.,PLAUS_NOCONN,superiore,SC1
+SR3b_24,104,414,L'adolescente era andata a farsi tagliare i capelli. Non era il tipo da look appariscenti. Si fece fare una cresta mohawk al salone.,IMPLAUS_NOCONN,cresta,SC2
+SR3b_25,105,419,"I ragazzi stavano litigando. Alla fine hanno iniziato a prendersi a pugni. Tuttavia, erano pieni di lividi il ??giorno successivo.",IMPLAUS_CONN,lividi,SC3
+SR3b_26,106,424,"Francesco aveva fatto un pranzo abbondante. Arrivò a casa pieno e un po' assonnato. Tuttavia, decise di mangiare un panino in cucina.",PLAUS_CONN,panino,SC4
+SR3b_27,107,425,Tutti i turisti adoravano l'organizzatore dei tour. Ha sempre avuto molti clienti. I suoi profitti erano enormi ogni estate.,PLAUS_NOCONN,enormi,SC1
+SR3b_28,108,430,Lo chef stava lavorando in cucina. Non stava nemmeno toccando i coltelli. Si è poi tagliato il dito.,IMPLAUS_NOCONN,tagliato,SC2
+SR3b_29,109,435,"Il turista voleva tornare al suo albergo. Aveva dimenticato le indicazioni. Tuttavia, si era perso per la strada.",IMPLAUS_CONN,perso,SC3
+SR3b_30,110,440,"Il Congresso aveva inviato il disegno di legge al Presidente per la sua approvazione. Venne ritenuta un'idea eccellente. Tuttavia, il Presidente respinse la misura.",PLAUS_CONN,respinse,SC4
+SR3b_31,111,441,Giovanni ha fatto i provini per la compagnia di teatro comico. La sua esibizione ha fatto ridere a crepapelle gli altri studenti. Il regista gli ha chiesto di unirsi al gruppo.,PLAUS_NOCONN,unirsi,SC1
+SR3b_32,112,446,Giovanni si era ubriacato alla festa. Dovette stendersi sul divano. Ha finito per accompagnare tutti a casa.,IMPLAUS_NOCONN,accompagnare,SC2
+SR3b_33,113,451,"Il carismatico guerriero aveva rovesciato il re. Il vecchio re era stato molto impopolare tra i suoi sudditi. Tuttavia, la gente esultava per le strade.",IMPLAUS_CONN,esultava,SC3
+SR3b_34,114,456,"L'edificio era stato evacuato per una minaccia di bomba. Ai dipendenti fu detto che si trattava di un falso allarme. Tuttavia, tutti erano spaventati dalla notizia.",PLAUS_CONN,spaventati,SC4
+SR3b_35,115,457,Riccardo aveva osservato il digiuno per la festa. Doveva digiunare tutto il giorno. Era davvero affamato quando venne sera.,PLAUS_NOCONN,affamato,SC1
+SR3b_36,116,462,La donna non aveva mai ballato prima del suo matrimonio. Non ha voluto prendere lezioni. Ha ballato come una professionista al ricevimento.,IMPLAUS_NOCONN,professionista,SC2
+SR3b_37,117,467,"Miriam ha ordinato dei bicchieri da vino nuovi. Alcuni sono arrivati ??rotti. Tuttavia, li ha voluti restituire immediatamente.",IMPLAUS_CONN,restituire,SC3
+SR3b_38,118,472,"Il bambino piangeva. La madre era troppo impegnata per pensare a lui. Tuttavia, il bambino si è calmato molto presto.",PLAUS_CONN,calmato,SC4
+SR3b_39,119,473,Carolina ascoltava la radio. La tempesta della scorsa notte aveva lasciato diversi metri di neve. Le scuole erano chiuse quel giorno.,PLAUS_NOCONN,chiuso,SC1
+SR3b_40,120,478,Giovanna era ottimista riguardo al suo caso. Il suo avvocato aveva prove che ne dimostravano l'innocenza. È stata condannata dalla giuria.,IMPLAUS_NOCONN,condannata,SC2
+SR3b_41,121,483,"Mario ha citato in giudizio il medico per negligenza. Alla fine ha vinto il risarcimento dei danni. Tuttavia, è diventato ricco grazie al caso.",IMPLAUS_CONN,ricco,SC3
+SR3b_42,122,488,"C'era stata un'irruzione in casa. Il ladro non ha lasciato tracce. Tuttavia, la polizia lo ha identificato facilmente.",PLAUS_CONN,identificato,SC4
+SR3b_43,123,489,L'adolescente stava facendo una presentazione. Era una persona molto impacciata. Durante la sessione delle domande era arrossito visibilmente.,PLAUS_NOCONN,arrossito,SC1
+SR3b_44,124,494,Alice si stava allenando per la stagione calcistica. Lunedì si è fatta fare un massaggio per rilassarsi. Il giorno dopo era dolorante dappertutto.,IMPLAUS_NOCONN,dolorante,SC2
+SR3b_45,125,499,"Era il primo giorno di primavera. Il giorno era bello e caldo. Tuttavia, i bambini hanno passato la ricreazione in cortile quel giorno.",IMPLAUS_CONN,cortile,SC3
+SR3b_46,126,504,"Giovanna aveva deciso di restituire le scarpe che aveva comprato l'anno prima. Erano consumate e lei aveva perso lo scontrino. Tuttavia, il negozio le ha rimborsato i soldi.",PLAUS_CONN,rimborsato,SC4
+SR3b_47,127,505,L'edificio del condominio si trovava in un quartiere elegante dei quartieri alti. La polizia ha regolarmente pattugliato la zona. I residenti si sentivano sicuri vivendo lì.,PLAUS_NOCONN,sicuri,SC1
+SR3b_48,128,510,L'amministratore delegato aveva programmato un incontro con i direttori di filiale della California. Ha preso un volo con un giorno d'anticipo. La riunione è stata annullata e riprogrammata.,IMPLAUS_NOCONN,annullata,SC2
+SR3b_49,129,515,"Per ottenere un lavoro come avvocato, Cristiano doveva superare l'esame di avvocato. Aveva appena fallito l'esame ad aprile. Tuttavia, Cristiano era preoccupato per la sua carriera.",IMPLAUS_CONN,preoccupato,SC3
+SR3b_50,130,520,"Gilda vive in una tranquilla campagna. La finestra della sua camera da letto si affaccia su una foresta. Tuttavia, di notte può sentire il traffico che passa.",PLAUS_CONN,traffico,SC4
+SR3b_51,131,521,Il Senato stava discutendo il nuovo disegno di legge del Presidente. Alla maggior parte dei membri del Congresso non piaceva. Il disegno di legge è fallito venerdì.,PLAUS_NOCONN,fallito,SC1
+SR3b_52,132,526,Le collane sono state realizzate nello stile celtico antico. Sono state prodotte in massa con la stessa tecnica. Ogni pezzo è unico e prezioso.,IMPLAUS_NOCONN,unico,SC2
+SR3b_53,133,531,"Il dirigente restava sempre alzato fino a tardi a lavorare. Il suo medico lo aveva esortato a riposarsi di più. Tuttavia, decise di dormire di più ogni giorno.",IMPLAUS_CONN,dormire,SC3
+SR3b_54,134,536,"Giovanni ha sempre faticato in matematica. Nella lezione di oggi il professore ha spiegato un nuovo concetto. Tuttavia, Giovanni lo ha trovato semplice da capire.",PLAUS_CONN,semplice,SC4
+SR3b_55,135,537,La senatrice si recò da sola in viaggio all'estero. Era in una zona pericolosa. È stata poi rapita da due criminali.,PLAUS_NOCONN,rapita,SC1
+SR3b_56,136,542,C'è stato un piccolo incendio nella cucina del ristorante. Il camion dei pompieri è arrivato subito. La maggior parte degli avventori si sono ustionati mentre cercavano di scappare.,IMPLAUS_NOCONN,ustionati,SC2
+SR3b_57,137,547,"Giovanna era andata al cinema per vedere il nuovo film. I biglietti erano esauriti trenta minuti prima. Tuttavia, si è sentita molto sfortunata ed è andata a casa.",IMPLAUS_CONN,sfortunata,SC3
+SR3b_58,138,552,"Melinda e suo marito sono andati a cena al ristorante di pesce. Sono entrambi intolleranti ai molluschi. Tuttavia, Melinda ha ordinato ostriche per cena.",PLAUS_CONN,ostriche,SC4
+SR3b_59,139,553,Matteo aveva dimenticato che l'articolo doveva essere consegnato mercoledì. A quel punto l'aveva a malapena iniziato. Ha consegnato l'articolo in ritardo all'insegnante.,PLAUS_NOCONN,ritardo,SC1
+SR3b_60,140,558,Kevin è un wrestler professionista. Mangia cinque pasti al giorno. È davvero magro come una stecco.,IMPLAUS_NOCONN,magro,SC2
+SR3b_61,141,563,"Licia odia il suo attuale lavoro. È stata assunta da un'altra società con uno stipendio molto più alto. Tuttavia, ha deciso di accettare la loro offerta.",IMPLAUS_CONN,accettare,SC3
+SR3b_62,142,568,"Daniele ha indossato una camicia stropicciata per il colloquio. Ci aveva appena rovesciato del caffè sopra. Tuttavia, sembrava professionale durante il colloquio.",PLAUS_CONN,professionale,SC4
+SR3b_63,143,569,Giacomo e altri cinque amici stavano viaggiando insieme. Affittarono un gigantesco furgone per il viaggio. Erano tutti molto comodi durante il viaggio.,PLAUS_NOCONN,comodi,SC1
+SR3b_64,144,574,Anna ha grossi problemi economici. Ora deve fare attenzione al suo budget mensile. Ha comprato un regalo molto costoso per la sua amica.,IMPLAUS_NOCONN,costoso,SC2
+SR3b_65,145,579,"Jessica aveva chiesto una bicicletta per Natale. I suoi genitori gliene hanno regalata una. Tuttavia, Jessica era molto felice per il regalo.",IMPLAUS_CONN,felice,SC3
+SR3b_66,146,584,"Donato ha dovuto farsi riattaccare un tendine da un chirurgo. Ci sono state alcune complicazioni fatali durante la procedura. Tuttavia, l'operazione è stata un successo. quel giorno.",PLAUS_CONN,successo,SC4
+SR3b_67,147,585,Il sindaco era incredibilmente impopolare in città. Ha ricevuto molte lettere di denuncia. Era circondato dalle critiche tutto il tempo.,PLAUS_NOCONN,critiche,SC1
+SR3b_68,148,590,Diana è caduta la prima volta che è andata a sciare. Ha giurato di non farlo mai più. In questi giorni va sulle piste il più spesso possibile.,IMPLAUS_NOCONN,piste,SC2
+SR3b_69,149,595,"Giovanna pulisce raramente la sua casa. Ha due bambini piccoli a casa. Tuttavia, la sua cucina era in disordine tutto il tempo.",IMPLAUS_CONN,disordine,SC3
+SR3b_70,150,600,"Il proprietario della casa si era appena trasferito. Tutti i vicini si mostravano amichevoli con lui. Tuttavia, ha chiamato i carabinieri perché venissero a controllare.",PLAUS_CONN,carabinieri,SC4
+SR3b_71,151,601,Il tetto aveva avuto una falla in cucina. Il tuttofare è passato e l'ha riparato. Il gocciolamento è cessato molto presto.,PLAUS_NOCONN,cessato,SC1
+SR3b_72,152,606,L'amico di Johnny lo ha invitato a un cocktail party. Johnny ha indossato un casco da football al raduno. Tutti pensavano che il suo look fosse appropriato per l'occasione.,IMPLAUS_NOCONN,appropriato,SC2
+SR3b_73,153,611,"Luca è molto socievole. Gli piace uscire con molti amici. Tuttavia, ha passato ogni fine settimana a festeggiare da qualche parte.",IMPLAUS_CONN,festeggiare,SC3
+SR3b_74,154,616,"Elena ha fatto una pulizia dentale dal dentista. Si sentiva molto meglio subito dopo. Tuttavia, il dottore le ha dato degli antidolorifici da prendere.",PLAUS_CONN,antidolorifici,SC4
+SR3b_75,155,617,Cristiano stava andando a trovare la sua ragazza per San Valentino. Sapeva che amava i fiori. Aveva comprato delle rose per lei.,PLAUS_NOCONN,rose,SC1
+SR3b_76,156,622,Luca non amava l'arte. La sua grande passione era lo sport. Ha trascorso la maggior parte del suo tempo in gallerie e musei d'arte.,IMPLAUS_NOCONN,gallerie,SC2
+SR3b_77,157,627,"Carlo era sovrappeso. Il dottore ha raccomandato più esercizio. Tuttavia, ha iniziato a correre quasi tutti i giorni.",IMPLAUS_CONN,correre,SC3
+SR4a_01,1,4,"Olivia aveva comprato un pastore tedesco. Il cane era docile e amichevole. Tuttavia, le ha morso la mano.",PLAUS_CONN,morso,SC4
+SR4a_02,2,5,Claudio era tornato di corsa al ristorante. Aveva perso il portafoglio da qualche parte. Si è sentito incredibilmente teso tutto il giorno.,PLAUS_NOCONN,teso,SC1
+SR4a_03,3,10,Carlotta ha spinto il carrello della spesa attraverso il parcheggio. Le uova erano state imballate in modo sicuro nella borsa. Si sono rotte nel loro cartone.,IMPLAUS_NOCONN,rotte,SC2
+SR4a_04,4,15,"La giornata era stata alquanto nuvolosa. All'improvviso iniziò a piovere. Tuttavia, Sheila tirò fuori l'ombrello dalla borsa.",IMPLAUS_CONN,ombrello,SC3
+SR4a_05,5,20,"Guglielmo era a casa. Aveva dato da mangiare al gatto regolarmente. Tuttavia, il gatto era affamato alla fine della settimana.",PLAUS_CONN,affamato,SC4
+SR4a_06,6,21,La donna cieca era stata operata. Il dottore era molto ottimista sui risultati. La sua vista migliorò il giorno successivo.,PLAUS_NOCONN,migliorò,SC1
+SR4a_07,7,26,"Il cane correva in una strada trafficata. Fortunatamente, l'auto ha sterzato e lo ha mancato. Il cane si è ferito gravemente.",IMPLAUS_NOCONN,ferito,SC2
+SR4a_08,8,31,"Elisabetta ha avuto un esame di storia lunedì. Ha fatto il test e l'ha superato. Tuttavia, è tornata a casa e ha festeggiato tutta la sera.",IMPLAUS_CONN,festeggiato,SC3
+SR4a_09,9,36,"La star di Broadway ha avuto un assolo nel musical. Ha cantato il pezzo molto male e stonando. Tuttavia, il pubblico ha applaudito molto energicamente.",PLAUS_CONN,applaudito,SC4
+SR4a_10,10,37,Caterina ha avuto un esame martedì. Ha ricevuto un voto negativo. Era davvero frustrata per il risultato.,PLAUS_NOCONN,frustrata,SC1
+SR4a_11,11,42,I funzionari della città sono stati portati in tribunale. Il giudice si è pronunciato in loro favore. Sono stati imprigionati immediatamente.,IMPLAUS_NOCONN,imprigionati,SC2
+SR4a_12,12,47,"Silvia e Franco stavano giocando d'azzardo al casinò. Vinsero tutte le partite di blackjack. Tuttavia, erano entrambi felici quella notte.",IMPLAUS_CONN,felici,SC3
+SR4a_13,13,52,"Alice è andata in campeggio durante le vacanze. Ha usato un ottimo repellente per le zanzare. Tuttavia, ha iniziato a sentire prurito dappertutto. ",PLAUS_CONN,prurito,SC4
+SR4a_14,14,53,Uno scout è venuto a vedere Paolo giocare a baseball. Ha lanciato molto bene. È stato firmato dalla squadra.,PLAUS_NOCONN,firmato,SC1
+SR4a_15,15,58,L'eremita viveva in una grotta. Si lavava in un fiume di montagna ogni giorno. I suoi capelli sembravano sporchi e disordinati.,IMPLAUS_NOCONN,sporchi,SC2
+SR4a_16,16,63,"Ottavia ha bisogno di una media del 27 per laurearsi. Si è resa conto che la sua media è abbastanza alta. Tuttavia, si diplomerà la prossima settimana con la sua classe.",IMPLAUS_CONN,settimana,SC3
+SR4a_17,17,68,"Giacomo ha avuto un problema con il cibo. Non riusciva a smettere di mangiare. Tuttavia, è diventato davvero magro dopo un po'.",PLAUS_CONN,magro,SC4
+SR4a_18,18,69,Il ladro era goffo. Aveva fatto scattare l'allarme. E' stato catturato dalla guardia.,PLAUS_NOCONN,catturato,SC1
+SR4a_19,19,74,La compagnia telefonica aveva avuto successo quell'anno. Aveva guadagnato molti clienti. I suoi profitti sono diminuiti poco dopo.,IMPLAUS_NOCONN,diminuiti,SC2
+SR4a_20,20,79,"Gianni prendeva brutti voti e spesso si metteva nei guai a scuola. Sembrava depresso e non aveva amici. Tuttavia, i suoi genitori erano preoccupati per lui.",IMPLAUS_CONN,preoccupati,SC3
+SR4a_21,21,84,"I due paesi erano in guerra da anni. I leader respinsero la proposta la proposta di cessate il fuoco. Tuttavia, il conflitto finì poco dopo.",PLAUS_CONN,finì,SC4
+SR4a_22,22,85,Il ristorante aveva ricevuto recensioni terribili. Era sempre vuoto. A maggio aveva chiuso in via definitiva.,PLAUS_NOCONN,chiuso,SC1
+SR4a_23,23,90,La famosa violinista era nervosa durante la performance. Fece molti errori mentre suonava. Tutti avevano esultato per lei.,IMPLAUS_NOCONN,esultato,SC2
+SR4a_24,24,95,"La sarta stava appuntando l'abito di Tobia. Era sbrigativa e negligente con gli spilli. Tuttavia, Tobia venne punto un paio di volte.",IMPLAUS_CONN,punto,SC3
+SR4a_25,25,100,"Giuditta aveva un giardino nel cortile sul retro. Passava molto tempo a prendersene cura. Tuttavia, era pieno di erbacce e spazzatura.",PLAUS_CONN,erbacce,SC4
+SR4a_26,26,101,La ginnasta era specializzata nella trave di equilibrio. Era inciampata durante la prima presa. Era rimasta delusa da sé stessa.,PLAUS_NOCONN,delusa,SC1
+SR4a_27,27,106,L'azienda aveva assunto un nuovo dipendente. Era efficiente e responsabile. Le sue valutazioni sono state negative quel trimestre.,IMPLAUS_NOCONN,negative,SC2
+SR4a_28,28,111,"Il bambino stava visitando il museo con i suoi genitori. Allungò una mano per toccare alcune delle opere d'arte. Tuttavia, dopo venne rimproverato dalla guardia del museo. ",IMPLAUS_CONN,rimproverato,SC3
+SR4a_29,29,116,"L'idea dell'ingegnere del software era stata implementata nel nuovo prodotto. L'idea non ebbe molto successo. Tuttavia, l'ingegnere ottenne una promozione in azienda. ",PLAUS_CONN,promozione,SC4
+SR4a_30,30,117,Era il giorno della partita di calcio. Tommaso bevve un sacco di birra quella notte. Si svegliò con i postumi di una sbornia la mattina dopo.,PLAUS_NOCONN,postumi,SC1
+SR4a_31,31,122,Il governatore era stato assassinato. Per la sera del crimine la moglie aveva un alibi molto solido. La donna venne arrestata immediatamente.,IMPLAUS_NOCONN,arrestata,SC2
+SR4a_32,32,127,"Il taxi aveva portato il passeggero all'aeroporto. Il passeggero saltò fuori senza pagare. Tuttavia, il tassista era furioso con lui.",IMPLAUS_CONN,furioso,SC3
+SR4a_33,33,132,"C'era un incontro di boxe nell'arena. Il pugno di un pugile mancò il viso del suo avversario. Tuttavia, dopo l'avversario cadde a terra. ",PLAUS_CONN,cadde,SC4
+SR4a_34,34,133,Luigi era stato a casa da solo per un'intera settimana. Non aveva ricevuto nessuna telefonata. Si sentiva davvero solo quella settimana.,PLAUS_NOCONN,solo,SC1
+SR4a_35,35,138,Linda pensava di sapere dove fosse la sua carta di credito. Pensava fosse da qualche parte in camera da letto. Aveva deciso di cancellarla immediatamente.,IMPLAUS_NOCONN,cancellarla,SC2
+SR4a_36,36,143,"Susanna era in partenza per una vacanza alle Bahamas più tardi quella settimana. Un grande uragano colpì le isole. Tuttavia, il viaggio fu annullato poco dopo.",IMPLAUS_CONN,annullato,SC3
+SR4a_37,37,148,"Dopo la tempesta, l'elettricità in città era stata riattivata. Le luci del ristorante si erano riaccese. Tuttavia, i camerieri portavano le candele ai tavoli.",PLAUS_CONN,candele,SC4
+SR4a_38,38,149,Alessandro voleva disperatamente andare ad Harvard. Aveva ricevuto una lettera di accettazione per posta. Iniziò subito a festeggiare con i suoi amici.,PLAUS_NOCONN,festeggiare,SC1
+SR4a_39,39,154,La donna dovette salire venti rampe di scale. Era in perfetta forma e faceva spesso esercizio. Si sentì subito stanca dopo lo sforzo. ,IMPLAUS_NOCONN,stanca,SC2
+SR4a_40,40,159,"Sara ha avuto un esame di storia oggi. Era completamente impreparata alle domande. Tuttavia, si sentiva nel panico durante l'esame.",IMPLAUS_CONN,panico,SC3
+SR4a_41,41,164,"Tamara guidava da vent'anni. Non aveva mai avuto incidenti. Tuttavia, era molto nervosa per strada.",PLAUS_CONN,nervosa,SC4
+SR4a_42,42,165,Il sindacato era impegnato in trattative contrattuali. Le trattative fallirono e i dipendenti erano furiosi. Il giorno dopo decisero di picchettare per i loro diritti.,PLAUS_NOCONN,picchettare,SC1
+SR4a_43,43,170,Il ragazzo aveva preso lo skilift fino in cima. Era troppo spaventato per scendere. Era molto fiero di sé stesso.,IMPLAUS_NOCONN,orgoglioso,SC2
+SR4a_44,44,175,"Maurizio ha lavorato in un ospedale. Si è rifiutato di indossare guanti di lattice. Tuttavia, è stato contagiato da un paziente.",IMPLAUS_CONN,contagiato,SC3
+SR4a_45,45,180,"Stefano ha fatto domanda per una scuola di legge. Aveva buoni voti e ottime raccomandazioni. Tuttavia, la scuola ha rifiutato la sua domanda.",PLAUS_CONN,rifiutato,SC4
+SR4a_46,46,181,Caterina stava preparando una limonata quel pomeriggio. Aveva aggiunto meno zucchero rispetto alla ricetta richiesta. La limonata aveva un sapore troppo aspro per tutti.,PLAUS_NOCONN,aspro,SC1
+SR4a_47,47,186,Gli amici di Tamara l'hanno portata al cinema. Era una commedia romantica. Tamara rimase molto spaventata dal film.,IMPLAUS_NOCONN,spaventata,SC2
+SR4a_48,48,191,"Donata era un'inquilina irresponsabile. Non era riuscita a pagare l'affitto. Tuttavia, il padrone di casa l'aveva sfrattata dall'edificio.",IMPLAUS_CONN,sfrattata,SC3
+SR4a_49,49,196,"Il comico era brillante quella notte. Fece una performance eccezionale. Tuttavia, il pubblico lo fischiava senza sosta.",PLAUS_CONN,fischiava,SC4
+SR4a_50,50,197,Il passeggero stava facendo i controlli di sicurezza all'aeroporto. Le guardie gli trovarono un'arma addosso. Il passeggero fu subito arrestato come terrorista.,PLAUS_NOCONN,arrestato,SC1
+SR4a_51,51,202,Giulia era tornata dalla montagna con il raffreddore. Non volle prendere lo sciroppo per la tosse. Si sentì subito meglio poco dopo.,IMPLAUS_NOCONN,meglio,SC2
+SR4a_52,52,207,"Il dipendente aveva lavorato per l'azienda per molti anni. È stato sorpreso a fare uso di droghe. Tuttavia, è stato licenziato dalla società.",IMPLAUS_CONN,licenziato,SC3
+SR4a_53,53,212,"Edoardo era un giovane cantante pop. La sua nuova canzone non aveva molti download. Tuttavia, era stata un successo alla radio.",PLAUS_CONN,successo,SC4
+SR4a_54,54,213,L'uomo era sulla cinquantina. La sua pelle era rugosa e grigia. Si vide molto vecchio guardandosi allo specchio.,PLAUS_NOCONN,vecchio,SC1
+SR4a_55,55,218,Marta voleva tingersi i capelli. Il parrucchiere fece un ottimo lavoro. Marta era davvero scontenta del risultato.,IMPLAUS_NOCONN,scontenta,SC2
+SR4a_56,56,223,"Alice stava tornando a casa dal lavoro di notte. Uno sconosciuto la stava seguendo. Tuttavia, i era sentita nervosa per tutto il tragitto.",IMPLAUS_CONN,nervosa,SC3
+SR4a_57,57,228,Andrea era diventato pigro. Aveva smesso di andare in palestra. Diventò davvero muscoloso quell'inverno.,PLAUS_CONN,muscoloso,SC4
+SR4a_58,58,229,Alla squadra di casa mancava solo un punto in più per vincere. Il giocatore realizzò il tiro libero all'ultimo secondo. La squadra di casa vinse quella partita.,PLAUS_NOCONN,vinse,SC1
+SR4a_59,59,234,Il condannato a morte ha impugnato il verdetto. Non erano emerse altre prove nel caso. È stato liberato dopo il procedimento.,IMPLAUS_NOCONN,liberato,SC2
+SR4a_60,60,239,"Tommaso ha dormito profondamente la notte scorsa. Ha bevuto del caffè stamattina. Tuttavia, si sentiva sveglio e pieno di energie al lavoro.",IMPLAUS_CONN,sveglio,SC3
+SR4a_61,61,244,"Maria aveva messo in valigia un cappotto invernale per il viaggio a Chicago. Le temperature erano meno rigide del previsto. Tuttavia, ha avuto freddo tutto il tempo.",PLAUS_CONN,freddo,SC4
+SR4a_62,62,245,Molte persone nell'ufficio di Giovanna avevano avuto l'influenza. Era un po' raffreddata dopo il lavoro martedì. Il giorno dopo si sentiva malissimo ed è rimasta a casa.,PLAUS_NOCONN,malissimo,SC1
+SR4a_63,63,250,Corinna si sentiva assonnata se non beveva caffè la mattina. Non ne aveva bevuto quel giorno. Era molto agitata durante l'incontro.,IMPLAUS_NOCONN,agitata,SC2
+SR4a_64,64,255,"Marco aveva perso il suo autobus. Era stato costretto ad andare al lavoro a piedi. Tuttavia, giunse in ritardo per l'incontro.",IMPLAUS_CONN,ritardo,SC3
+SR4a_65,65,260,"Giovanni stava facendo domanda per un lavoro. Aveva diverse qualifiche importanti. Tuttavia, era ormai disoccupato da più di un anno.",PLAUS_CONN,disoccupato,SC4
+SR4a_66,66,261,A Pietro piaceva il cibo spazzatura. Non amava mangiare sano. Mangiava spesso patatine a pranzo e cena.,PLAUS_NOCONN,patatine,SC1
+SR4a_67,67,266,Alice era stata attenta al suo maglione di lana. Lo aveva lavato a secco. Il maglione si era ristretto dopo la lavata. ,IMPLAUS_NOCONN,ristretto,SC2
+SR4a_68,68,271,"Amanda è andata dal parrucchiere. I parrucchieri hanno fatto un ottimo lavoro. Tuttavia, era bellissima lasciando il negozio.",IMPLAUS_CONN,bellissima,SC3
+SR4a_69,69,276,"Maria stava organizzando un cocktail party. Era stata troppo occupata per pulire la casa prima della festa. Tuttavia, la casa era magnifica durante la festa.",PLAUS_CONN,magnifica,SC4
+SR4a_70,70,277,Giovanni ha inviato un articolo di ricerca a un giornale. I revisori hanno mandato recensioni molto positive. L'articolo è stato accettato per la pubblicazione.,PLAUS_NOCONN,accettato,SC1
+SR4a_71,71,282,Giovanni ha avuto delle vacanze davvero eccitanti. Ha visitato un sacco di posti fantastici coi suoi amici. Da inizio ferie si era annoiato ogni giorno.,IMPLAUS_NOCONN,annoiato,SC2
+SR4a_72,72,287,"Giovanni si era fermato a prendere un caffè al bar. L'ha ordinato con zucchero e panna extra. Tuttavia, aveva un sapore molto dolce per lui.",IMPLAUS_CONN,dolce,SC3
+SR4a_73,73,292,"L'uomo stava cercando di attraversare a nuoto l'ampio fiume. L'acqua era calma e poco profonda. Tuttavia, l'uomo è annegato prima di riuscire ad attraversare.",PLAUS_CONN,annegato,SC4
+SR4a_74,74,293,Susanna è andata a correre. Ha sudato parecchio. Ha fatto una doccia appena tornata a casa.,PLAUS_NOCONN,doccia,SC1
+SR4a_75,75,298,Davide portava sempre rispetto ai suoi insegnanti. Si è sempre comportato benissimo in classe. È stato sospeso per volere del preside.,IMPLAUS_NOCONN,sospeso,SC2
+SR4a_76,76,303,"L'imputato si dichiarava innocente. La giuria ha deciso a suo favore. Tuttavia, l'imputato fu liberato il giorno successivo.",IMPLAUS_CONN,liberato,SC3
+SR4a_77,77,308,"Il mago stava eseguendo trucchi. Aveva sbagliato il numero del coniglio. Tuttavia, tutti rimasero incantati dalla performance.",PLAUS_CONN,incantati,SC4
+SR4a_78,78,309,A Gianni è stato vietato di guardare film violenti. Ha guardato un film di sparatorie. I suoi genitori gli hanno proibito la televisione.,PLAUS_NOCONN,proibito,SC1
+SR4a_79,79,314,Giliana si abbronzava spesso. Aveva messo la crema solare in spiaggia. Si è presa una scottatura lunedì scorso.,IMPLAUS_NOCONN,scottatura,SC2
+SR4a_80,80,319,"Il soldato era stato colpito al petto. Non c'era nessun medico nelle vicinanze. Tuttavia, il soldato era morto pochi minuti dopo.",IMPLAUS_CONN,morto,SC3
+SR4b_01,81,324,"Angela ha chiamato suo padre sul cellulare. Il segnale era ottimo. Tuttavia, la voce di suo padre era confusa e indistinta.",PLAUS_CONN,confusa,SC4
+SR4b_02,82,325,La zona era controllata dalla mafia. Il proprietario del negozio si è rifiutato di pagarli. Il suo negozio è stato attaccato quella notte.,PLAUS_NOCONN,attaccato,SC1
+SR4b_03,83,330,Fu scoperto che l'atleta non aveva mai assunto steroidi. I test mostrarono che era pulito. Il Comitato Olimpico lo ha bandito per 10 anni.,IMPLAUS_NOCONN,bandito,SC2
+SR4b_04,84,335,"L'astronomo pensava di aver trovato un nuovo pianeta. L'analisi del computer ha mostrato che si sbagliava. Tuttavia, era molto abbattuto per questo.",IMPLAUS_CONN,abbattuto,SC3
+SR4b_05,85,340,"Cominciarono a circolare voci sulla corruzione del governatore. Il procuratore federale dichiarò che risultava innocente dalle indagini. Tuttavia, il governatore si dimise dall'incarico.",PLAUS_CONN,dimise,SC4
+SR4b_06,86,341,Laura ha messo la torta in forno. L'ha cotta per oltre mezz'ora. La torta si è bruciata in forno.,PLAUS_NOCONN,bruciata,SC1
+SR4b_07,87,346,A Claudia piace suonare la batteria nel suo appartamento. I vicini adorano sentirla suonare. Si sono lamentati con il padrone di casa.,IMPLAUS_NOCONN,lamentati,SC2
+SR4b_08,88,351,"Il ponte aveva più di cento anni. La fondazione era stata recentemente danneggiata. Tuttavia, gli ispettori statali lo hanno ritenuto poco sicuro per l'uso.",IMPLAUS_CONN,sicuro,SC3
+SR4b_09,89,356,"L'esaminatore di guida è stato molto severo. Aveva notato che Bernardo aveva commesso diversi errori. Tuttavia, Bernardo ha superato il test quel giorno.",PLAUS_CONN,superato,SC4
+SR4b_10,90,357,Gianna è una grande fan della musica classica. Ha comprato il biglietto più costoso per il concerto di venerdì. Ha un posto in platea vicino al palco.,PLAUS_NOCONN,platea,SC1
+SR4b_11,91,362,L'auto della polizia era seduta lungo la strada. Il rilevatore ha detto che l'auto stava andando entro i limiti. Il poliziotto ha fermato l'autista.,IMPLAUS_NOCONN,fermato,SC2
+SR4b_12,92,367,"Michela stava invecchiando. La sua crema antietà era inutile. Tuttavia, la sua faccia era rugosa e secca.",IMPLAUS_CONN,rugosa,SC3
+SR4b_13,93,372,"Il bambino è stato messo a dormire nella sua culla. Aveva dormito tranquillamente tutta la notte. Tuttavia, la mattina dopo, i suoi genitori erano esausti e irritabili.",PLAUS_CONN,esausti,SC4
+SR4b_14,94,373,L'uragano aveva colpito l'isola. Gli argini si sono rotti con l'innalzamento del livello del mare. Le strade sono state allagate per giorni. ,PLAUS_NOCONN,allagate,SC1
+SR4b_15,95,378,Le previsioni del tempo hanno mostrato brutto tempo per il fine settimana di vacanza. Molte persone hanno deciso di restare a casa. Le autostrade erano bloccate per chilometri.,IMPLAUS_NOCONN,bloccate,SC2
+SR4b_16,96,383,"I residenti della città costiera hanno ascoltato le notizie dell'uragano. La tempesta sarebbe giunta proprio sopra la loro città. Tuttavia, gli è stato consigliato di evacuare immediatamente.",IMPLAUS_CONN,evacuare,SC3
+SR4b_17,97,388,"Clara stava andando piano nella tempesta di ghiaccio. Era concentrata sul mantenere il controllo del mezzo. Tuttavia, l'auto si è schiantata contro un albero.",PLAUS_CONN,schiantata,SC4
+SR4b_18,98,389,L'uomo è rimasto fuori tutta la notte. Ha preso un terribile raffreddore. La mattina dopo aveva tosse e naso che cola.,PLAUS_NOCONN,tosse,SC1
+SR4b_19,99,394,L'aereo iniziava a muoversi sulla pista. Il volo sarebbe stato il prossimo a partire. I passeggeri iniziarono a brontolare rumorosamente.,IMPLAUS_NOCONN,brontolare,SC2
+SR4b_20,100,399,"L'anziana donna stava scendendo i gradini innevati. Cadde e si ruppe l'anca. Tuttavia, dopo rimase in ospedale per un po' di tempo.",IMPLAUS_CONN,ospedale,SC3
+SR4b_21,101,404,"Il sensitivo afferma di vedere il futuro. I giornali locali scrivono che si tratta di una truffa. Tuttavia, i clienti sono rimasti soddisfatti delle sue predizioni.",PLAUS_CONN,soddisfatti,SC4
+SR4b_22,102,405,Daniele è andato in un pub con i suoi amici. Aveva voglia di un drink. Ha ordinato un whisky e una bibita.,PLAUS_NOCONN,whisky,SC1
+SR4b_23,103,410,L'autista non aveva bevuto quella notte. L'ufficiale di polizia ha somministrato un test dell'etilometro. Il livello di alcol nel sangue del conducente era superiore al limite legale.,IMPLAUS_NOCONN,superiore,SC2
+SR4b_24,104,415,"L'adolescente era andata a farsi tagliare i capelli. Voleva qualcosa di aggressivo e alternativo. Tuttavia, si fece fare una cresta mohawk al salone.",IMPLAUS_CONN,cresta,SC3
+SR4b_25,105,420,"I ragazzi stavano litigando. Alla fine sono riusciti a fare pace. Tuttavia, erano pieni di lividi il ??giorno successivo.",PLAUS_CONN,lividi,SC4
+SR4b_26,106,421,Francesco aveva saltato colazione e pranzo. Arrivò a casa da scuola affamato. Decise di mangiare un panino in cucina.,PLAUS_NOCONN,panino,SC1
+SR4b_27,107,426,Tutti i turisti evitavano l'organizzatore dei tour. Aveva sempre pochi clienti. I suoi profitti erano enormi ogni estate.,IMPLAUS_NOCONN,enormi,SC2
+SR4b_28,108,431,"Lo chef stava tagliando delle verdure. Stava facendo poca attenzione al coltello. Tuttavia, si è poi tagliato il dito.",IMPLAUS_CONN,tagliato,SC3
+SR4b_29,109,436,"Il turista voleva tornare al suo albergo. Conosceva ormai la via a memoria. Tuttavia, si era perso per la strada.",PLAUS_CONN,perso,SC4
+SR4b_30,110,437,Il Congresso aveva inviato il disegno di legge al Presidente per la sua approvazione. Venne ritenuta un'idea terribile. Il Presidente respinse la misura.,PLAUS_NOCONN,respinse,SC1
+SR4b_31,111,442,Giovanni ha fatto i provini per la compagnia di teatro comico. Le sue battute erano fiacche e poco divertenti. Il regista gli ha chiesto di unirsi al gruppo.,IMPLAUS_NOCONN,unirsi,SC2
+SR4b_32,112,447,"Giovanni non ha bevuto alla festa. Era l'unico sobrio tra i suoi amici. Tuttavia, ha finito per accompagnare tutti a casa.",IMPLAUS_CONN,accompagnare,SC3
+SR4b_33,113,452,"I perfidi mercenari avevano rovesciato il re. Il vecchio re era molto popolare tra i suoi sudditi. Tuttavia, la gente esultava per le strade.",PLAUS_CONN,esultava,SC4
+SR4b_34,114,453,L'edificio era stato evacuato per una minaccia di bomba. Ai dipendenti fu detto che si trattava di una situazione grave. Tutti erano spaventati dalla notizia.,PLAUS_NOCONN,spaventati,SC1
+SR4b_35,115,458,Riccardo era in vacanza per la festa nazionale. Aveva mangiato tutto il giorno. Era davvero affamato quando venne sera.,IMPLAUS_NOCONN,affamato,SC2
+SR4b_36,116,463,"La donna non aveva mai ballato prima del suo matrimonio. Ha preso mesi di lezioni. Tuttavia, ha ballato come una professionista al ricevimento.",IMPLAUS_CONN,professionista,SC3
+SR4b_37,117,468,"Miriam ha ordinato dei bicchieri da vino nuovi. Era contenta dell'acquisto del nuovo set. Tuttavia, li ha voluti restituire immediatamente.",PLAUS_CONN,restituire,SC4
+SR4b_38,118,469,Il bambino piangeva. Sua madre venne e lo cullò dolcemente. Il bambino si è calmato molto presto.,PLAUS_NOCONN,calmato,SC1
+SR4b_39,119,474,"Carolina ascoltava la radio. Dopo la tempesta della notte scorsa, era rimasta poca neve. Le scuole erano chiuse quel giorno.",IMPLAUS_NOCONN,chiuso,SC2
+SR4b_40,120,479,"Giovanna era pessimista riguardo al suo caso. Il suo avvocato aveva pochissime prove che l'aiutassero. Tuttavia, è stata condannata dalla giuria.",IMPLAUS_CONN,condannata,SC3
+SR4b_41,121,484,"Mario ha citato in giudizio il medico per negligenza. Alla fine ha perso in tribunale. Tuttavia, è diventato ricco grazie al caso.",PLAUS_CONN,ricco,SC4
+SR4b_42,122,485,C'era stata un'irruzione in casa. Il ladro aveva lasciato molte impronte. La polizia lo ha identificato facilmente.,PLAUS_NOCONN,identificato,SC1
+SR4b_43,123,490,L'adolescente stava facendo una presentazione. Era una persona molto sicura di sé. Durante la sessione delle domande era arrossito visibilmente.,IMPLAUS_NOCONN,arrossito,SC2
+SR4b_44,124,495,"Alice si sta allenando per la stagione calcistica. Lunedì si è davvero sovraccaricata con gli esercizi. Tuttavia, il giorno dopo era dolorante dappertutto.",IMPLAUS_CONN,dolorante,SC3
+SR4b_45,125,500,"Pioveva da una settimana. La pioggia aveva reso il terreno molto fangoso. Tuttavia, i bambini hanno passato la ricreazione in cortile quel giorno.",PLAUS_CONN,cortile,SC4
+SR4b_46,126,501,Giovanna aveva deciso di restituire le scarpe che aveva appena comprato. Erano ancora nuove di zecca e lei aveva lo scontrino. Il negozio le ha rimborsato i soldi.,PLAUS_NOCONN,rimborsato,SC1
+SR4b_47,127,506,L'edificio del condominio si trovava in un quartiere molto malfamato. La polizia di rado pattugliava la zona. I residenti si sentivano sicuri vivendo lì.,IMPLAUS_NOCONN,sicuri,SC2
+SR4b_48,128,511,"L'amministratore delegato aveva programmato un incontro con i direttori di filiale della California. Ha perso l'ultimo volo della giornata. Tuttavia, la riunione è stata annullata e riprogrammata.",IMPLAUS_CONN,annullata,SC3
+SR4b_49,129,516,"Per ottenere un lavoro come avvocato, Cristiano doveva superare l'esame di avvocato. Aveva appena superato l'esame ad aprile. Tuttavia, Cristiano era preoccupato per la sua carriera.",PLAUS_CONN,preoccupato,SC4
+SR4b_50,130,517,Gilda vive nel cuore della città. La finestra della sua camera da letto si affaccia sulla strada. Di notte può sentire il traffico che passa.,PLAUS_NOCONN,traffico,SC1
+SR4b_51,131,522,Il Senato stava discutendo il nuovo disegno di legge del Presidente. La maggior parte dei membri del Congresso lo approvavano. Il disegno di legge è fallito venerdì.,IMPLAUS_NOCONN,fallito,SC2
+SR4b_52,132,527,"Le collane sono state realizzate da artisti provenienti da molti paesi diversi. Tutti hanno impresso il loro stile inconfondibile. Tuttavia, ogni pezzo è unico e prezioso.",IMPLAUS_CONN,unico,SC3
+SR4b_53,133,532,"Il dirigente restava alla scrivania a lavorare. Il suo medico lo aveva esortato a fare più esercizio. Tuttavia, decise di dormire di più ogni giorno.",PLAUS_CONN,dormire,SC4
+SR4b_54,134,533,Giovanni ha un talento naturale per la matematica. Nella lezione di oggi il professore ha spiegato un nuovo concetto. Giovanni lo ha trovato semplice da capire.,PLAUS_NOCONN,semplice,SC1
+SR4b_55,135,538,La senatrice si recò in viaggio con la sua guardia del corpo. Era in una zona sicura. È stata poi rapita da due criminali.,IMPLAUS_NOCONN,rapita,SC2
+SR4b_56,136,543,"C'è stato un pericoloso incendio nella cucina del ristorante. Il camion dei pompieri si è presentato troppo tardi. Tuttavia, la maggior parte degli avventori si sono ustionati mentre cercavano di scappare.",IMPLAUS_CONN,ustionati,SC3
+SR4b_57,137,548,"Giovanna era andata al cinema per vedere il nuovo film. Ha comprato l'ultimo biglietto disponibile. Tuttavia, si è sentita molto sfortunata ed è andata a casa.",PLAUS_CONN,sfortunata,SC4
+SR4b_58,138,549,Melinda e suo marito sono andati a cena al ristorante di pesce. Adorano i molluschi. Melinda ha ordinato ostriche per cena.,PLAUS_NOCONN,ostriche,SC1
+SR4b_59,139,554,Matteo doveva consegnare l'articolo mercoledì. Aveva iniziato a scriverlo presto. Ha consegnato l'articolo in ritardo all'insegnante.,IMPLAUS_NOCONN,ritardo,SC2
+SR4b_60,140,559,"Kevin è un modello professionista. È a dieta tutti i giorni. Tuttavia, è davvero magro come una stecco.",IMPLAUS_CONN,magro,SC3
+SR4b_61,141,564,"Licia adora il suo attuale lavoro. Ha ricevuto un'offerta più bassa da un'altra società. Tuttavia, ha deciso di accettare la loro offerta.",PLAUS_CONN,accettare,SC4
+SR4b_62,142,565,Daniele ha indossato un vestito nuovo per il colloquio. Lo ha abbinato con una bella cravatta. Sembrava molto professionale durante il colloquio.,PLAUS_NOCONN,professionale,SC1
+SR4b_63,143,570,Giacomo e altri cinque amici stavano viaggiando insieme. Affittarono una piccola auto per il viaggio. Erano tutti molto comodi durante il viaggio.,IMPLAUS_NOCONN,comodi,SC2
+SR4b_64,144,575,"Anna ha appena avuto un grosso aumento di stipendio. Ora può permettersi quasi tutto ciò che vuole. Tuttavia, ha comprato un regalo molto costoso per la sua amica.",IMPLAUS_CONN,costoso,SC3
+SR4b_65,145,580,"Jessica aveva chiesto una bicicletta per Natale. I suoi genitori invece le hanno regalato una bambola. Tuttavia, Jessica era molto felice per il regalo.",PLAUS_CONN,felice,SC4
+SR4b_66,146,581,Donato ha fatto rimuovere un neo da un chirurgo. È stata una procedura facile. L'operazione è stata un successo quel giorno.,PLAUS_NOCONN,successo,SC1
+SR4b_67,147,586,Il sindaco era incredibilmente popolare in città. Ha ricevuto molte lettere di ringraziamento. Era circondato dalle critiche tutto il tempo.,IMPLAUS_NOCONN,critiche,SC2
+SR4b_68,148,591,"Diana si è divertita tanto la prima volta che è andata a sciare. Si è innamorata di questo sport. Tuttavia, in questi giorni va sulle piste il più spesso possibile.",IMPLAUS_CONN,piste,SC3
+SR4b_69,149,596,"Giovanna pulisce la sua casa ogni giorno. Ha anche addetti alle pulizie che vengono regolarmente. Tuttavia, la sua cucina era in disordine tutto il tempo.",PLAUS_CONN,disordine,SC4
+SR4b_70,150,597,Il proprietario della casa si era appena trasferito. Ha visto delle persone sospette fuori dal suo garage. Ha chiamato i carabinieri perché venissero a controllare.,PLAUS_NOCONN,carabinieri,SC1
+SR4b_71,151,602,Il tetto aveva avuto una falla in cucina. La pioggia si è fatta intensa durante la settimana. Il gocciolamento è cessato molto presto.,IMPLAUS_NOCONN,cessato,SC2
+SR4b_72,152,607,"L'amico di Johnny lo ha invitato a una festa del Superbowl. Johnny ha indossato un casco da football al raduno. Tuttavia, tutti pensavano che il suo look fosse appropriato per l'occasione.",IMPLAUS_CONN,appropriato,SC3
+SR4b_73,153,612,"Luca è poco socievole. Resta sempre a casa dopo il lavoro. Tuttavia, ha passato ogni fine settimana a festeggiare da qualche parte.",PLAUS_CONN,festeggiare,SC4
+SR4b_74,154,613,Elena ha estratto i denti del giudizio dal dentista. La sua bocca era molto dolorante dopo. Il dottore le ha dato degli antidolorifici da prendere.,PLAUS_NOCONN,antidolorifici,SC1
+SR4b_75,155,618,Cristiano stava andando a trovare la sua ragazza per San Valentino. Sapeva che era allergica ai fiori. Aveva comprato delle rose per lei.,IMPLAUS_NOCONN,rose,SC2
+SR4b_76,156,623,"Luca era un pittore. Gli piaceva imparare dal lavoro di altre persone. Tuttavia, ha trascorso la maggior parte del suo tempo in gallerie e musei d'arte.",IMPLAUS_CONN,gallerie,SC3
+SR4b_77,157,628,"Carlo aveva problemi al cuore. Il dottore ha raccomandato di limitare gli esercizi fisici intensi. Tuttavia, ha iniziato a correre quasi tutti i giorni.",PLAUS_CONN,correre,SC4
