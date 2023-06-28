@@ -9,13 +9,16 @@ library(ordinal)
 library(emmeans)
 library(openxlsx)
 
+rstudioapi::writeRStudioPreference("data_viewer_max_columns", 1000L)
+
 setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\survey_data")
 
 #Sys.setlocale(category="LC_ALL", locale = "English_United States.1252")
-View(italianData)
+
 italianData <- read.csv("italianData.csv")
 italianConds <- read.csv("italianConditions.csv", encoding = "Italian")
 italianConds <- italianConds[,c(-2:-4)]
+#View(italianData)
 #View(italianConds)
 # A pie chart of age distribution
 
@@ -28,46 +31,46 @@ italianConds <- italianConds[,c(-2:-4)]
 
 # Change the values here later when more data is collected 
 
-italianData1a <- italianData[c(1:5), c(2,4,5,7,8:87)]
-italianData1b <- italianData[c(6:10), c(2,4,5,7,88:164)]
-italianData2a <- italianData[c(11:15), c(2,4,5,7,165:244)]
-italianData2b <- italianData[c(16:20), c(2,4,5,7,245:321)]
-italianData3a <- italianData[c(21:25), c(2,4,5,7,322:401)]
-italianData3b <- italianData[c(26:30), c(2,4,5,7,402:478)]
-italianData4a <- italianData[c(31:35), c(2,4,5,7,479:558)]
-italianData4b <- italianData[c(36:40), c(2,4,5,7,559:635)]
-
+italianData1a <- italianData[c(1:5), c(2,4,5,7,8:87,636)]
+italianData1b <- italianData[c(6:10), c(2,4,5,7,88:164,636)]
+italianData2a <- italianData[c(11:15), c(2,4,5,7,165:244,636)]
+italianData2b <- italianData[c(16:20), c(2,4,5,7,245:321,636)]
+italianData3a <- italianData[c(21:25), c(2,4,5,7,322:401,636)]
+italianData3b <- italianData[c(26:30), c(2,4,5,7,402:478,636)]
+italianData4a <- italianData[c(31:35), c(2,4,5,7,479:558,636)]
+italianData4b <- italianData[c(36:40), c(2,4,5,7,559:635,636)]
+View(italianData)
 # Melt data to long format
 
-italianData1a <- reshape2::melt(italianData1a, id.vars = c(1:4))
+italianData1a <- reshape2::melt(italianData1a, id.vars = c(1:4,85))
 colnames(italianData1a)[colnames(italianData1a)=="variable"] = "Item"
 colnames(italianData1a)[colnames(italianData1a)=="value"] = "Score"
 
-italianData1b <- reshape2::melt(italianData1b, id.vars = c(1:4))
+italianData1b <- reshape2::melt(italianData1b, id.vars = c(1:4,82))
 colnames(italianData1b)[colnames(italianData1b)=="variable"] = "Item"
 colnames(italianData1b)[colnames(italianData1b)=="value"] = "Score"
 
-italianData2a <- reshape2::melt(italianData2a, id.vars = c(1:4))
+italianData2a <- reshape2::melt(italianData2a, id.vars = c(1:4,85))
 colnames(italianData2a)[colnames(italianData2a)=="variable"] = "Item"
 colnames(italianData2a)[colnames(italianData2a)=="value"] = "Score"
 
-italianData2b <- reshape2::melt(italianData2b, id.vars = c(1:4))
+italianData2b <- reshape2::melt(italianData2b, id.vars = c(1:4,82))
 colnames(italianData2b)[colnames(italianData2b)=="variable"] = "Item"
 colnames(italianData2b)[colnames(italianData2b)=="value"] = "Score"
 
-italianData3a <- reshape2::melt(italianData3a, id.vars = c(1:4))
+italianData3a <- reshape2::melt(italianData3a, id.vars = c(1:4,85))
 colnames(italianData3a)[colnames(italianData3a)=="variable"] = "Item"
 colnames(italianData3a)[colnames(italianData3a)=="value"] = "Score"
 
-italianData3b <- reshape2::melt(italianData3b, id.vars = c(1:4))
+italianData3b <- reshape2::melt(italianData3b, id.vars = c(1:4,82))
 colnames(italianData3b)[colnames(italianData3b)=="variable"] = "Item"
 colnames(italianData3b)[colnames(italianData3b)=="value"] = "Score"
 
-italianData4a <- reshape2::melt(italianData4a, id.vars = c(1:4))
+italianData4a <- reshape2::melt(italianData4a, id.vars = c(1:4,85))
 colnames(italianData4a)[colnames(italianData4a)=="variable"] = "Item"
 colnames(italianData4a)[colnames(italianData4a)=="value"] = "Score"
 
-italianData4b <- reshape2::melt(italianData4b, id.vars = c(1:4))
+italianData4b <- reshape2::melt(italianData4b, id.vars = c(1:4,82))
 colnames(italianData4b)[colnames(italianData4b)=="variable"] = "Item"
 colnames(italianData4b)[colnames(italianData4b)=="value"] = "Score"
 
@@ -76,7 +79,7 @@ colnames(italianData4b)[colnames(italianData4b)=="value"] = "Score"
 allData <- rbind(italianData1a,italianData1b,italianData2a,italianData2b,
                  italianData3a,italianData3b,italianData4a,italianData4b)
 
-#View(allData)
+View(allData)
 
 allData <- merge(allData,italianConds, by.x = "Item", by.y = "SOS_ID")
 
@@ -156,6 +159,26 @@ scoreBox <- ggplot(allData, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
   ggtitle("Sentence Conditions")
 scoreBox
+
+
+#####################
+# Outliers
+#####################
+
+# Implaus_NoConn
+
+impNoConn_outliers <- subset(allData, CONDITION == "IMPLAUS_NOCONN")
+impNoConn_outliers <- subset(impNoConn_outliers, Score > 4)
+impNoConn_outliers <- subset(impNoConn_outliers, Time < 800)
+View(impNoConn_outliers)
+
+table(impNoConn_outliers$Part)
+# Plaus_NoConn
+
+plausNoConn_outliers <- subset(allData, CONDITION == "PLAUS_NOCONN")
+plausNoConn_outliers <- subset(plausNoConn_outliers, Score < 5)
+plausNoConn_outliers <- subset(plausNoConn_outliers, Time < 800)
+View(plausNoConn_outliers)
 
 
 # Conditions model
