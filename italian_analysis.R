@@ -424,3 +424,15 @@ concCondNorms <- merge(concCondNorms,concCondSD, by = "CONDITION")
 #View(concCondNorms)
 
 
+# Clmm for Concessive data
+
+allConcData$Score <- as.factor(allConcData$Score)
+allConcData$Part <- as.factor(allConcData$Part)
+
+concClmmModel <- clmm(Score~CONDITION + Gender + (1|Part), data = allConcData) 
+summary(concClmmModel) 
+
+emmeans(concClmmModel,pairwise ~ CONDITION | Score, mode = "prob")
+
+
+
