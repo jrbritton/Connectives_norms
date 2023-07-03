@@ -434,5 +434,83 @@ summary(concClmmModel)
 
 emmeans(concClmmModel,pairwise ~ CONDITION | Score, mode = "prob")
 
+# Chi-square analysis on adversative and concessive sents
+
+View(allData)
+
+adversData <- subset(allData, CONDITION == "PLAUS_CONN" | CONDITION == 
+                       "IMPLAUS_CONN")
+
+# Rename CONN to ADV for Adversative
+adversData$CONDITION[adversData$CONDITION == "PLAUS_CONN"] = "PLAUS_ADV"
+adversData$CONDITION[adversData$CONDITION == "IMPLAUS_CONN"] = "IMPLAUS_ADV"
+
+# Same for concessive data
+concData <- subset(allConcData, CONDITION == "PLAUS_CONN" | CONDITION == 
+                       "IMPLAUS_CONN")
+
+# Rename CONN to ADV for Adversative
+concData$CONDITION[concData$CONDITION == "PLAUS_CONN"] = "PLAUS_CONC"
+concData$CONDITION[concData$CONDITION == "IMPLAUS_CONN"] = "IMPLAUS_CONC"
+# Rename education column
+colnames(concData)[colnames(concData)=="Education"] = "Edu"
+
+# R bind all data
+advConcData <- rbind(adversData, concData)
+advConcData$Score <- as.numeric(advConcData$Score)
+View(advConcData)
+
+median(advConcData$Score)
+quantile(advConcData$scoreBox, 0.5)
+
+table(advConcData$Score, advConcData$CONDITION)
+
+# Bar plot
+ggplot(advConcData) +
+  aes(x = Score, fill = CONDITION) +
+  geom_bar(position = "dodge")
+
+ggplot(advConcData) +
+  aes(x = Score, fill = CONDITION) +
+  geom_bar(position = "fill")
+
+# Make Coherent and Incoherent variables from high and low scores
+# Higher or lower than the median
+
+advConcData$Score <- ifelse(advConcData$Score < median(advConcData$Score),
+                   "Incoherent", "Coherent")
+
+plausData <- subset(advConcData, CONDITION == "PLAUS_CONC" | CONDITION ==
+                      "PLAUS_ADV")
+  
+implausData <- subset(advConcData, CONDITION == "IMPLAUS_CONC" | CONDITION ==
+                        "IMPLAUS_ADV")
+
+
+# Chi-square
+chi_advConc <- chisq.test(table(advConcData$Score, advConcData$CONDITION))
+chi_advConc
+
+chi_plaus <-chisq.test(table(plausData$Score, plausData$CONDITION))
+chi_plaus
+
+chi_implaus <- chisq.test(table(implausData$Score, implausData$CONDITION))
+chi_implaus
+
+
+# Bar Plots
+
+ggplot(plausData) +
+  aes(x = Score, fill = CONDITION) +
+  geom_bar(position = "dodge")
+
+ggplot(implausData) +
+  aes(x = Score, fill = CONDITION) +
+  geom_bar(position = "dodge")
+
+ggplot(implausData) +
+  aes(x = Score, fill = CONDITION) +
+  geom_bar(position = "fill")
+
 
 
