@@ -13,6 +13,7 @@ rstudioapi::writeRStudioPreference("data_viewer_max_columns", 1000L)
 
 setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\survey_data")
 
+
 #Sys.setlocale(category="LC_ALL", locale = "English_United States.1252")
 
 italianData <- read.csv("italianData.csv")
@@ -324,12 +325,12 @@ View(italianConcess_Data)
 italianConcData1a <- italianConcess_Data[c(1:5), c(2,4,5,7,8:87,636)]
 italianConcData1b <- italianConcess_Data[c(6:9), c(2,4,5,7,88:164,636)]
 italianConcData2a <- italianConcess_Data[c(10:15), c(2,4,5,7,165:244,636)]
-italianConcData2b <- italianConcess_Data[c(16:21), c(2,4,5,7,245:321,636)]
-italianConcData3a <- italianConcess_Data[c(22:26), c(2,4,5,7,322:401,636)]
-italianConcData3b <- italianConcess_Data[c(27:32), c(2,4,5,7,402:478,636)]
-italianConcData4a <- italianConcess_Data[c(33:35), c(2,4,5,7,479:558,636)]
+italianConcData2b <- italianConcess_Data[c(16:20), c(2,4,5,7,245:321,636)]
+italianConcData3a <- italianConcess_Data[c(21:24), c(2,4,5,7,322:401,636)]
+italianConcData3b <- italianConcess_Data[c(25:30), c(2,4,5,7,402:478,636)]
+italianConcData4a <- italianConcess_Data[c(31:35), c(2,4,5,7,479:558,636)]
 italianConcData4b <- italianConcess_Data[c(36:40), c(2,4,5,7,559:635,636)]
-View(italian)
+
 # Melt data to long format
 
 italianConcData1a <- reshape2::melt(italianConcData1a, id.vars = c(1:4,85))
@@ -363,8 +364,6 @@ colnames(italianConcData4a)[colnames(italianConcData4a)=="value"] = "Score"
 italianConcData4b <- reshape2::melt(italianConcData4b, id.vars = c(1:4,82))
 colnames(italianConcData4b)[colnames(italianConcData4b)=="variable"] = "Item"
 colnames(italianConcData4b)[colnames(italianConcData4b)=="value"] = "Score"
-
-View(italianConcData1a)
 
 # Rbind and merge all data 
 
