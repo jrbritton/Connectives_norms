@@ -13,8 +13,7 @@ rstudioapi::writeRStudioPreference("data_viewer_max_columns", 1000L)
 
 setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\survey_data")
 
-
-#Sys.setlocale(category="LC_ALL", locale = "English_United States.1252")
+Sys.setlocale(category="LC_ALL", locale = "English_United States.1252")
 
 italianData <- read.csv("italianData.csv")
 italianConds <- read.csv("italianConditions.csv", encoding = "Italian")
@@ -214,15 +213,17 @@ impNoConnHi <- subset(allData, CONDITION == "IMPLAUS_NOCONN" & Score >= 4)
 
 plausNoConnLo <- subset(allData, CONDITION == "PLAUS_NOCONN" & Score <= 4)
 
+Sys.setlocale(category="LC_ALL", locale = "English_United States.1252")
+
 italianAllRotas <- read.csv("italianAllRotas.csv")
 italianAllRotas <- subset(italianAllRotas, select = c(1:5))
-
+View(italianAllRotas)
 impNoConnHi <- merge(italianAllRotas,impNoConnHi, by.x = "SOS_ID", 
                      by.y = "Item")
 
 plausNoConnLo <- merge(italianAllRotas,plausNoConnLo, by.x = "SOS_ID", 
                        by.y = "Item")
-
+View(italianConds)
 #write.csv(plausNoConnLo,"C:/Users/herts/OneDrive/Desktop/impNoConn_low.csv", fileEncoding = "UTF-8")
 
 # allData[allData == "SC1"] <- 1
@@ -250,12 +251,13 @@ summary(itaclmmModel)
 
 emmeans(itaclmmModel,pairwise ~ CONDITION | Score, mode = "prob")
 
-
 # Calculate clause lengths
+
+italianConds <- read.csv("italianConditions.csv", encoding = "Italian")
 
 sent_len = c()  # Empty vector
 
-for (var in italianAllRotas$SENTENCE){
+for (var in italianConds$SENTENCE){
   var = length(strsplit(var, " ")[[1]])
   it = var     # 'it' is the value of var after one iteration
   sent_len = c(sent_len, it) # add the value of it to empty vector
@@ -267,20 +269,45 @@ sent_lengths <- data.frame(table(sent_len))
 View(sent_lengths)
 
 colnames(sent_lengths) <- c("WordCount", "SentNum")
-italianAllRotas <- cbind(italianAllRotas,sent_len)
+italianConds <- cbind(italianConds,sent_len)
 
 #write.xlsx(sent_lengths,"C:/Users/herts/OneDrive/Desktop/sent_lengths.xlsx", 
 #           colNames = TRUE)
 #write.xlsx(italianAllRotas,"C:/Users/herts/OneDrive/Desktop/allItalianRotas.xlsx", 
 #           colNames = TRUE)
 
-subRotas1 <- subset(italianAllRotas, CONDITION == "PLAUS_NOCONN" & 
+subRotas1 <- subset(italianConds, CONDITION == "PLAUS_NOCONN" & 
+                      sent_len == 20)
+subRotas2 <- subset(italianConds, CONDITION == "IMPLAUS_NOCONN" & 
+                      sent_len == 20)
+subRotas3 <- subset(italianConds, CONDITION == "PLAUS_CONN" & 
+                      sent_len == 20)
+subRotas4 <- subset(italianConds, CONDITION == "IMPLAUS_CONN" & 
+                      sent_len == 20)
+
+words_20 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
+table(words_20$CONDITION)
+
+subRotas1 <- subset(italianConds, CONDITION == "PLAUS_NOCONN" & 
+                      sent_len == 21)
+subRotas2 <- subset(italianConds, CONDITION == "IMPLAUS_NOCONN" & 
+                      sent_len == 21)
+subRotas3 <- subset(italianConds, CONDITION == "PLAUS_CONN" & 
+                      sent_len == 21)
+subRotas4 <- subset(italianConds, CONDITION == "IMPLAUS_CONN" & 
+                      sent_len == 21)
+
+words_21 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
+table(words_21$CONDITION)
+
+
+subRotas1 <- subset(italianConds, CONDITION == "PLAUS_NOCONN" & 
                       sent_len == 22)
-subRotas2 <- subset(italianAllRotas, CONDITION == "IMPLAUS_NOCONN" & 
+subRotas2 <- subset(italianConds, CONDITION == "IMPLAUS_NOCONN" & 
                       sent_len == 22)
-subRotas3 <- subset(italianAllRotas, CONDITION == "PLAUS_CONN" & 
+subRotas3 <- subset(italianConds, CONDITION == "PLAUS_CONN" & 
                       sent_len == 22)
-subRotas4 <- subset(italianAllRotas, CONDITION == "IMPLAUS_CONN" & 
+subRotas4 <- subset(italianConds, CONDITION == "IMPLAUS_CONN" & 
                       sent_len == 22)
 
 words_22 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
@@ -289,30 +316,17 @@ table(words_22$CONDITION)
 clauses2 <- read.csv("clauses2.csv")
 table(clauses2$CONDITION)
 
-subRotas1 <- subset(italianAllRotas, CONDITION == "PLAUS_NOCONN" & 
+subRotas1 <- subset(italianConds, CONDITION == "PLAUS_NOCONN" & 
                       sent_len == 23)
-subRotas2 <- subset(italianAllRotas, CONDITION == "IMPLAUS_NOCONN" & 
+subRotas2 <- subset(italianConds, CONDITION == "IMPLAUS_NOCONN" & 
                       sent_len == 23)
-subRotas3 <- subset(italianAllRotas, CONDITION == "PLAUS_CONN" & 
+subRotas3 <- subset(italianConds, CONDITION == "PLAUS_CONN" & 
                       sent_len == 23)
-subRotas4 <- subset(italianAllRotas, CONDITION == "IMPLAUS_CONN" & 
+subRotas4 <- subset(italianConds, CONDITION == "IMPLAUS_CONN" & 
                       sent_len == 23)
 
 words_23 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
 table(words_23$CONDITION)
-
-subRotas1 <- subset(italianAllRotas, CONDITION == "PLAUS_NOCONN" & 
-                      sent_len == 21)
-subRotas2 <- subset(italianAllRotas, CONDITION == "IMPLAUS_NOCONN" & 
-                      sent_len == 21)
-subRotas3 <- subset(italianAllRotas, CONDITION == "PLAUS_CONN" & 
-                      sent_len == 21)
-subRotas4 <- subset(italianAllRotas, CONDITION == "IMPLAUS_CONN" & 
-                      sent_len == 21)
-
-words_21 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
-table(words_21$CONDITION)
-
 
 #write.xlsx(words_22,"C:/Users/herts/OneDrive/Desktop/words_22.xlsx", 
 #           colNames = TRUE)
@@ -322,18 +336,14 @@ table(words_21$CONDITION)
 #write.csv(words_22,"C:/Users/herts/OneDrive/Desktop/words_22.csv", 
 #          fileEncoding = "UTF-8")
 
-allwords <- rbind(words_22, words_23)
-allwords <- rbind(allwords, words_21)
-
+allwords <- rbind(words_20, words_21, words_22, words_23)
+View(allwords)
 # Merge with conditions data (target words)
 
-allwords <- merge(allwords,italianConds, by = "SOS_ID")
-allwords <- subset(allwords, select = c(-5,-9))
-colnames(allwords)[colnames(allwords)=="CONDITION.y"] = "CONDITION"
-View(allwords)  
-
 table(allwords$TARGET_WORD)
-  
+
+write_excel_csv(allwords, delim = ",", "C:/Users/herts/OneDrive/Desktop/allwords.csv") 
+
 ##############################################
 # Concessive Data
 ##############################################
