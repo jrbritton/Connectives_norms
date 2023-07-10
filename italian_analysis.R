@@ -85,7 +85,7 @@ allData <- rbind(italianData1a,italianData1b,italianData2a,italianData2b,
 allData <- merge(allData,italianConds, by.x = "Item", by.y = "SOS_ID")
 
 # Means by Sentence Condition
-View(allData)
+#View(allData)
 italianCondNorms <- aggregate(Score~CONDITION, data=allData,mean); 
 names(italianCondNorms) = c("CONDITION","Mean") 
 
@@ -172,7 +172,7 @@ scoreBox
 impNoConn_outliers <- subset(allData, CONDITION == "IMPLAUS_NOCONN")
 impNoConn_outliers <- subset(impNoConn_outliers, Score > 4)
 impNoConn_outliers <- subset(impNoConn_outliers, Time < 800)
-View(impNoConn_outliers)
+#View(impNoConn_outliers)
 
 table(impNoConn_outliers$Part)
 # Plaus_NoConn
@@ -180,7 +180,7 @@ table(impNoConn_outliers$Part)
 plausNoConn_outliers <- subset(allData, CONDITION == "PLAUS_NOCONN")
 plausNoConn_outliers <- subset(plausNoConn_outliers, Score < 5)
 plausNoConn_outliers <- subset(plausNoConn_outliers, Time < 800)
-View(plausNoConn_outliers)
+#View(plausNoConn_outliers)
 
 
 # Conditions model
@@ -264,6 +264,7 @@ for (var in italianAllRotas$SENTENCE){
 sent_len = data.frame(sent_len)  # make for loop output into a data frame
 
 sent_lengths <- data.frame(table(sent_len))
+View(sent_lengths)
 
 colnames(sent_lengths) <- c("WordCount", "SentNum")
 italianAllRotas <- cbind(italianAllRotas,sent_len)
@@ -283,7 +284,6 @@ subRotas4 <- subset(italianAllRotas, CONDITION == "IMPLAUS_CONN" &
                       sent_len == 22)
 
 words_22 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
-View(words_22)
 table(words_22$CONDITION)
 
 clauses2 <- read.csv("clauses2.csv")
@@ -301,17 +301,39 @@ subRotas4 <- subset(italianAllRotas, CONDITION == "IMPLAUS_CONN" &
 words_23 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
 table(words_23$CONDITION)
 
+subRotas1 <- subset(italianAllRotas, CONDITION == "PLAUS_NOCONN" & 
+                      sent_len == 21)
+subRotas2 <- subset(italianAllRotas, CONDITION == "IMPLAUS_NOCONN" & 
+                      sent_len == 21)
+subRotas3 <- subset(italianAllRotas, CONDITION == "PLAUS_CONN" & 
+                      sent_len == 21)
+subRotas4 <- subset(italianAllRotas, CONDITION == "IMPLAUS_CONN" & 
+                      sent_len == 21)
 
-write.xlsx(words_22,"C:/Users/herts/OneDrive/Desktop/words_22.xlsx", 
-           colNames = TRUE)
-write.xlsx(words_23,"C:/Users/herts/OneDrive/Desktop/words_23.xlsx", 
-           colNames = TRUE)
-
-write.csv(words_22,"C:/Users/herts/OneDrive/Desktop/words_22.csv", 
-          fileEncoding = "UTF-8")
+words_21 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
+table(words_21$CONDITION)
 
 
+#write.xlsx(words_22,"C:/Users/herts/OneDrive/Desktop/words_22.xlsx", 
+#           colNames = TRUE)
+#write.xlsx(words_23,"C:/Users/herts/OneDrive/Desktop/words_23.xlsx", 
+#           colNames = TRUE)
 
+#write.csv(words_22,"C:/Users/herts/OneDrive/Desktop/words_22.csv", 
+#          fileEncoding = "UTF-8")
+
+allwords <- rbind(words_22, words_23)
+allwords <- rbind(allwords, words_21)
+
+# Merge with conditions data (target words)
+
+allwords <- merge(allwords,italianConds, by = "SOS_ID")
+allwords <- subset(allwords, select = c(-5,-9))
+colnames(allwords)[colnames(allwords)=="CONDITION.y"] = "CONDITION"
+View(allwords)  
+
+table(allwords$TARGET_WORD)
+  
 ##############################################
 # Concessive Data
 ##############################################
