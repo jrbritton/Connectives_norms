@@ -67,7 +67,7 @@ colnames(frenchData4b)[colnames(frenchData4b)=="value"] = "Score"
 
 allDataFre <- rbind(frenchData1a,frenchData1b,frenchData2a,frenchData2b,
                  frenchData3a,frenchData3b,frenchData4a,frenchData4b)
-View(allDataFre)
+#View(allDataFre)
 allDataFre <- merge(allDataFre,frenchSentConds, by.x = "Item", by.y = "SOS_ID")
 #View(frenchSentConds)
 # Means by Sentence Condition
@@ -135,11 +135,29 @@ emmeans(clmmFrench,pairwise ~ CONDITION | Score, mode = "prob")
 
 impNoConn_outliersFre <- subset(allDataFre, CONDITION == "IMPLAUS_NOCONN")
 impNoConn_outliersFre <- subset(impNoConn_outliersFre, Score > 4)
-View(impNoConn_outliersFre)
+#View(impNoConn_outliersFre)
 
 # Plaus_NoConn
 
 plausNoConn_outliersFre <- subset(allDataFre, CONDITION == "PLAUS_NOCONN")
 plausNoConn_outliersFre <- subset(plausNoConn_outliersFre, Score < 5)
-View(plausNoConn_outliersFre)
+#View(plausNoConn_outliersFre)
+
+
+
+##############################################
+# Concessive data
+##############################################
+
+frenchConcRotas <- read.csv("frenchConcRotas.csv")
+
+table(frenchConcRotas$CONDITION)
+
+
+
+
+
+
+
+
 

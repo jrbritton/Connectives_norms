@@ -21,6 +21,7 @@ italianConds <- italianConds[,c(-2:-4)]
 #View(italianData)
 #View(italianConds)
 # A pie chart of age distribution
+table(italianConds$CONDITION)
 
 # ageSum <- data.frame(table(italianData$Age))
 # pieColours <- c("maroon", "deepskyblue", "lightgreen", "yellow3", "purple",
@@ -255,95 +256,52 @@ emmeans(itaclmmModel,pairwise ~ CONDITION | Score, mode = "prob")
 
 italianConds <- read.csv("italianConditions.csv", encoding = "Italian")
 
+# Counting words in a sentence
 sent_len = c()  # Empty vector
 
+# Counting words in a sentence
+
+# strsplit - each element of a vector becomes a vector
+# outputs to a list which is indexed by [[1]]
+
 for (var in italianConds$SENTENCE){
-  var = length(strsplit(var, " ")[[1]])
+  var = length(strsplit(var, " ")[[1]]) # " " space between words
   it = var     # 'it' is the value of var after one iteration
   sent_len = c(sent_len, it) # add the value of it to empty vector
 }
 
 sent_len = data.frame(sent_len)  # make for loop output into a data frame
-
+View(sent_len)
 sent_lengths <- data.frame(table(sent_len))
 View(sent_lengths)
 
 colnames(sent_lengths) <- c("WordCount", "SentNum")
 italianConds <- cbind(italianConds,sent_len)
+View(italianConds)
 
 #write.xlsx(sent_lengths,"C:/Users/herts/OneDrive/Desktop/sent_lengths.xlsx", 
 #           colNames = TRUE)
 #write.xlsx(italianAllRotas,"C:/Users/herts/OneDrive/Desktop/allItalianRotas.xlsx", 
 #           colNames = TRUE)
 
-subRotas1 <- subset(italianConds, CONDITION == "PLAUS_NOCONN" & 
-                      sent_len == 20)
-subRotas2 <- subset(italianConds, CONDITION == "IMPLAUS_NOCONN" & 
-                      sent_len == 20)
-subRotas3 <- subset(italianConds, CONDITION == "PLAUS_CONN" & 
-                      sent_len == 20)
-subRotas4 <- subset(italianConds, CONDITION == "IMPLAUS_CONN" & 
-                      sent_len == 20)
+# Subset sent lengths by word count
 
-words_20 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
-table(words_20$CONDITION)
+words18 <- subset(italianConds, sent_len == 18)
+words19 <- subset(italianConds, sent_len == 19)
+words20 <- subset(italianConds, sent_len == 20)
+words21 <- subset(italianConds, sent_len == 21)
+words22 <- subset(italianConds, sent_len == 22)
+words23 <- subset(italianConds, sent_len == 23)
+words24 <- subset(italianConds, sent_len == 24)
+words25 <- subset(italianConds, sent_len == 25)
+words26 <- subset(italianConds, sent_len == 26)
 
-subRotas1 <- subset(italianConds, CONDITION == "PLAUS_NOCONN" & 
-                      sent_len == 21)
-subRotas2 <- subset(italianConds, CONDITION == "IMPLAUS_NOCONN" & 
-                      sent_len == 21)
-subRotas3 <- subset(italianConds, CONDITION == "PLAUS_CONN" & 
-                      sent_len == 21)
-subRotas4 <- subset(italianConds, CONDITION == "IMPLAUS_CONN" & 
-                      sent_len == 21)
-
-words_21 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
-table(words_21$CONDITION)
-
-
-subRotas1 <- subset(italianConds, CONDITION == "PLAUS_NOCONN" & 
-                      sent_len == 22)
-subRotas2 <- subset(italianConds, CONDITION == "IMPLAUS_NOCONN" & 
-                      sent_len == 22)
-subRotas3 <- subset(italianConds, CONDITION == "PLAUS_CONN" & 
-                      sent_len == 22)
-subRotas4 <- subset(italianConds, CONDITION == "IMPLAUS_CONN" & 
-                      sent_len == 22)
-
-words_22 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
-table(words_22$CONDITION)
-
-clauses2 <- read.csv("clauses2.csv")
-table(clauses2$CONDITION)
-
-subRotas1 <- subset(italianConds, CONDITION == "PLAUS_NOCONN" & 
-                      sent_len == 23)
-subRotas2 <- subset(italianConds, CONDITION == "IMPLAUS_NOCONN" & 
-                      sent_len == 23)
-subRotas3 <- subset(italianConds, CONDITION == "PLAUS_CONN" & 
-                      sent_len == 23)
-subRotas4 <- subset(italianConds, CONDITION == "IMPLAUS_CONN" & 
-                      sent_len == 23)
-
-words_23 <- rbind(subRotas1,subRotas2,subRotas3,subRotas4)
-table(words_23$CONDITION)
-
-#write.xlsx(words_22,"C:/Users/herts/OneDrive/Desktop/words_22.xlsx", 
-#           colNames = TRUE)
-#write.xlsx(words_23,"C:/Users/herts/OneDrive/Desktop/words_23.xlsx", 
-#           colNames = TRUE)
-
-#write.csv(words_22,"C:/Users/herts/OneDrive/Desktop/words_22.csv", 
-#          fileEncoding = "UTF-8")
-
-allwords <- rbind(words_20, words_21, words_22, words_23)
-View(allwords)
-# Merge with conditions data (target words)
-
-table(allwords$TARGET_WORD)
+allwords <- rbind(words18,words19,words20,words21,words22,words23,words24,words25,words26)
 
 write_excel_csv(allwords, delim = ",", "C:/Users/herts/OneDrive/Desktop/allwords.csv") 
 
+clauses2 <- read.csv("clauses2.csv")
+table(clauses2$CONDITION)
 ##############################################
 # Concessive Data
 ##############################################
