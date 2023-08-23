@@ -12,6 +12,8 @@ library(openxlsx)
 
 setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\survey_data")
 
+rstudioapi::writeRStudioPreference("data_viewer_max_columns", 1000L)
+
 frenchData <- read.csv("french_data.csv")
 frenchSentConds <- read.csv("frenchConditions.csv", encoding = "French")
 frenchSentConds <- frenchSentConds[,c(-2:-4)]
@@ -67,6 +69,7 @@ colnames(frenchData4b)[colnames(frenchData4b)=="value"] = "Score"
 
 allDataFre <- rbind(frenchData1a,frenchData1b,frenchData2a,frenchData2b,
                  frenchData3a,frenchData3b,frenchData4a,frenchData4b)
+View(allDataFre)
 #View(allDataFre)
 allDataFre <- merge(allDataFre,frenchSentConds, by.x = "Item", by.y = "SOS_ID")
 #View(frenchSentConds)
@@ -83,10 +86,12 @@ View(frenchCondNorms)
 
 # Plot for distributions
 
-ggplot(allDataFre, aes(x=Score)) +
+frenchAdvDist <- ggplot(allDataFre, aes(x=Score)) +
   geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
   geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
-             color="red", linetype="dashed", size=1)
+             color="red", linetype="dashed", size=1) +
+  ggtitle("French Distribution: Cependant")
+frenchAdvDist
 
 # Exclude participant 33 from time analysis 
 timeData <- subset(allDataFre, Part != 33)
@@ -95,21 +100,6 @@ timeBoxFre <- ggplot(timeData, aes(x = Quest, y = Time, fill = Quest)) +
   geom_boxplot() +
   ggtitle("Time to complete questionnaire")
 timeBoxFre
-
-#timeNorms <- aggregate(Time~Quest, data=italianData,mean); 
-#names(timeNorms) = c("Quest","Mean") 
-
-#write.csv(timeNorms,"C:/Users/herts/OneDrive/Desktop/timeNorms.csv", fileEncoding = "UTF-8")
-
-# Add a column for all the participant data
-
-allDataFre$all <- "Parts"
-
-questTimeBoxFre <- ggplot(allDataFre, aes(x = questAB, y = Time, fill = questAB)) +
-  geom_boxplot() +
-  ggtitle("Time to complete questionnaire")
-questTimeBoxFre
-
 
 scoreBoxFre <- ggplot(allDataFre, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
@@ -120,44 +110,116 @@ scoreBoxFre
 
 allDataFre$Score <- as.factor(allDataFre$Score)
 allDataFre$Part <- as.factor(allDataFre$Part)
+View(allDataFre)
 
+frenchAdv_clmm <- clmm(Score ~ CONDITION + Gender + (1|Part), data = allDataFre) 
+summary(frenchAdv_clmm) 
 
-clmmFrench <- clmm(Score~CONDITION + TARGET_WORD + (1|Part), data = allDataFre) 
-summary(clmmFrench) 
-
-emmeans(clmmFrench,pairwise ~ CONDITION | Score, mode = "prob")
-
-#####################
-# Outliers
-#####################
-
-# Implaus_NoConn
-
-impNoConn_outliersFre <- subset(allDataFre, CONDITION == "IMPLAUS_NOCONN")
-impNoConn_outliersFre <- subset(impNoConn_outliersFre, Score > 4)
-#View(impNoConn_outliersFre)
-
-# Plaus_NoConn
-
-plausNoConn_outliersFre <- subset(allDataFre, CONDITION == "PLAUS_NOCONN")
-plausNoConn_outliersFre <- subset(plausNoConn_outliersFre, Score < 5)
-#View(plausNoConn_outliersFre)
-
-
+emmeans(frenchAdv_clmm,pairwise ~ CONDITION | Score, mode = "prob")
 
 ##############################################
 # Concessive data
 ##############################################
 
-frenchConcRotas <- read.csv("frenchConcRotas.csv")
+# Concessive Analysis
 
-table(frenchConcRotas$CONDITION)
+frenchConcData <- read.csv("frenchConcess_data.csv")
+colnames(frenchConcData)[colnames(frenchConcData)=="TIME003"] = "Time"
+View(frenchConcData)
 
+# Update rows if data is added
+frenchConcData1a <- frenchConcData[c(1:5), c(2,4:6,8:87,636)]
+frenchConcData1b <- frenchConcData[c(6:10), c(2,4:6,88:164,636)]
+frenchConcData2a <- frenchConcData[c(11:15), c(2,4:6,165:244,636)]
+frenchConcData2b <- frenchConcData[c(16:19), c(2,4:6,245:321,636)]
+frenchConcData3a <- frenchConcData[c(20:24), c(2,4:6,322:401,636)]
+frenchConcData3b <- frenchConcData[c(25:29), c(2,4:6,402:478,636)]
+frenchConcData4a <- frenchConcData[c(30:32), c(2,4:6,479:558,636)]
+frenchConcData4b <- frenchConcData[c(33:36), c(2,4:6,559:635,636)]
 
+# Melt data to long format
+frenchConcData1a <- reshape2::melt(frenchConcData1a, id.vars = c(1:4,85))
+colnames(frenchConcData1a)[colnames(frenchConcData1a)=="variable"] = "Item"
+colnames(frenchConcData1a)[colnames(frenchConcData1a)=="value"] = "Score"
 
+frenchConcData1b <- reshape2::melt(frenchConcData1b, id.vars = c(1:4,82))
+colnames(frenchConcData1b)[colnames(frenchConcData1b)=="variable"] = "Item"
+colnames(frenchConcData1b)[colnames(frenchConcData1b)=="value"] = "Score"
 
+frenchConcData2a <- reshape2::melt(frenchConcData2a, id.vars = c(1:4,85))
+colnames(frenchConcData2a)[colnames(frenchConcData2a)=="variable"] = "Item"
+colnames(frenchConcData2a)[colnames(frenchConcData2a)=="value"] = "Score"
 
+frenchConcData2b <- reshape2::melt(frenchConcData2b, id.vars = c(1:4,82))
+colnames(frenchConcData2b)[colnames(frenchConcData2b)=="variable"] = "Item"
+colnames(frenchConcData2b)[colnames(frenchConcData2b)=="value"] = "Score"
 
+frenchConcData3a <- reshape2::melt(frenchConcData3a, id.vars = c(1:4,85))
+colnames(frenchConcData3a)[colnames(frenchConcData3a)=="variable"] = "Item"
+colnames(frenchConcData3a)[colnames(frenchConcData3a)=="value"] = "Score"
+
+frenchConcData3b <- reshape2::melt(frenchConcData3b, id.vars = c(1:4,82))
+colnames(frenchConcData3b)[colnames(frenchConcData3b)=="variable"] = "Item"
+colnames(frenchConcData3b)[colnames(frenchConcData3b)=="value"] = "Score"
+
+frenchConcData4a <- reshape2::melt(frenchConcData4a, id.vars = c(1:4,85))
+colnames(frenchConcData4a)[colnames(frenchConcData4a)=="variable"] = "Item"
+colnames(frenchConcData4a)[colnames(frenchConcData4a)=="value"] = "Score"
+
+frenchConcData4b <- reshape2::melt(frenchConcData4b, id.vars = c(1:4,82))
+colnames(frenchConcData4b)[colnames(frenchConcData4b)=="variable"] = "Item"
+colnames(frenchConcData4b)[colnames(frenchConcData4b)=="value"] = "Score"
+
+# Rbind and merge all data 
+
+allConcDataFre <- rbind(frenchConcData1a,frenchConcData1b,frenchConcData2a,frenchConcData2b,
+                    frenchConcData3a,frenchConcData3b,frenchConcData4a,frenchConcData4b)
+allConcDataFre <- merge(allConcDataFre,frenchSentConds, by.x = "Item", by.y = "SOS_ID")
+
+# Means
+frenchConcCondNorms <- aggregate(Score~CONDITION, data=allConcDataFre,mean); 
+names(frenchConcCondNorms) = c("CONDITION","Mean") 
+
+frenchConcCondSD <- aggregate(Score~CONDITION, data=allConcDataFre,sd); 
+names(frenchConcCondSD) = c("CONDITION","SD") 
+
+frenchConcCondNorms <- merge(frenchConcCondNorms,frenchConcCondSD, by = "CONDITION")
+View(frenchConcCondNorms)
+
+# Plot for distributions
+
+frenchConcDist <- ggplot(allConcDataFre, aes(x=Score)) +
+  geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
+  geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
+             color="red", linetype="dashed", size=1) +
+  ggtitle("French Concessive Distribution")
+frenchConcDist
+
+# Time plots
+
+questTimeBoxFre2 <- ggplot(allConcDataFre, aes(x = Quest, y = Time, fill = Quest)) +
+  geom_boxplot() +
+  ggtitle("Time to complete questionnaire")
+questTimeBoxFre2
+
+# Score plots per Condition
+
+scoreBoxFre2 <- ggplot(allConcDataFre, aes(x = CONDITION, y = Score, fill = CONDITION)) +
+  geom_boxplot() +
+  ggtitle("Sentence Conditions: Malgre cela")
+scoreBoxFre2
+
+####################
+# Conditions Model
+####################
+
+allConcDataFre$Score <- as.factor(allConcDataFre$Score)
+allConcDataFre$Part <- as.factor(allConcDataFre$Part)
+
+frenchConc_clmm <- clmm(Score~CONDITION + Gender + (1|Part), data = allConcDataFre) 
+summary(frenchConc_clmm) 
+
+emmeans(frenchConc_clmm,pairwise ~ CONDITION | Score, mode = "prob")
 
 
 

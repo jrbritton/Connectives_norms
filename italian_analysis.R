@@ -8,6 +8,7 @@ library(sjPlot)
 library(ordinal)
 library(emmeans)
 library(openxlsx)
+library(gridExtra)
 
 rstudioapi::writeRStudioPreference("data_viewer_max_columns", 1000L)
 
@@ -40,9 +41,19 @@ italianData3a <- italianData[c(21:25), c(2,4,5,7,322:401,636)]
 italianData3b <- italianData[c(26:30), c(2,4,5,7,402:478,636)]
 italianData4a <- italianData[c(31:35), c(2,4,5,7,479:558,636)]
 italianData4b <- italianData[c(36:40), c(2,4,5,7,559:635,636)]
-#View(italianData)
-# Melt data to long format
 
+# This function will melt data to long format. 
+# Specify the df and the columns to transpose as a numeric vector.
+# Requires reshape2 / tidyverse
+meltFunc <- function(df, cols){
+  df <- reshape2::melt(df, id.vars = c(cols))
+}
+
+print(testvec)
+testvec <- c(1:4,85)
+test <- meltFunc(italianData1a, testvec)
+View(test)  
+# Melt data to long format
 italianData1a <- reshape2::melt(italianData1a, id.vars = c(1:4,85))
 colnames(italianData1a)[colnames(italianData1a)=="variable"] = "Item"
 colnames(italianData1a)[colnames(italianData1a)=="value"] = "Score"
@@ -95,6 +106,18 @@ names(italianCondSD)= c("CONDITION","SD")
 italianCondNorms <- merge(italianCondNorms,italianCondSD, by = "CONDITION")
 #View(italianCondNorms)
 
+# Table theme
+tableTheme <- ttheme_minimal(
+  core=list(bg_params = list(fill = "lightblue")),
+            fg_params=list(fontface=3),
+            colhead=list(fg_params=list(col="steelblue", fontface=4L)),
+  core=list(fg_params=list(hjust=0, x=0.1)),
+  rowhead=list(fg_params=list(hjust=0, x=0)))
+
+# Plot table for norms
+normsTable <- tableGrob(italianCondNorms, theme=tableTheme)
+grid.arrange(normsTable)
+
 #write.csv(italianCondNorms,"C:/Users/herts/OneDrive/Desktop/condNorms.csv", fileEncoding = "UTF-8")
 
 # Means by Word
@@ -146,7 +169,7 @@ timeBox <- ggplot(italianData, aes(x = Quest, y = Time, fill = Quest)) +
   geom_boxplot() +
   ggtitle("Time to complete questionnaire")
 timeBox
-
+View(italianData)
 #timeNorms <- aggregate(Time~Quest, data=italianData,mean); 
 #names(timeNorms) = c("Quest","Mean") 
 
@@ -302,6 +325,7 @@ write_excel_csv(allwords, delim = ",", "C:/Users/herts/OneDrive/Desktop/allwords
 
 clauses2 <- read.csv("clauses2.csv")
 table(clauses2$CONDITION)
+
 ##############################################
 # Concessive Data
 ##############################################

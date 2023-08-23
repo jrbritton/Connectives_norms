@@ -1,0 +1,89 @@
+---
+title: "Chinese 'Even-so' Summary"
+---
+
+```{r include = FALSE}
+library(tidyverse)
+library(postHoc)
+library(DescTools)
+library(agricolae)
+library(RColorBrewer)
+library(sjPlot)
+library(ordinal)
+library(emmeans)
+library(rmarkdown)
+```
+
+This provides a summary of plots and models for the Chinese 'even-so' data from the self-paced reading task.
+
+```{r include=FALSE}
+setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\Chinese")
+
+chineseData <- read.csv("Results_1234.csv")
+View(chineseData)
+
+# Remove NA rows to only look at coherence scores
+
+coherenceScores <- na.omit(chineseData)
+View(coherenceScores)
+table(coherenceScores$TrialNumber)
+
+
+# Means by Sentence Condition
+chineseCondNorms <- aggregate(Value~Condition, data=coherenceScores,mean); 
+names(chineseCondNorms) = c("Condition","Mean") 
+
+chineseCondSD <- aggregate(Value~Condition, data=coherenceScores,sd); 
+names(chineseCondSD)= c("Condition","SD") 
+
+chineseCondNorms <- merge(chineseCondNorms,chineseCondSD, by = "Condition")
+```
+
+#### Distribution
+```{r include=FALSE}
+chinDist <- ggplot(coherenceScores, aes(x=Value)) +
+  geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
+  geom_density(aes(x=Value)) +
+  geom_vline(aes(xintercept=mean(Value, na.rm=T)),   # Ignore NA values for mean
+             color="red", linetype="dashed", size=1) +
+  ggtitle("Distribution: Chinese ('Even-so')")
+```
+
+```{r}
+chinDist
+```
+
+#### Means and Standard Deviations per Condition
+```{r}
+chineseCondNorms
+```
+
+
+#### Box plots per Condition
+
+```{r include=FALSE}
+chinscoreBox <- ggplot(coherenceScores, aes(x = Condition, y = Value, fill = Condition)) +
+  geom_boxplot() +
+  ggtitle("Chinese: Even-so")
+```
+```{r}
+chinscoreBox
+```
+
+#### Clmm Analysis
+
+```{r include=FALSE}
+coherenceScores$Value <- as.factor(coherenceScores$Value)
+coherenceScores$Participant <- as.factor(coherenceScores$Participant)
+```
+
+##### Model with value as DV and Condition as IV (Participant as random effect)
+```{r}
+chinclmmModel <- clmm(Value~Condition + (1|Participant), data = coherenceScores) 
+summary(chinclmmModel) 
+```
+
+##### Between conditions analysis with emmeans
+```{r}
+emmeans(chinclmmModel,pairwise ~ Condition | Value, mode = "prob")
+```
