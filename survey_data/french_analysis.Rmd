@@ -1,3 +1,11 @@
+---
+title: "French Adversative and Concessive Analysis"
+author: "James Britton"
+date: "2023-08-24"
+output: html_document
+---
+
+```{r setup, include=FALSE}
 library(tidyverse)
 library(lme4)
 library(postHoc)
@@ -7,21 +15,22 @@ library(RColorBrewer)
 library(sjPlot)
 library(ordinal)
 library(emmeans)
-library(stringr)
 library(openxlsx)
-
-setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\survey_data")
+library(gridExtra)
 
 rstudioapi::writeRStudioPreference("data_viewer_max_columns", 1000L)
 
+setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\survey_data")
+```
+
+## Adversative Analysis ('Cependant')
+```{r include=FALSE}
 frenchData <- read.csv("frenchData.csv")
-frenchSentConds <- read.csv("frenchConditions.csv", encoding = "French")
+frenchSentConds <- read.csv("frenchConditions.csv", encoding = "Italian")
 frenchSentConds <- frenchSentConds[,c(-2:-4)]
+```
 
-colnames(frenchData)[colnames(frenchData)=="Time.spent.on.page.3"] = "Time"
-
-table(frenchData$Age)
-
+```{r include=FALSE}
 frenchData1a <- frenchData[c(1:5), c(1,4,5,7,10:89,638)]
 frenchData1b <- frenchData[c(6:11), c(1,4,5,7,90:166,638)]
 frenchData2a <- frenchData[c(12:16), c(1,4,5,7,167:246,638)]
@@ -69,13 +78,13 @@ colnames(frenchData4b)[colnames(frenchData4b)=="value"] = "Score"
 
 allDataFre <- rbind(frenchData1a,frenchData1b,frenchData2a,frenchData2b,
                  frenchData3a,frenchData3b,frenchData4a,frenchData4b)
-View(allDataFre)
-#View(allDataFre)
+
 allDataFre <- merge(allDataFre,frenchSentConds, by.x = "Item", by.y = "SOS_ID")
-View(frenchSentConds)
+```
 
+### Means by sentence condition
+```{r include=FALSE}
 # Means by Sentence Condition
-
 frenchCondNorms <- aggregate(Score~CONDITION, data=allDataFre,mean); 
 names(frenchCondNorms) = c("CONDITION","Mean") 
 
@@ -83,52 +92,72 @@ frenchCondSD <- aggregate(Score~CONDITION, data=allDataFre,sd);
 names(frenchCondSD)= c("CONDITION","SD") 
 
 frenchCondNorms <- merge(frenchCondNorms,frenchCondSD, by = "CONDITION")
-View(frenchCondNorms)
+```
+```{r include=TRUE}
+frenchCondNorms
+```
 
-# Plot for distributions
-
+### Distribution
+```{r include=FALSE}
 frenchAdvDist <- ggplot(allDataFre, aes(x=Score)) +
   geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
   geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
              color="red", linetype="dashed", size=1) +
   ggtitle("French Distribution: Cependant")
+```
+```{r include=TRUE}
 frenchAdvDist
+```
 
-# Exclude participant 33 from time analysis 
+### Time to complete questionnaire
+```{r include=FALSE}
 freTimeData <- subset(allDataFre, Part != 33)
-
-freTimeBox <- ggplot(timeData, aes(x = Quest, y = Time, fill = Quest)) +
+freTimeBox <- ggplot(freTimeData, aes(x = Quest, y = Time, fill = Quest)) +
   geom_boxplot() +
   ggtitle("Time to complete questionnaire")
+```
+```{r include=TRUE}
 freTimeBox
+```
 
-# Scores per condition
+### Scores per condition
+```{r include=FALSE}
 freScoreBox <- ggplot(allDataFre, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
-  ggtitle("Sentence Conditions")
+  ggtitle("Sentence Conditions: 'Cependant'")
+```
+```{r include=TRUE}
 freScoreBox
+```
 
-# Conditions Model
-
+## CLMM Analysis
+```{r include=FALSE}
 allDataFre$Score <- as.factor(allDataFre$Score)
 allDataFre$Part <- as.factor(allDataFre$Part)
-View(allDataFre)
+```
 
+```{r include=TRUE}
 frenchAdv_clmm <- clmm(Score ~ CONDITION + Gender + (1|Part), data = allDataFre) 
-summary(frenchAdv_clmm) 
+summary(frenchAdv_clmm)
+```
 
+### Between levels analysis
+```{r include=TRUE}
 emmeans(frenchAdv_clmm,pairwise ~ CONDITION | Score, mode = "prob")
+```
 
-##############################################
-# Concessive data
-##############################################
 
-# Concessive Analysis
+_________________________________________________________________________
 
+
+
+## Concessive Analysis ('Malgre cela')
+```{r include=FALSE}
 frenchConcData <- read.csv("frenchConcess_data.csv")
 colnames(frenchConcData)[colnames(frenchConcData)=="TIME003"] = "Time"
-View(frenchConcData)
+```
 
+```{r include=FALSE}
 # Update rows if data is added
 frenchConcData1a <- frenchConcData[c(1:5), c(2,4:6,8:87,636)]
 frenchConcData1b <- frenchConcData[c(6:10), c(2,4:6,88:164,636)]
@@ -176,9 +205,13 @@ colnames(frenchConcData4b)[colnames(frenchConcData4b)=="value"] = "Score"
 
 allConcDataFre <- rbind(frenchConcData1a,frenchConcData1b,frenchConcData2a,frenchConcData2b,
                     frenchConcData3a,frenchConcData3b,frenchConcData4a,frenchConcData4b)
-allConcDataFre <- merge(allConcDataFre,frenchSentConds, by.x = "Item", by.y = "SOS_ID")
 
-# Means
+allConcDataFre <- merge(allConcDataFre,frenchSentConds, by.x = "Item", by.y = "SOS_ID")
+```
+
+### Means by sentence condition
+```{r include=FALSE}
+# Means by Sentence Condition
 frenchConcCondNorms <- aggregate(Score~CONDITION, data=allConcDataFre,mean); 
 names(frenchConcCondNorms) = c("CONDITION","Mean") 
 
@@ -186,41 +219,59 @@ frenchConcCondSD <- aggregate(Score~CONDITION, data=allConcDataFre,sd);
 names(frenchConcCondSD) = c("CONDITION","SD") 
 
 frenchConcCondNorms <- merge(frenchConcCondNorms,frenchConcCondSD, by = "CONDITION")
-View(frenchConcCondNorms)
+```
+```{r include=TRUE}
+frenchConcCondNorms
+```
 
-# Plot for distributions
-
+### Distribution
+```{r include=FALSE}
 frenchConcDist <- ggplot(allConcDataFre, aes(x=Score)) +
   geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
   geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
              color="red", linetype="dashed", size=1) +
-  ggtitle("French Concessive Distribution")
+  ggtitle("French Distribution: 'Malgre cela'")
+```
+```{r include=TRUE}
 frenchConcDist
+```
 
+### Time to complete questionnaire
+```{r include=FALSE}
 # Time plots
 freTimeBox2 <- ggplot(allConcDataFre, aes(x = Quest, y = Time, fill = Quest)) +
   geom_boxplot() +
   ggtitle("Time to complete questionnaire")
+```
+```{r include=TRUE}
 freTimeBox2
+```
 
-# Score plots per Condition
-
+### Scores per condition
+```{r include=FALSE}
 freScoreBox2 <- ggplot(allConcDataFre, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
   ggtitle("Sentence Conditions: 'Malgre cela'")
+```
+```{r include=TRUE}
 freScoreBox2
+```
 
-####################
-# Conditions Model
-####################
-
+## CLMM Analysis
+```{r include=FALSE}
 allConcDataFre$Score <- as.factor(allConcDataFre$Score)
 allConcDataFre$Part <- as.factor(allConcDataFre$Part)
+```
 
+```{r include=TRUE}
 frenchConc_clmm <- clmm(Score~CONDITION + Gender + (1|Part), data = allConcDataFre) 
 summary(frenchConc_clmm) 
+```
 
+### Between levels analysis
+```{r include=TRUE}
 emmeans(frenchConc_clmm,pairwise ~ CONDITION | Score, mode = "prob")
+```
 
 
 

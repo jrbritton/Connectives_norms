@@ -25,6 +25,8 @@ setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\survey_data")
 Sys.setlocale(category="LC_ALL", locale = "English_United States.1252")
 ```
 
+## Adversative Analysis ('Tuttavia')
+
 ```{r include=FALSE}
 italianData <- read.csv("italianData.csv")
 italianConds <- read.csv("italianConditions.csv", encoding = "Italian")
@@ -102,7 +104,201 @@ tableTheme <- ttheme_minimal(
   rowhead=list(fg_params=list(hjust=0, x=0)))
 ```
 
-```{r include=TRUE}
+```{r include=FALSE}
 normsTable <- tableGrob(italianCondNorms, theme=tableTheme)
 grid.arrange(normsTable)
 ```
+
+```{r include=TRUE}
+italianCondNorms
+```
+
+```{r include=FALSE}
+# Create a vector of 'a' and 'b' to add to italianData for each quest type
+questAB <- c(rep('a',5),rep('b',5),rep('a',5),rep('b',5),rep('a',5),
+            rep('b',5),rep('a',5),rep('b',5))
+
+italianData$questAB <- questAB
+```
+
+```{r include=FALSE}
+# Draw with black outline, white fill
+italianAdvDist <- ggplot(allData, aes(x=Score)) +
+  geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
+  geom_density(aes(x=Score)) +
+  geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
+           color="red", linetype="dashed", size=1) +
+  ggtitle("Distribution: Adversative ('Tuttavia')")
+```
+
+### Distribution
+```{r include=TRUE}
+italianAdvDist
+```
+
+### Time to complete questionnaire
+```{r include=FALSE}
+timeBox <- ggplot(italianData, aes(x = Quest, y = Time, fill = Quest)) +
+  geom_boxplot() +
+  ggtitle("Time to complete questionnaire")
+```
+```{r include=TRUE}
+timeBox
+```
+
+### Scores per condition
+```{r include=FALSE}
+scoreBox <- ggplot(allData, aes(x = CONDITION, y = Score, fill = CONDITION)) +
+  geom_boxplot() +
+  ggtitle("Sentence Conditions: Adversative ('Tuttavia')")
+```
+```{r include=TRUE}
+scoreBox
+```
+
+### CLMM Analysis
+```{r include=FALSE}
+allData$Score <- as.factor(allData$Score)
+allData$Part <- as.factor(allData$Part)
+```
+```{r include=TRUE}
+itaclmmModel <- clmm(Score~CONDITION + Gender + (1|Part), data = allData) 
+summary(itaclmmModel) 
+```
+
+#### Between levels analysis
+```{r include=TRUE}
+emmeans(itaclmmModel,pairwise ~ CONDITION | Score, mode = "prob")
+```
+
+
+_________________________________________________________________________
+
+
+## Concessive Analysis ('Nonostante cio')
+
+```{r include=FALSE}
+italianConcess_Data <- read.csv("italianConcess_Data.csv")
+italianConds <- read.csv("italianConditions.csv", encoding = "Italian")
+italianConds <- italianConds[,c(-2:-4)]
+
+italianConcData1a <- italianConcess_Data[c(1:5), c(2,4,5,7,8:87,636)]
+italianConcData1b <- italianConcess_Data[c(6:9), c(2,4,5,7,88:164,636)]
+italianConcData2a <- italianConcess_Data[c(10:15), c(2,4,5,7,165:244,636)]
+italianConcData2b <- italianConcess_Data[c(16:20), c(2,4,5,7,245:321,636)]
+italianConcData3a <- italianConcess_Data[c(21:24), c(2,4,5,7,322:401,636)]
+italianConcData3b <- italianConcess_Data[c(25:30), c(2,4,5,7,402:478,636)]
+italianConcData4a <- italianConcess_Data[c(31:35), c(2,4,5,7,479:558,636)]
+italianConcData4b <- italianConcess_Data[c(36:40), c(2,4,5,7,559:635,636)]
+
+# Melt data to long format
+
+italianConcData1a <- reshape2::melt(italianConcData1a, id.vars = c(1:4,85))
+colnames(italianConcData1a)[colnames(italianConcData1a)=="variable"] = "Item"
+colnames(italianConcData1a)[colnames(italianConcData1a)=="value"] = "Score"
+
+italianConcData1b <- reshape2::melt(italianConcData1b, id.vars = c(1:4,82))
+colnames(italianConcData1b)[colnames(italianConcData1b)=="variable"] = "Item"
+colnames(italianConcData1b)[colnames(italianConcData1b)=="value"] = "Score"
+
+italianConcData2a <- reshape2::melt(italianConcData2a, id.vars = c(1:4,85))
+colnames(italianConcData2a)[colnames(italianConcData2a)=="variable"] = "Item"
+colnames(italianConcData2a)[colnames(italianConcData2a)=="value"] = "Score"
+
+italianConcData2b <- reshape2::melt(italianConcData2b, id.vars = c(1:4,82))
+colnames(italianConcData2b)[colnames(italianConcData2b)=="variable"] = "Item"
+colnames(italianConcData2b)[colnames(italianConcData2b)=="value"] = "Score"
+
+italianConcData3a <- reshape2::melt(italianConcData3a, id.vars = c(1:4,85))
+colnames(italianConcData3a)[colnames(italianConcData3a)=="variable"] = "Item"
+colnames(italianConcData3a)[colnames(italianConcData3a)=="value"] = "Score"
+
+italianConcData3b <- reshape2::melt(italianConcData3b, id.vars = c(1:4,82))
+colnames(italianConcData3b)[colnames(italianConcData3b)=="variable"] = "Item"
+colnames(italianConcData3b)[colnames(italianConcData3b)=="value"] = "Score"
+
+italianConcData4a <- reshape2::melt(italianConcData4a, id.vars = c(1:4,85))
+colnames(italianConcData4a)[colnames(italianConcData4a)=="variable"] = "Item"
+colnames(italianConcData4a)[colnames(italianConcData4a)=="value"] = "Score"
+
+italianConcData4b <- reshape2::melt(italianConcData4b, id.vars = c(1:4,82))
+colnames(italianConcData4b)[colnames(italianConcData4b)=="variable"] = "Item"
+colnames(italianConcData4b)[colnames(italianConcData4b)=="value"] = "Score"
+
+# Rbind and merge all data 
+
+allConcData <- rbind(italianConcData1a,italianConcData1b,italianConcData2a,italianConcData2b,
+                 italianConcData3a,italianConcData3b,italianConcData4a,italianConcData4b)
+
+allConcData <- merge(allConcData,italianConds, by.x = "Item", by.y = "SOS_ID")
+```
+
+
+### Means by Sentence Condition
+
+```{r include=FALSE}
+concCondNorms <- aggregate(Score~CONDITION, data=allConcData,mean); 
+names(concCondNorms) = c("CONDITION","Mean") 
+
+concCondSD <- aggregate(Score~CONDITION, data=allConcData,sd); 
+names(concCondSD)= c("CONDITION","SD") 
+
+concCondNorms <- merge(concCondNorms,concCondSD, by = "CONDITION")
+```
+```{r include=TRUE}
+concCondNorms
+```
+
+### Distribution
+
+```{r include=FALSE}
+# Draw with black outline, white fill
+italianConcDist <- ggplot(allConcData, aes(x=Score)) +
+  geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
+  geom_density(aes(x=Score)) +
+  geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
+             color="red", linetype="dashed", size=1) +
+  ggtitle("Distribution: Concessive ('Nonostante cio')")
+```
+```{r include=TRUE}
+italianConcDist
+```
+
+### Time to complete questionnaire
+```{r include=FALSE}
+concTimeBox <- ggplot(allConcData, aes(x = Quest, y = Time, fill = Quest)) +
+  geom_boxplot() +
+  ggtitle("Time to complete questionnaire")
+```
+```{r include=TRUE}
+concTimeBox
+```
+
+### Scores per condition
+```{r include=FALSE}
+concScoreBox <- ggplot(allConcData, aes(x = CONDITION, y = Score, fill = CONDITION)) +
+  geom_boxplot() +
+  ggtitle("Sentence Conditions: Concessive ('Nonostante cio')")
+```
+```{r include=TRUE}
+concScoreBox
+```
+
+### CLMM Analysis
+```{r include=FALSE}
+allConcData$Score <- as.factor(allConcData$Score)
+allConcData$Part <- as.factor(allConcData$Part)
+```
+```{r include=TRUE}
+concClmmModel <- clmm(Score~CONDITION + Gender + (1|Part), data = allConcData) 
+summary(concClmmModel) 
+```
+
+#### Between levels analysis
+```{r include=TRUE}
+emmeans(concClmmModel,pairwise ~ CONDITION | Score, mode = "prob")
+```
+
+
+
+

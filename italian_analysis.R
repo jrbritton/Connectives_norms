@@ -143,7 +143,6 @@ condsWords <- italianConds[,c(2,3)]
 italianData$all <- "Parts"
 
 # Create a vector of 'a' and 'b' to add to italianData for each quest type
-
 questAB <- c(rep('a',5),rep('b',5),rep('a',5),rep('b',5),rep('a',5),
             rep('b',5),rep('a',5),rep('b',5))
 
@@ -155,12 +154,13 @@ ggplot(allData, aes(x=Score)) + geom_histogram(binwidth=.5)
 # qplot(dat$rating, binwidth=.5)
 
 # Draw with black outline, white fill
-ggplot(allData, aes(x=Score)) +
+italianAdvDist <- ggplot(allData, aes(x=Score)) +
   geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
   geom_density(aes(x=Score)) +
   geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
            color="red", linetype="dashed", size=1) +
   ggtitle("Distribution: Adversative ('Tuttavia')")
+italianAdvDist
 
 # Density curve
 ggplot(allData, aes(x=Score)) + geom_density()
@@ -401,7 +401,7 @@ View(concCondNorms)
 # Plot for distributions
 
 # Draw with black outline, white fill
-ggplot(allConcData, aes(x=Score)) +
+italianConcDist <- ggplot(allConcData, aes(x=Score)) +
   geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
   geom_density(aes(x=Score)) +
   geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
@@ -421,10 +421,10 @@ timeBox
 
 #write.csv(timeNorms,"C:/Users/herts/OneDrive/Desktop/timeNorms.csv", fileEncoding = "UTF-8")
 
-scoreBox <- ggplot(allConcData, aes(x = CONDITION, y = Score, fill = CONDITION)) +
+concScoreBox <- ggplot(allConcData, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
   ggtitle("Sentence Conditions: Concessive ('Nonostante cio')")
-scoreBox
+concScoreBox
 
 # Means by Sentence Condition
 concCondNorms <- aggregate(Score~CONDITION, data=allConcData,mean); 
