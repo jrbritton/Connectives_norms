@@ -9,6 +9,8 @@ library(ordinal)
 library(emmeans)
 library(openxlsx)
 library(gridExtra)
+library(RVAideMemoire)
+library(plotly)
 
 rstudioapi::writeRStudioPreference("data_viewer_max_columns", 1000L)
 
@@ -16,13 +18,14 @@ setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\survey_data")
 
 Sys.setlocale(category="LC_ALL", locale = "English_United States.1252")
 
-italianData <- read.csv("italianData.csv")
-italianConds <- read.csv("italianConditions.csv", encoding = "Italian")
-italianConds <- italianConds[,c(-2:-4)]
-#View(italianData)
-#View(italianConds)
+italianData <- read.csv("italianData.csv", fileEncoding="UTF-8-BOM")
+italianConds <- read.csv("italian_conditions2.csv", fileEncoding="UTF-8-BOM")
+
+table(italianConds$SENT_COND)
 # A pie chart of age distribution
-table(italianConds$CONDITION)
+
+# Check number of conditions
+# table(italianConds$CONDITION)
 
 # ageSum <- data.frame(table(italianData$Age))
 # pieColours <- c("maroon", "deepskyblue", "lightgreen", "yellow3", "purple",
@@ -49,10 +52,10 @@ meltFunc <- function(df, cols){
   df <- reshape2::melt(df, id.vars = c(cols))
 }
 
-print(testvec)
-testvec <- c(1:4,85)
-test <- meltFunc(italianData1a, testvec)
-View(test)  
+#print(testvec)
+#testvec <- c(1:4,85)
+#test <- meltFunc(italianData1a, testvec)
+#View(test)  
 # Melt data to long format
 italianData1a <- reshape2::melt(italianData1a, id.vars = c(1:4,85))
 colnames(italianData1a)[colnames(italianData1a)=="variable"] = "Item"
@@ -91,7 +94,8 @@ colnames(italianData4b)[colnames(italianData4b)=="value"] = "Score"
 allData <- rbind(italianData1a,italianData1b,italianData2a,italianData2b,
                  italianData3a,italianData3b,italianData4a,italianData4b)
 
-#View(allData)
+#wideData <- reshape2::dcast(allData, Item + Part ~ CONDITION, value.var="Score")
+#View(wideData)
 
 allData <- merge(allData,italianConds, by.x = "Item", by.y = "SOS_ID")
 
@@ -149,9 +153,6 @@ questAB <- c(rep('a',5),rep('b',5),rep('a',5),rep('b',5),rep('a',5),
 italianData$questAB <- questAB
 
 # Plot for distributions
-#view(allData)
-ggplot(allData, aes(x=Score)) + geom_histogram(binwidth=.5)
-# qplot(dat$rating, binwidth=.5)
 
 # Draw with black outline, white fill
 italianAdvDist <- ggplot(allData, aes(x=Score)) +
@@ -159,7 +160,7 @@ italianAdvDist <- ggplot(allData, aes(x=Score)) +
   geom_density(aes(x=Score)) +
   geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
            color="red", linetype="dashed", size=1) +
-  ggtitle("Distribution: Adversative ('Tuttavia')")
+  ggtitle("Italian Adversative Distribution: Tuttavia")
 italianAdvDist
 
 # Density curve
@@ -169,7 +170,7 @@ timeBox <- ggplot(italianData, aes(x = Quest, y = Time, fill = Quest)) +
   geom_boxplot() +
   ggtitle("Time to complete questionnaire")
 timeBox
-View(italianData)
+
 #timeNorms <- aggregate(Time~Quest, data=italianData,mean); 
 #names(timeNorms) = c("Quest","Mean") 
 
@@ -182,9 +183,8 @@ questTimeBox
 
 scoreBox <- ggplot(allData, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
-  ggtitle("Sentence Conditions: Adversative ('Tuttavia')")
-scoreBox
-
+  ggtitle("Italian Adversative Scores: Tuttavia")
+ggplotly(scoreBox)
 
 #####################
 # Outliers
@@ -204,7 +204,6 @@ plausNoConn_outliers <- subset(allData, CONDITION == "PLAUS_NOCONN")
 plausNoConn_outliers <- subset(plausNoConn_outliers, Score < 5)
 plausNoConn_outliers <- subset(plausNoConn_outliers, Time < 800)
 #View(plausNoConn_outliers)
-
 
 # Conditions model
 # 
@@ -241,13 +240,13 @@ Sys.setlocale(category="LC_ALL", locale = "English_United States.1252")
 
 italianAllRotas <- read.csv("italianAllRotas.csv")
 italianAllRotas <- subset(italianAllRotas, select = c(1:5))
-View(italianAllRotas)
+#View(italianAllRotas)
 impNoConnHi <- merge(italianAllRotas,impNoConnHi, by.x = "SOS_ID", 
                      by.y = "Item")
 
 plausNoConnLo <- merge(italianAllRotas,plausNoConnLo, by.x = "SOS_ID", 
                        by.y = "Item")
-View(italianConds)
+#View(italianConds)
 #write.csv(plausNoConnLo,"C:/Users/herts/OneDrive/Desktop/impNoConn_low.csv", fileEncoding = "UTF-8")
 
 # allData[allData == "SC1"] <- 1
@@ -269,7 +268,8 @@ View(italianConds)
 
 allData$Score <- as.factor(allData$Score)
 allData$Part <- as.factor(allData$Part)
-
+write.csv(allData,"C:/Users/herts/OneDrive/Desktop/italian_advers_data.csv", fileEncoding = "UTF-8")
+#View(allData)
 itaclmmModel <- clmm(Score~CONDITION + Gender + (1|Part), data = allData) 
 summary(itaclmmModel) 
 
@@ -294,13 +294,13 @@ for (var in italianConds$SENTENCE){
 }
 
 sent_len = data.frame(sent_len)  # make for loop output into a data frame
-View(sent_len)
+#View(sent_len)
 sent_lengths <- data.frame(table(sent_len))
-View(sent_lengths)
+#View(sent_lengths)
 
 colnames(sent_lengths) <- c("WordCount", "SentNum")
 italianConds <- cbind(italianConds,sent_len)
-View(italianConds)
+#View(italianConds)
 
 #write.xlsx(sent_lengths,"C:/Users/herts/OneDrive/Desktop/sent_lengths.xlsx", 
 #           colNames = TRUE)
@@ -331,10 +331,9 @@ table(clauses2$CONDITION)
 ##############################################
 
 italianConcess_Data <- read.csv("italianConcess_Data.csv")
-italianConds <- read.csv("italianConditions.csv", encoding = "Italian")
-italianConds <- italianConds[,c(-2:-4)]
-View(italianConcess_Data)
+italianConcConds <- read.csv("italianConcConditions.csv", fileEncoding = "UTF-8-BOM")
 
+#View(italianConcess_Data)
 
 italianConcData1a <- italianConcess_Data[c(1:5), c(2,4,5,7,8:87,636)]
 italianConcData1b <- italianConcess_Data[c(6:9), c(2,4,5,7,88:164,636)]
@@ -384,9 +383,9 @@ colnames(italianConcData4b)[colnames(italianConcData4b)=="value"] = "Score"
 allConcData <- rbind(italianConcData1a,italianConcData1b,italianConcData2a,italianConcData2b,
                  italianConcData3a,italianConcData3b,italianConcData4a,italianConcData4b)
 
-allConcData <- merge(allConcData,italianConds, by.x = "Item", by.y = "SOS_ID")
-View(allConcData)
-
+allConcData <- merge(allConcData,italianConcConds, by.x = "Item", by.y = "SOS_ID")
+write.csv(allConcData,"C:/Users/herts/OneDrive/Desktop/italian_concess_data.csv", fileEncoding = "UTF-8")
+#View(allConcData)
 # Means by Sentence Condition
 
 concCondNorms <- aggregate(Score~CONDITION, data=allConcData,mean); 
@@ -396,7 +395,7 @@ concCondSD <- aggregate(Score~CONDITION, data=allConcData,sd);
 names(concCondSD)= c("CONDITION","SD") 
 
 concCondNorms <- merge(concCondNorms,concCondSD, by = "CONDITION")
-View(concCondNorms)
+#View(concCondNorms)
 
 # Plot for distributions
 
@@ -406,7 +405,8 @@ italianConcDist <- ggplot(allConcData, aes(x=Score)) +
   geom_density(aes(x=Score)) +
   geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
              color="red", linetype="dashed", size=1) +
-  ggtitle("Distribution: Concessive ('Nonostante cio')")
+  ggtitle("Italian Concessive Distribution: Nonostante ci¨°")
+italianConcDist
 
 # Density curve
 ggplot(allConcData, aes(x=Score)) + geom_density()
@@ -423,8 +423,8 @@ timeBox
 
 concScoreBox <- ggplot(allConcData, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
-  ggtitle("Sentence Conditions: Concessive ('Nonostante cio')")
-concScoreBox
+  ggtitle("Italian Concessive Scores: Nonostante ci¨°")
+ggplotly(concScoreBox)
 
 # Means by Sentence Condition
 concCondNorms <- aggregate(Score~CONDITION, data=allConcData,mean); 
@@ -435,7 +435,6 @@ names(concCondSD)= c("CONDITION","SD")
 
 concCondNorms <- merge(concCondNorms,concCondSD, by = "CONDITION")
 #View(concCondNorms)
-
 
 # Clmm for Concessive data
 
@@ -448,8 +447,6 @@ summary(concClmmModel)
 emmeans(concClmmModel,pairwise ~ CONDITION | Score, mode = "prob")
 
 # Chi-square analysis on adversative and concessive sents
-
-View(allData)
 
 adversData <- subset(allData, CONDITION == "PLAUS_CONN" | CONDITION == 
                        "IMPLAUS_CONN")
@@ -471,7 +468,6 @@ colnames(concData)[colnames(concData)=="Education"] = "Edu"
 # R bind all data
 advConcData <- rbind(adversData, concData)
 advConcData$Score <- as.numeric(advConcData$Score)
-View(advConcData)
 
 median(advConcData$Score)
 quantile(advConcData$scoreBox, 0.5)
@@ -526,6 +522,13 @@ ggplot(implausData) +
   geom_bar(position = "fill")
 
 
+###############################
+# Comparison with French data
+###############################
 
+# Correlations 
+
+italianScores <- subset(allConcData, select = c(7))
+View(italianScores)
 
 

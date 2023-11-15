@@ -9,18 +9,19 @@ library(ordinal)
 library(emmeans)
 library(stringr)
 library(openxlsx)
+library(plotly)
 
 setwd("C:\\Users\\herts\\OneDrive\\Desktop\\Manu\\connectives\\survey_data")
 
+Sys.setlocale(category="LC_ALL", locale = "English_United States.1252")
+
 rstudioapi::writeRStudioPreference("data_viewer_max_columns", 1000L)
 
-frenchData <- read.csv("frenchData.csv")
-frenchSentConds <- read.csv("frenchConditions.csv", encoding = "French")
-frenchSentConds <- frenchSentConds[,c(-2:-4)]
-
+frenchData <- read.csv("frenchData.csv", fileEncoding="UTF-8-BOM")
+frenchSentConds <- read.csv("french_conditions2.csv", fileEncoding="UTF-8-BOM")
 colnames(frenchData)[colnames(frenchData)=="Time.spent.on.page.3"] = "Time"
 
-table(frenchData$Age)
+table(frenchSentConds$CONDITION)
 
 frenchData1a <- frenchData[c(1:5), c(1,4,5,7,10:89,638)]
 frenchData1b <- frenchData[c(6:11), c(1,4,5,7,90:166,638)]
@@ -69,11 +70,10 @@ colnames(frenchData4b)[colnames(frenchData4b)=="value"] = "Score"
 
 allDataFre <- rbind(frenchData1a,frenchData1b,frenchData2a,frenchData2b,
                  frenchData3a,frenchData3b,frenchData4a,frenchData4b)
-View(allDataFre)
-#View(allDataFre)
 allDataFre <- merge(allDataFre,frenchSentConds, by.x = "Item", by.y = "SOS_ID")
-View(frenchSentConds)
-
+#View(frenchSentConds)
+#View(allDataFre)
+write.csv(allDataFre,"C:/Users/herts/OneDrive/Desktop/french_advers_data.csv", fileEncoding = "UTF-8")
 # Means by Sentence Condition
 
 frenchCondNorms <- aggregate(Score~CONDITION, data=allDataFre,mean); 
@@ -83,7 +83,7 @@ frenchCondSD <- aggregate(Score~CONDITION, data=allDataFre,sd);
 names(frenchCondSD)= c("CONDITION","SD") 
 
 frenchCondNorms <- merge(frenchCondNorms,frenchCondSD, by = "CONDITION")
-View(frenchCondNorms)
+#View(frenchCondNorms)
 
 # Plot for distributions
 
@@ -91,7 +91,7 @@ frenchAdvDist <- ggplot(allDataFre, aes(x=Score)) +
   geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
   geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
              color="red", linetype="dashed", size=1) +
-  ggtitle("French Distribution: Cependant")
+  ggtitle("French Adversative Distribution: Cependant")
 frenchAdvDist
 
 # Exclude participant 33 from time analysis 
@@ -105,14 +105,14 @@ freTimeBox
 # Scores per condition
 freScoreBox <- ggplot(allDataFre, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
-  ggtitle("Sentence Conditions")
-freScoreBox
+  ggtitle("French Adversative Scores: Cependant")
+ggplotly(freScoreBox)
 
 # Conditions Model
 
 allDataFre$Score <- as.factor(allDataFre$Score)
 allDataFre$Part <- as.factor(allDataFre$Part)
-View(allDataFre)
+write.csv(allDataFre,"C:/Users/herts/OneDrive/Desktop/french_advers_data.csv", fileEncoding = "UTF-8")
 
 frenchAdv_clmm <- clmm(Score ~ CONDITION + Gender + (1|Part), data = allDataFre) 
 summary(frenchAdv_clmm) 
@@ -125,9 +125,10 @@ emmeans(frenchAdv_clmm,pairwise ~ CONDITION | Score, mode = "prob")
 
 # Concessive Analysis
 
-frenchConcData <- read.csv("frenchConcess_data.csv")
+frenchConcData <- read.csv("frenchConcess_data.csv", fileEncoding='UTF-8-BOM')
 colnames(frenchConcData)[colnames(frenchConcData)=="TIME003"] = "Time"
-View(frenchConcData)
+frenchConcConds <- read.csv("frenchConcConditions.csv", fileEncoding="UTF-8-BOM")
+table(frenchConcConds$CONDITION)
 
 # Update rows if data is added
 frenchConcData1a <- frenchConcData[c(1:5), c(2,4:6,8:87,636)]
@@ -136,8 +137,8 @@ frenchConcData2a <- frenchConcData[c(11:15), c(2,4:6,165:244,636)]
 frenchConcData2b <- frenchConcData[c(16:19), c(2,4:6,245:321,636)]
 frenchConcData3a <- frenchConcData[c(20:24), c(2,4:6,322:401,636)]
 frenchConcData3b <- frenchConcData[c(25:29), c(2,4:6,402:478,636)]
-frenchConcData4a <- frenchConcData[c(30:32), c(2,4:6,479:558,636)]
-frenchConcData4b <- frenchConcData[c(33:36), c(2,4:6,559:635,636)]
+frenchConcData4a <- frenchConcData[c(30:34), c(2,4:6,479:558,636)]
+frenchConcData4b <- frenchConcData[c(35:38), c(2,4:6,559:635,636)]
 
 # Melt data to long format
 frenchConcData1a <- reshape2::melt(frenchConcData1a, id.vars = c(1:4,85))
@@ -176,7 +177,8 @@ colnames(frenchConcData4b)[colnames(frenchConcData4b)=="value"] = "Score"
 
 allConcDataFre <- rbind(frenchConcData1a,frenchConcData1b,frenchConcData2a,frenchConcData2b,
                     frenchConcData3a,frenchConcData3b,frenchConcData4a,frenchConcData4b)
-allConcDataFre <- merge(allConcDataFre,frenchSentConds, by.x = "Item", by.y = "SOS_ID")
+allConcDataFre <- merge(allConcDataFre,frenchConcConds, by.x = "Item", by.y = "SOS_ID")
+write.csv(allConcDataFre,"C:/Users/herts/OneDrive/Desktop/french_concess_data.csv", fileEncoding = "UTF-8")
 
 # Means
 frenchConcCondNorms <- aggregate(Score~CONDITION, data=allConcDataFre,mean); 
@@ -186,7 +188,7 @@ frenchConcCondSD <- aggregate(Score~CONDITION, data=allConcDataFre,sd);
 names(frenchConcCondSD) = c("CONDITION","SD") 
 
 frenchConcCondNorms <- merge(frenchConcCondNorms,frenchConcCondSD, by = "CONDITION")
-View(frenchConcCondNorms)
+#View(frenchConcCondNorms)
 
 # Plot for distributions
 
@@ -194,7 +196,7 @@ frenchConcDist <- ggplot(allConcDataFre, aes(x=Score)) +
   geom_histogram(binwidth=.5, colour="black", fill="steelblue") +
   geom_vline(aes(xintercept=mean(Score, na.rm=T)),   # Ignore NA values for mean
              color="red", linetype="dashed", size=1) +
-  ggtitle("French Concessive Distribution")
+  ggtitle("French Concessive Distribution: Malgré cela")
 frenchConcDist
 
 # Time plots
@@ -207,8 +209,8 @@ freTimeBox2
 
 freScoreBox2 <- ggplot(allConcDataFre, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
-  ggtitle("Sentence Conditions: 'Malgre cela'")
-freScoreBox2
+  ggtitle("French Concessive Scores: Malgré cela")
+ggplotly(freScoreBox2)
 
 ####################
 # Conditions Model

@@ -51,7 +51,7 @@ ggplot(coherenceScores, aes(x=Value)) + geom_density()
 #Box plots
 chinscoreBox <- ggplot(coherenceScores, aes(x = Condition, y = Value, fill = Condition)) +
   geom_boxplot() +
-  ggtitle("Chinese: Even-so")
+  ggtitle("Chinese: Concessive")
 chinscoreBox
 
 ####################

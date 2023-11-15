@@ -165,8 +165,8 @@ frenchConcData2a <- frenchConcData[c(11:15), c(2,4:6,165:244,636)]
 frenchConcData2b <- frenchConcData[c(16:19), c(2,4:6,245:321,636)]
 frenchConcData3a <- frenchConcData[c(20:24), c(2,4:6,322:401,636)]
 frenchConcData3b <- frenchConcData[c(25:29), c(2,4:6,402:478,636)]
-frenchConcData4a <- frenchConcData[c(30:32), c(2,4:6,479:558,636)]
-frenchConcData4b <- frenchConcData[c(33:36), c(2,4:6,559:635,636)]
+frenchConcData4a <- frenchConcData[c(30:34), c(2,4:6,479:558,636)]
+frenchConcData4b <- frenchConcData[c(35:38), c(2,4:6,559:635,636)]
 
 # Melt data to long format
 frenchConcData1a <- reshape2::melt(frenchConcData1a, id.vars = c(1:4,85))
