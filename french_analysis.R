@@ -105,6 +105,7 @@ freTimeBox
 # Scores per condition
 freScoreBox <- ggplot(allDataFre, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
+  stat_summary(fun=mean, geom="point", shape=20, size=2, color="blue", fill="blue") +
   ggtitle("French Adversative Scores: Cependant")
 ggplotly(freScoreBox)
 
@@ -209,6 +210,7 @@ freTimeBox2
 
 freScoreBox2 <- ggplot(allConcDataFre, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
+  stat_summary(fun=mean, geom="point", shape=20, size=2, color="blue", fill="blue") +
   ggtitle("French Concessive Scores: Malgré cela")
 ggplotly(freScoreBox2)
 

@@ -183,6 +183,7 @@ questTimeBox
 
 scoreBox <- ggplot(allData, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
+  stat_summary(fun=mean, geom="point", shape=20, size=2, color="blue", fill="blue") +
   ggtitle("Italian Adversative Scores: Tuttavia")
 ggplotly(scoreBox)
 
@@ -423,6 +424,7 @@ timeBox
 
 concScoreBox <- ggplot(allConcData, aes(x = CONDITION, y = Score, fill = CONDITION)) +
   geom_boxplot() +
+  stat_summary(fun=mean, geom="point", shape=20, size=2, color="blue", fill="blue") +
   ggtitle("Italian Concessive Scores: Nonostante ci¨°")
 ggplotly(concScoreBox)
 
